@@ -1,3 +1,6 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -182,4 +185,69 @@
 
 html {
   font-size: var(--font-size);
+}
+
+/* Syntax highlighting - GitHub style */
+.hljs {
+  background: var(--muted) !important;
+  border-radius: var(--radius);
+  padding: 1rem !important;
+  overflow-x: auto;
+}
+
+.dark .hljs {
+  background: oklch(0.2 0 0) !important;
+}
+
+/* Prose customizations for blog posts */
+.prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--primary);
+  --tw-prose-code: var(--foreground);
+  --tw-prose-pre-bg: var(--muted);
+}
+
+.prose pre {
+  background: var(--muted);
+  border-radius: var(--radius);
+}
+
+.dark .prose pre {
+  background: oklch(0.2 0 0);
+}
+
+.prose code:not(pre code) {
+  background: var(--muted);
+  padding: 0.2em 0.4em;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+
+.prose img {
+  border-radius: var(--radius);
+  margin: 1.5rem auto;
+}
+
+.prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose a:hover {
+  opacity: 0.8;
+}
+
+.prose blockquote {
+  border-left-color: var(--primary);
+  font-style: italic;
+}
+
+.prose ul > li::marker {
+  color: var(--muted-foreground);
+}
+
+.prose ol > li::marker {
+  color: var(--muted-foreground);
 }

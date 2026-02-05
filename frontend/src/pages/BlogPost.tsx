@@ -1,8 +1,11 @@
 import { useParams, Link, Navigate } from 'react-router';
-import { Calendar, Clock, ArrowLeft } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
 import { Badge } from '../components/ui/badge';
 import { Button } from '../components/ui/button';
 import { blogPosts } from '../data/blogPosts';
+
+// Import highlight.js styles
+import 'highlight.js/styles/github-dark.css';
 
 export function BlogPost() {
   const { slug } = useParams();
@@ -11,67 +14,6 @@ export function BlogPost() {
   if (!post) {
     return <Navigate to="/blog" replace />;
   }
-
-  // Split content into paragraphs and sections
-  const renderContent = (content: string) => {
-    const lines = content.split('\n');
-    return lines.map((line, index) => {
-      // Headers
-      if (line.startsWith('## ')) {
-        return <h2 key={index} className="text-2xl mt-8 mb-4">{line.substring(3)}</h2>;
-      }
-      if (line.startsWith('### ')) {
-        return <h3 key={index} className="text-xl mt-6 mb-3">{line.substring(4)}</h3>;
-      }
-      
-      // Lists
-      if (line.startsWith('- **')) {
-        const match = line.match(/- \*\*(.+?)\*\*: (.+)/);
-        if (match) {
-          return (
-            <li key={index} className="ml-6 mb-2">
-              <strong>{match[1]}</strong>: {match[2]}
-            </li>
-          );
-        }
-      }
-      if (line.startsWith('- ')) {
-        return <li key={index} className="ml-6 mb-2">{line.substring(2)}</li>;
-      }
-      
-      // Numbered lists
-      if (/^\d+\. \*\*/.test(line)) {
-        const match = line.match(/\d+\. \*\*(.+?)\*\*: (.+)/);
-        if (match) {
-          return (
-            <li key={index} className="ml-6 mb-2">
-              <strong>{match[1]}</strong>: {match[2]}
-            </li>
-          );
-        }
-      }
-      
-      // Bold text
-      if (line.includes('**')) {
-        const parts = line.split(/\*\*(.+?)\*\*/g);
-        return (
-          <p key={index} className="mb-4">
-            {parts.map((part, i) => 
-              i % 2 === 1 ? <strong key={i}>{part}</strong> : part
-            )}
-          </p>
-        );
-      }
-      
-      // Empty lines
-      if (line.trim() === '') {
-        return <div key={index} className="h-2" />;
-      }
-      
-      // Regular paragraphs
-      return <p key={index} className="mb-4">{line}</p>;
-    });
-  };
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -85,17 +27,22 @@ export function BlogPost() {
         {/* Article Header */}
         <article>
           <header className="mb-8">
-            <div className="mb-4">
+            <div className="flex flex-wrap gap-2 mb-4">
               <Badge variant="secondary">{post.category}</Badge>
+              {!post.published && (
+                <Badge variant="outline" className="border-yellow-500 text-yellow-600">
+                  Draft
+                </Badge>
+              )}
             </div>
             <h1 className="text-4xl md:text-5xl mb-4">{post.title}</h1>
-            <div className="flex items-center gap-4 text-muted-foreground">
+            <div className="flex items-center gap-4 text-muted-foreground mb-4">
               <div className="flex items-center gap-1">
                 <Calendar className="size-4" />
-                <span>{new Date(post.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
+                <span>{new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
                 })}</span>
               </div>
               <div className="flex items-center gap-1">
@@ -103,16 +50,40 @@ export function BlogPost() {
                 <span>{post.readTime}</span>
               </div>
             </div>
+
+            {/* Tags */}
+            {post.tags.length > 0 && (
+              <div className="flex items-center gap-2 flex-wrap">
+                <Tag className="size-4 text-muted-foreground" />
+                {post.tags.map(tag => (
+                  <Badge key={tag} variant="outline" className="text-xs">
+                    {tag}
+                  </Badge>
+                ))}
+              </div>
+            )}
           </header>
 
+          {/* Cover Image */}
+          {post.coverImage && (
+            <div className="mb-8">
+              <img
+                src={post.coverImage}
+                alt={post.title}
+                className="w-full rounded-lg object-cover max-h-96"
+              />
+            </div>
+          )}
+
           {/* Article Content */}
-          <div className="prose prose-lg max-w-none">
-            <p className="text-xl text-muted-foreground mb-8 italic">
+          <div className="prose prose-lg max-w-none dark:prose-invert">
+            <p className="text-xl text-muted-foreground mb-8 italic lead">
               {post.excerpt}
             </p>
-            <div className="text-foreground leading-relaxed">
-              {renderContent(post.content)}
-            </div>
+            <div
+              className="text-foreground"
+              dangerouslySetInnerHTML={{ __html: post.htmlContent }}
+            />
           </div>
 
           {/* Article Footer */}
@@ -138,7 +109,7 @@ export function BlogPost() {
               .filter(p => p.slug !== slug)
               .slice(0, 3)
               .map(relatedPost => (
-                <Link 
+                <Link
                   key={relatedPost.slug}
                   to={`/blog/${relatedPost.slug}`}
                   className="p-4 border border-border rounded-lg hover:bg-accent transition-colors"
