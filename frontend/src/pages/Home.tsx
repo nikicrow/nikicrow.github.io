@@ -1,7 +1,9 @@
 import { Link } from 'react-router';
-import { ArrowRight, TrendingUp, Code, BookOpen, Rocket } from 'lucide-react';
+import { ArrowRight, TrendingUp, Code, BookOpen, Rocket, Star } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
+import { Badge } from '../components/ui/badge';
+import { featuredProjects } from '../data/projects';
 
 export function Home() {
   return (
@@ -102,6 +104,61 @@ export function Home() {
           </Card>
         </div>
       </section>
+
+      {/* Featured Projects */}
+      {featuredProjects.length > 0 && (
+        <section className="py-12 max-w-5xl mx-auto">
+          <div className="flex items-center justify-between mb-8">
+            <h2 className="text-3xl flex items-center gap-2">
+              <Star className="size-8 text-yellow-500" />
+              Featured Projects
+            </h2>
+            <Link to="/portfolio">
+              <Button variant="outline" className="gap-2">
+                View All
+                <ArrowRight className="size-4" />
+              </Button>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {featuredProjects.slice(0, 4).map((project) => (
+              <Link key={project.id} to={`/portfolio/${project.id}`}>
+                <Card className="h-full hover:shadow-lg transition-shadow">
+                  <CardContent className="pt-6">
+                    <div className="flex items-center gap-2 mb-3">
+                      <Badge variant="secondary">{project.category}</Badge>
+                      {project.metrics && project.metrics[0] && (
+                        <Badge variant="outline" className="font-mono">
+                          {project.metrics[0].value}
+                        </Badge>
+                      )}
+                    </div>
+                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-1">
+                      {project.tech.slice(0, 4).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 bg-accent text-xs rounded"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.tech.length > 4 && (
+                        <span className="px-2 py-1 text-xs text-muted-foreground">
+                          +{project.tech.length - 4}
+                        </span>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Featured Areas */}
       <section className="py-12 max-w-5xl mx-auto">
