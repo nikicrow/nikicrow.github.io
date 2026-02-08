@@ -30,8 +30,11 @@ export interface BlogPost {
 
 // Simple frontmatter parser (browser-compatible, no Buffer needed)
 function parseFrontmatter(fileContent: string): { data: Record<string, unknown>; content: string } {
+  console.log('Raw content first 100 chars:', JSON.stringify(fileContent?.slice(0, 100)));
   const frontmatterRegex = /^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/;
   const match = fileContent.match(frontmatterRegex);
+
+  console.log('Frontmatter match:', match ? 'found' : 'NOT FOUND');
 
   if (!match) {
     return { data: {}, content: fileContent };
@@ -45,7 +48,10 @@ function parseFrontmatter(fileContent: string): { data: Record<string, unknown>;
   let inArray = false;
   let arrayValues: string[] = [];
 
-  frontmatterStr.split('\n').forEach(line => {
+  frontmatterStr.split('\n').forEach(rawLine => {
+    // Strip Windows carriage return if present
+    const line = rawLine.replace(/\r$/, '');
+    console.log('Processing line:', JSON.stringify(line));
     // Array item (starts with "  - ")
     if (inArray && line.match(/^\s+-\s+/)) {
       const value = line.replace(/^\s+-\s+/, '').trim();
@@ -62,6 +68,7 @@ function parseFrontmatter(fileContent: string): { data: Record<string, unknown>;
 
     // Key-value pair
     const kvMatch = line.match(/^(\w+):\s*(.*)$/);
+    console.log('KV match for line:', kvMatch);
     if (kvMatch) {
       const [, key, rawValue] = kvMatch;
       const value = rawValue.trim();
@@ -93,6 +100,7 @@ function parseFrontmatter(fileContent: string): { data: Record<string, unknown>;
     data[currentKey] = arrayValues;
   }
 
+  console.log('Parsed frontmatter data:', data);
   return { data, content: content.trim() };
 }
 
@@ -114,7 +122,10 @@ const isDev = import.meta.env.DEV;
 
 export const blogPosts: BlogPost[] = Object.entries(postFiles)
   .map(([_filepath, file]) => {
-    const rawContent = (file as { default: string }).default;
+    // Handle both Vite versions: raw string or { default: string }
+    const rawContent = typeof file === 'string'
+      ? file
+      : (file as { default: string }).default;
     const { data: frontmatter, content } = parseFrontmatter(rawContent);
 
     return {
