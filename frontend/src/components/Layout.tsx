@@ -23,7 +23,7 @@ export function Layout() {
                   <Terminal className="size-6" />
                   <Heart className="size-3 absolute -top-1 -right-1 text-pink-500 fill-pink-500" />
                 </div>
-                <span className="font-mono">~/mum.codes</span>
+                <span className="font-mono">~/niki.codes</span>
               </div>
             </Link>
             
@@ -76,12 +76,12 @@ export function Layout() {
           <div className="flex items-center justify-between text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Code2 className="size-4" />
-              <span>Built with React & TypeScript (& lots of coffee)</span>
+              <span>Built with React & TypeScript</span>
             </div>
             <div className="flex items-center gap-1">
               <span>Made with</span>
               <Heart className="size-4 text-pink-500 fill-pink-500" />
-              <span>by a tired mum</span>
+              <span>by mostly AI let's be real</span>
             </div>
           </div>
         </div>

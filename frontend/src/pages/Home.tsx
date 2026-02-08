@@ -23,9 +23,8 @@ export function Home() {
         </h1>
         
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Building intelligent systems by day, building humans by night. Writing about machine learning, 
-          markets, parenting, pregnancy, and the beautiful chaos of doing it all. Ex-Goldman Sachs trader, 
-          current toddler negotiator.
+          Building intelligent systems by day, raising humans by night. Writing about machine learning, 
+          data, AI, financial markets, parenting, pregnancy, and the beautiful chaos of doing it all. 
         </p>
         
         <div className="flex gap-4 justify-center flex-wrap">
@@ -54,7 +53,7 @@ export function Home() {
                   <TrendingUp className="size-6 text-white" />
                 </div>
                 <div>
-                  <div className="text-2xl font-mono">5+</div>
+                  <div className="text-2xl font-mono">8+</div>
                   <div className="text-sm text-muted-foreground">Years Trading</div>
                 </div>
               </div>
@@ -96,7 +95,7 @@ export function Home() {
                   <span className="text-2xl">👶</span>
                 </div>
                 <div>
-                  <div className="text-2xl font-mono">1.5</div>
+                  <div className="text-2xl font-mono">1.8</div>
                   <div className="text-sm text-muted-foreground">Tiny Humans (& counting!)</div>
                 </div>
               </div>
@@ -186,10 +185,11 @@ export function Home() {
                   <TrendingUp className="size-6 text-white" />
                 </div>
               </div>
-              <h3 className="text-xl mb-2">Trading & Markets</h3>
+              <h3 className="text-xl mb-2">Side Projects</h3>
               <p className="text-muted-foreground">
-                Former trader at Goldman Sachs with deep expertise in quantitative 
-                strategies and market microstructure. Now I apply the same analytical rigor to choosing nurseries.
+                Gardening, crochet, and DIY home improvement. 
+                When I'm not coding, I'm usually knee-deep in soil or yarn, 
+                finding creative outlets beyond the screen.
               </p>
             </CardContent>
           </Card>

@@ -16,7 +16,7 @@ export function About() {
           <h1 className="text-4xl mb-4">About Me</h1>
           <div className="flex items-center justify-center gap-2 text-muted-foreground mb-2">
             <MapPin className="size-4" />
-            <span>New York, NY</span>
+            <span>Sydney, Australia</span>
           </div>
           <div className="flex items-center justify-center gap-2 text-muted-foreground">
             <Briefcase className="size-4" />
@@ -35,15 +35,36 @@ export function About() {
               to be a mum to an energetic 2-year-old and currently pregnant with baby number two.
             </p>
             <p>
-              I spent several years as a trader at Goldman Sachs, where I developed a deep 
-              appreciation for quantitative analysis, risk management, and making decisions under 
-              uncertainty. (Which, it turns out, is excellent preparation for parenting.)
+              I studied Mechanical Engineering and Pure Mathematics at the University of Sydney,
+              where I discovered my love for algorithms and problem-solving. After graduation, 
+              I transitioned into the world of finance at Goldman Sachs trading swaps, swaptions 
+              and exotic bonds in AUD and JPY markets (it paid the best of the grad jobs I got offered
+              lol).
             </p>
             <p>
-              These days, I build and deploy production ML systems while navigating the beautiful 
+              I spent three years as a trader at Goldman Sachs, where I developed a deep 
+              appreciation for quantitative analysis, risk management, and taught myself to code so
+              I could automate tedious tasks and build simple trading tools. This sparked my passion 
+              for data science and machine learning, leading me to pivot my career towards data analysis.
+            </p>
+            <p>
+              I landed a job as a Data analyst at a government agency and quickly decided that I wanted
+              to learn about machine learning and data science. So I learnt enough to get a job as a 
+              Data Scientist at a fintech scaleup, where I built many ML models to predict customer behavior and
+              optimize revenue generation.
+            </p>
+            <p>
+              After three years there and 1 baby, I was head hunted into a role as a Senior Data Scientist at 
+              a large telco where I built and deployed ML systems in production. After less than a year there,
+              I was leading a team of data scientists, engineers and analysts to deploy and end to end MLOps 
+              system to automate the process of building, deploying and monitoring ML models in production. 
+              They recognised my work (despite getting pregnant again) and I got promoted to Lead Machine 
+              Learning Engineer, which is my current role.
+            </p>
+            <p>
+              These days, I build, deploy and monitor production ML systems while navigating the beautiful 
               chaos of toddlerhood and pregnancy. I'm passionate about creating systems that actually 
-              work in production—usually coded between bedtime and midnight, fueled by decaf coffee 
-              and sheer determination.
+              work in production. Note: not all functional and useful systems need to be ML.
             </p>
             <p>
               My blog reflects the full spectrum of my life: technical deep dives into ML and trading, 
@@ -54,7 +75,8 @@ export function About() {
             <p>
               I believe we need more diverse voices in tech, and that includes the voices of parents, 
               especially mothers who are still actively building and shipping while raising humans. 
-              It's hard, it's messy, and it's absolutely possible.
+              It's hard, it's messy, but I wouldn't change a thing. Except for maybe winning the 
+              lottery so I can hire a cleaner and a chef and just focus on the fun parts of life.
             </p>
           </CardContent>
         </Card>
@@ -65,12 +87,23 @@ export function About() {
             <CardTitle>Skills & Expertise</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div>
-                <h4 className="mb-3 text-sm text-muted-foreground">Machine Learning & Data</h4>
+                <h4 className="mb-3 text-sm text-muted-foreground">Machine Learning & AI</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Python', 'PyTorch', 'TensorFlow', 'scikit-learn', 'Pandas', 'SQL', 'MLOps'].map((skill) => (
+                  {['Python', 'PyTorch', 'TensorFlow', 'scikit-learn', 'Pandas', 'MLOps'].map((skill) => (
                     <span key={skill} className="px-3 py-1 bg-blue-100 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 rounded-full text-sm">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="mb-3 text-sm text-muted-foreground">Data & BI</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['Spark', 'Databricks', 'Redshift', 'Snowflake', 'PostgreSQL', 'Tableau', 'Power BI'].map((skill) => (
+                    <span key={skill} className="px-3 py-1 bg-red-100 dark:bg-red-900/20 text-red-700 dark:text-red-300 rounded-full text-sm">
                       {skill}
                     </span>
                   ))}
@@ -110,12 +143,12 @@ export function About() {
                 <Mail className="size-5 text-muted-foreground" />
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <div>your.email@example.com</div>
+                  <div>not.telling@isthissafetho.com</div>
                 </div>
               </a>
               
               <a 
-                href="https://linkedin.com/in/yourprofile" 
+                href="https://www.linkedin.com/in/niki-crow-bb329313b/" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 border border-border rounded-lg hover:bg-accent transition-colors"
@@ -123,12 +156,12 @@ export function About() {
                 <Linkedin className="size-5 text-muted-foreground" />
                 <div>
                   <div className="text-sm text-muted-foreground">LinkedIn</div>
-                  <div>/in/yourprofile</div>
+                  <div>/in/niki-crow-bb329313b</div>
                 </div>
               </a>
               
               <a 
-                href="https://github.com/yourusername" 
+                href="https://github.com/nikicrow" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 p-4 border border-border rounded-lg hover:bg-accent transition-colors"
@@ -136,11 +169,11 @@ export function About() {
                 <Github className="size-5 text-muted-foreground" />
                 <div>
                   <div className="text-sm text-muted-foreground">GitHub</div>
-                  <div>@yourusername</div>
+                  <div>@nikicrow</div>
                 </div>
               </a>
               
-              <a 
+              {/* <a 
                 href="https://twitter.com/yourhandle" 
                 target="_blank"
                 rel="noopener noreferrer"
@@ -151,7 +184,7 @@ export function About() {
                   <div className="text-sm text-muted-foreground">Twitter</div>
                   <div>@yourhandle</div>
                 </div>
-              </a>
+              </a> */}
             </div>
           </CardContent>
         </Card>
