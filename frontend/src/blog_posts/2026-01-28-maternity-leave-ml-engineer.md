@@ -1,6 +1,6 @@
 ---
-title: "What No One Tells You About Maternity Leave as an ML Engineer"
-slug: "maternity-leave-ml-engineer"
+title: "What No One Tells You About Maternity Leave"
+slug: "maternity-leave"
 date: 2026-01-28
 category: Parenting
 excerpt: "The reality of stepping away from fast-moving tech while growing a human. Spoiler: your models will be fine, you won't be obsolete, and it's okay to not check Slack."

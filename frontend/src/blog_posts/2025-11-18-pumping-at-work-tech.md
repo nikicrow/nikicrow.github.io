@@ -4,7 +4,7 @@ slug: "pumping-at-work-tech"
 date: 2025-11-18
 category: Parenting
 excerpt: "The unglamorous reality of being a working mum who pumps. Finding lactation rooms between standups, debugging with a breast pump running, and why we need to normalize this."
-published: true
+published: false
 tags:
   - parenting
   - tech
