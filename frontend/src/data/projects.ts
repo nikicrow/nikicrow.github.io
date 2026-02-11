@@ -21,7 +21,7 @@ const projectSchema = z.object({
   id: z.string(),
   title: z.string(),
   description: z.string(),
-  status: z.enum(['production', 'beta', 'archived']),
+  status: z.enum(['production', 'development', 'beta', 'archived']),
   category: z.string(),
   tech: z.array(z.string()),
   completedDate: z.string().optional(),
@@ -85,7 +85,7 @@ export const projects: Project[] = Object.entries(projectFiles)
     const parseResult = projectSchema.safeParse(frontmatter);
 
     if (!parseResult.success) {
-      console.error(`Invalid project frontmatter in ${filepath}:`, parseResult.error.errors);
+      console.error(`Invalid project frontmatter in ${filepath}:`, parseResult.error.issues);
       return null;
     }
 

@@ -44,13 +44,13 @@ export function Layout() {
               >
                 Blog
               </Link>
-              <Link 
-                to="/portfolio" 
+              <Link
+                to="/portfolio"
                 className={`transition-colors hover:text-primary ${
                   isActive('/portfolio') ? 'text-primary' : 'text-muted-foreground'
                 }`}
               >
-                Portfolio
+                Projects
               </Link>
               <Link 
                 to="/about" 

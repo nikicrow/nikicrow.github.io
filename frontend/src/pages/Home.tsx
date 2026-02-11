@@ -30,7 +30,7 @@ export function Home() {
         <div className="flex gap-4 justify-center flex-wrap">
           <Link to="/portfolio">
             <Button size="lg" className="gap-2">
-              View My Work
+              View My Fun Projects
               <ArrowRight className="size-4" />
             </Button>
           </Link>
@@ -110,7 +110,7 @@ export function Home() {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-3xl flex items-center gap-2">
               <Star className="size-8 text-yellow-500" />
-              Featured Projects
+              Featured Personal Projects
             </h2>
             <Link to="/portfolio">
               <Button variant="outline" className="gap-2">
@@ -173,7 +173,7 @@ export function Home() {
               <h3 className="text-xl mb-2">Machine Learning & Data Science</h3>
               <p className="text-muted-foreground">
                 Building and deploying production ML systems. From model development 
-                to MLOps, I transform data into actionable insights—usually between bedtime and midnight.
+                to MLOps, I transform data and juicy algorithms into automated systems and actionable insights.
               </p>
             </CardContent>
           </Card>
@@ -187,9 +187,9 @@ export function Home() {
               </div>
               <h3 className="text-xl mb-2">Side Projects</h3>
               <p className="text-muted-foreground">
-                Gardening, crochet, and DIY home improvement. 
-                When I'm not coding, I'm usually knee-deep in soil or yarn, 
-                finding creative outlets beyond the screen.
+                Gardening, crochet, cooking, and DIY home improvement. 
+                When I'm not coding, I'm juggling too many responsibilies as wife, a mum, dog owner of a rescue border collie x,
+                3 chickens, and a prolific veggie patch.
               </p>
             </CardContent>
           </Card>

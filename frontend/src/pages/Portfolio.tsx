@@ -17,6 +17,8 @@ export function Portfolio() {
     switch (status) {
       case 'production':
         return <CheckCircle2 className="size-4 text-green-600" />;
+      case 'development':
+        return <Clock className="size-4 text-blue-600" />;
       case 'beta':
         return <Clock className="size-4 text-yellow-600" />;
       case 'archived':
@@ -28,6 +30,8 @@ export function Portfolio() {
     switch (status) {
       case 'production':
         return 'Production';
+      case 'development':
+        return 'In Development';
       case 'beta':
         return 'Beta';
       case 'archived':
@@ -40,10 +44,9 @@ export function Portfolio() {
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-4xl mb-4">Portfolio</h1>
+          <h1 className="text-4xl mb-4">Fun Projects</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of deployed applications and ML systems I've built.
-            Click on any project to see the full case study.
+            A showcase of fun personal projects I have done in my spare time (of which I have very little given I have small children and a high needs rescue border collie).
           </p>
         </div>
 
@@ -59,28 +62,6 @@ export function Portfolio() {
               {category === 'all' ? 'All Projects' : category}
             </Button>
           ))}
-        </div>
-
-        {/* Stats Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Card>
-            <CardContent className="pt-6 text-center">
-              <div className="text-3xl font-mono mb-2">{projects.filter(p => p.status === 'production').length}</div>
-              <div className="text-sm text-muted-foreground">Production Apps</div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6 text-center">
-              <div className="text-3xl font-mono mb-2">{projects.filter(p => p.category === 'ML').length}</div>
-              <div className="text-sm text-muted-foreground">ML Systems</div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="pt-6 text-center">
-              <div className="text-3xl font-mono mb-2">99.9%</div>
-              <div className="text-sm text-muted-foreground">Avg. Uptime</div>
-            </CardContent>
-          </Card>
         </div>
 
         {/* Projects Grid */}
