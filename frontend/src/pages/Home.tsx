@@ -43,67 +43,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Quick Stats */}
-      <section className="py-12 max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-          <Card className="border-2 hover:shadow-lg transition-shadow bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/10 dark:to-blue-800/10">
-            <CardContent className="pt-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-blue-500 rounded-lg">
-                  <TrendingUp className="size-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-2xl font-mono">8+</div>
-                  <div className="text-sm text-muted-foreground">Years Trading</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="border-2 hover:shadow-lg transition-shadow bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/10 dark:to-purple-800/10">
-            <CardContent className="pt-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-purple-500 rounded-lg">
-                  <Code className="size-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-2xl font-mono">10+</div>
-                  <div className="text-sm text-muted-foreground">ML Models Deployed</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="border-2 hover:shadow-lg transition-shadow bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/10 dark:to-green-800/10">
-            <CardContent className="pt-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-green-500 rounded-lg">
-                  <Rocket className="size-6 text-white" />
-                </div>
-                <div>
-                  <div className="text-2xl font-mono">8+</div>
-                  <div className="text-sm text-muted-foreground">Apps in Production</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-          
-          <Card className="border-2 hover:shadow-lg transition-shadow bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-900/10 dark:to-pink-800/10">
-            <CardContent className="pt-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 bg-pink-500 rounded-lg">
-                  <span className="text-2xl">👶</span>
-                </div>
-                <div>
-                  <div className="text-2xl font-mono">1.8</div>
-                  <div className="text-sm text-muted-foreground">Tiny Humans (& counting!)</div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
-
       {/* Featured Projects */}
       {featuredProjects.length > 0 && (
         <section className="py-12 max-w-5xl mx-auto">
