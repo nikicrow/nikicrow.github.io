@@ -46,7 +46,7 @@ export function Portfolio() {
         <div className="mb-12 text-center">
           <h1 className="text-4xl mb-4">Fun Projects</h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            A showcase of fun personal projects I have done in my spare time (of which I have very little given I have small children and a high needs rescue border collie).
+            A showcase of fun personal projects I have done in my spare time
           </p>
         </div>
 
