@@ -208,6 +208,50 @@ html {
   --tw-prose-pre-bg: var(--muted);
 }
 
+.prose.prose-lg {
+  font-size: 1.125rem;
+  line-height: 1.8;
+}
+
+.prose h2 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: -0.01em;
+}
+
+.prose h3 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose > div > p:first-child {
+  font-size: 1.15em;
+  line-height: 1.75;
+}
+
+.prose li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
 .prose pre {
   background: var(--muted);
   border-radius: var(--radius);
@@ -226,22 +270,38 @@ html {
 
 .prose img {
   border-radius: var(--radius);
-  margin: 1.5rem auto;
+  margin: 2rem auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .prose a {
   color: var(--primary);
   text-decoration: underline;
-  text-underline-offset: 2px;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
 .prose a:hover {
   opacity: 0.8;
+  text-decoration-thickness: 2px;
 }
 
 .prose blockquote {
-  border-left-color: var(--primary);
+  border-left: 3px solid var(--primary);
   font-style: italic;
+  padding-left: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose hr {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  border-color: var(--border);
+}
+
+.prose strong {
+  font-weight: 650;
 }
 
 .prose ul > li::marker {

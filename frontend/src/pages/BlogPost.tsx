@@ -26,7 +26,7 @@ export function BlogPost() {
 
         {/* Article Header */}
         <article>
-          <header className="mb-8">
+          <header className="mb-10">
             <div className="flex flex-wrap gap-2 mb-4">
               <Badge variant="secondary">{post.category}</Badge>
               {!post.published && (
@@ -35,9 +35,9 @@ export function BlogPost() {
                 </Badge>
               )}
             </div>
-            <h1 className="text-4xl md:text-5xl mb-4">{post.title}</h1>
-            <div className="flex items-center gap-4 text-muted-foreground mb-4">
-              <div className="flex items-center gap-1">
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-6">{post.title}</h1>
+            <div className="flex items-center gap-4 text-muted-foreground mb-5">
+              <div className="flex items-center gap-1.5">
                 <Calendar className="size-4" />
                 <span>{new Date(post.date).toLocaleDateString('en-US', {
                   year: 'numeric',
@@ -45,7 +45,7 @@ export function BlogPost() {
                   day: 'numeric'
                 })}</span>
               </div>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1.5">
                 <Clock className="size-4" />
                 <span>{post.readTime}</span>
               </div>
@@ -77,7 +77,7 @@ export function BlogPost() {
 
           {/* Article Content */}
           <div className="prose prose-lg max-w-none dark:prose-invert">
-            <p className="text-xl text-muted-foreground mb-8 italic lead">
+            <p className="text-xl text-muted-foreground mb-10 italic lead border-l-4 border-muted pl-5 py-2">
               {post.excerpt}
             </p>
             <div
