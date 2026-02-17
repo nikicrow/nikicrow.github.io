@@ -26,14 +26,37 @@ This is the source code for my personal website—a space where I write about ma
 | Icons | [Lucide](https://lucide.dev/) |
 | Charts | [Recharts](https://recharts.org/) |
 
-## Getting Started
+## How to Run
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/) v18 or higher
-- npm (comes with Node.js)
+- [Node.js](https://nodejs.org/) v18 or higher (includes npm)
 
-### Installation
+#### Installing Node.js
+
+**Windows:**
+```powershell
+winget install OpenJS.NodeJS.LTS
+```
+
+**macOS:**
+```bash
+brew install node
+```
+
+**Linux (Ubuntu/Debian):**
+```bash
+curl -fsSL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+
+Verify installation:
+```bash
+node --version   # Should output v18.x.x or higher
+npm --version    # Should output 9.x.x or higher
+```
+
+### Quick Start
 
 ```bash
 # Clone the repository
@@ -52,6 +75,15 @@ npm run dev
 
 The site will be available at **http://localhost:3000**
 
+### Common Commands
+
+| Command | Description |
+|---------|-------------|
+| `npm install` | Install all dependencies |
+| `npm run dev` | Start development server |
+| `npm run build` | Create production build |
+| `npm run preview` | Preview production build locally |
+
 ### Build for Production
 
 ```bash
@@ -63,29 +95,36 @@ Output will be in the `build/` directory, ready for deployment.
 ## Project Structure
 
 ```
-frontend/
-├── src/
-│   ├── pages/          # Page components
-│   │   ├── Home.tsx        # Landing page
-│   │   ├── About.tsx       # About me
-│   │   ├── Portfolio.tsx   # Project showcase
-│   │   ├── Blog.tsx        # Blog listing
-│   │   └── BlogPost.tsx    # Individual posts
+nikicrow.github.io/
+├── frontend/
+│   ├── src/
+│   │   ├── pages/              # Page components
+│   │   │   ├── Home.tsx
+│   │   │   ├── About.tsx
+│   │   │   ├── Portfolio.tsx
+│   │   │   ├── Blog.tsx
+│   │   │   └── BlogPost.tsx
+│   │   │
+│   │   ├── components/         # Reusable UI components
+│   │   │   ├── ui/             # shadcn/ui components
+│   │   │   └── figma/          # Design-specific components
+│   │   │
+│   │   ├── blog_posts/         # Blog content (markdown with frontmatter)
+│   │   ├── projects/           # Project content (markdown with frontmatter)
+│   │   ├── data/               # Content loaders
+│   │   │   ├── blogPosts.ts    # Parses blog markdown files
+│   │   │   └── projects.ts     # Parses project markdown files
+│   │   │
+│   │   ├── styles/             # CSS styling files
+│   │   ├── App.tsx             # Root component
+│   │   ├── routes.tsx          # Route definitions
+│   │   └── index.css           # Global styles
 │   │
-│   ├── components/     # Reusable UI components
-│   │   ├── ui/             # shadcn/ui components
-│   │   └── figma/          # Design-specific components
-│   │
-│   ├── data/           # Content data
-│   │   ├── blogPosts.ts    # Blog content
-│   │   └── projects.ts     # Portfolio projects
-│   │
-│   ├── App.tsx         # Root component
-│   ├── routes.tsx      # Route definitions
-│   └── index.css       # Global styles
+│   ├── package.json            # Dependencies
+│   └── vite.config.ts          # Build configuration
 │
-├── package.json        # Dependencies
-└── vite.config.ts      # Build configuration
+├── build/                      # Production build output
+└── .github/                    # GitHub Actions for deployment
 ```
 
 ## Features
@@ -100,47 +139,64 @@ frontend/
 
 ### Blog Posts
 
-Edit `frontend/src/data/blogPosts.ts` to add new posts:
+Create a new markdown file in `frontend/src/blog_posts/` with frontmatter:
 
-```typescript
-{
-  id: 'my-new-post',
-  title: 'My New Post Title',
-  date: '2025-02-05',
-  category: 'ML',
-  excerpt: 'A brief description...',
-  content: `Your markdown content here...`
-}
+```markdown
+---
+title: "My New Post Title"
+slug: "my-new-post"
+date: 2025-02-05
+category: ML
+excerpt: "A brief description..."
+published: true
+tags:
+  - machine-learning
+  - python
+---
+
+Your markdown content here...
 ```
 
 ### Projects
 
-Edit `frontend/src/data/projects.ts` to add new projects:
+Create a new markdown file in `frontend/src/projects/` with frontmatter:
 
-```typescript
-{
-  id: 'project-id',
-  title: 'Project Name',
-  description: 'Short description',
-  longDescription: 'Detailed description...',
-  tech: ['Python', 'React', 'etc'],
-  status: 'production',
-  category: 'ML',
-  metrics: [
-    { label: 'Users', value: '1000+' }
-  ]
-}
+```markdown
+---
+id: "project-id"
+title: "Project Name"
+description: "Short description"
+status: production
+category: ML
+featured: true
+draft: false
+tech:
+  - Python
+  - React
+links:
+  github: "https://github.com/..."
+  demo: "https://..."
+---
+
+## Overview
+
+Detailed project description in markdown...
 ```
 
 ## Deployment
 
-This site is designed to be deployed on GitHub Pages. The repository name follows the `username.github.io` convention for automatic hosting.
+This site is deployed on GitHub Pages via GitHub Actions. The workflow automatically builds and deploys when changes are pushed to the `main` branch.
 
-To deploy:
+## Troubleshooting
 
-1. Build the production bundle: `npm run build`
-2. Push to the `main` branch
-3. GitHub Pages will serve from the `build/` directory
+**"node is not recognized"** — Restart your terminal after installing Node.js
+
+**Port 3000 in use** — Either close the other application or modify `package.json`:
+```json
+"dev": "vite --open --port 3001"
+```
+
+**Changes not appearing** — Hard refresh with `Ctrl + Shift + R` (or `Cmd + Shift + R` on Mac)
 
 ## License
 
