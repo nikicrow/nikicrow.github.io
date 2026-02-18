@@ -10,7 +10,7 @@ tags:
   - work-culture
 ---
 
-*This is Part 3 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first.*
+_This is Part 3 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
 
 # Principal 2: The written word
 
@@ -32,7 +32,11 @@ Great, detailed, beginner friendly documentation, particularly how to guides on 
 
 4. **They mean everyone is following a consistent way of doing the thing.** Often you can do something in many ways and the more ways people do things, the messier things get.
 
-5. **You are leaving a paper trail so you know what you worked on when and when you finished it.** It doesn't sound relevant, but how many projects have you left no trace for?
+5. **You are leaving a paper trail so you know what you worked on when and when you finished it.** It doesn't sound relevant, but how many projects have you left no trace of?
+
+What I define as 'solid' documentation is really dependent on what it is. For example, if we are documenting a cumbersome process that we only do once a quarter or so and therefore will forget it by the next time we do it, we want detailed simple instructions with LOTS of screenshots. Say what button is next, explain the outputs you expect if it worked, if it is relevant even explain why you need to do something that way. If you are creating a template, make it really obvious what needs to be filled in, leave a guide at the top of the page on how to go about filling it, be clear on what you are expecting by providing pre-filled examples. If you are documenting a process, add links, emojis, make it interesting, even add hidden easter eggs.
+
+Solid documentation is documentation that people will go back to after a long time and understand without having to reach out to you.
 
 ---
 
@@ -55,3 +59,9 @@ The other way I have seen this scale well is to keep everyone relevant in the lo
 3. **Covering yourself by leaving a paper trail** - I always like to leave a paper trail to hedge myself for future issues
 
 4. **Updating lots of people at once** - The more people you need to talk to, the further out you need to plan a meeting, not so with async communication, they will read it in a small pocket of time they find and this will be a different pocket to the other bunch of people who needed to know
+
+## Conclusion
+
+Now I hope it's clear that WRITING THINGS DOWN where people read them is very scalable. I definitely prefer this to 'Hey do you have 5 minutes for a call?' (even though I often do that). Not really, and now I feel anxious that you are calling me to tell me I did something bad. Documentation has also really saved me so much time and has given me reassurance when I forget things.
+
+Next up - [Part 4: Balancing Hands On Teaching vs Letting Independence Grow](/blog/principals-that-scale-teaching-independence)

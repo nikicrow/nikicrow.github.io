@@ -10,7 +10,7 @@ tags:
   - work-culture
 ---
 
-*This is Part 1 of a 6-part series on principals that scale well. This article covers the introduction and provides an overview of all the principals in the series.*
+_This is Part 1 of a 6-part series on principals that scale well. This article covers the introduction and provides an overview of all the principals in the series._
 
 # Introduction
 
@@ -20,17 +20,17 @@ This may seem overly abstract to be a very relevant topic. To some, that may be 
 
 ## What inspired this essay?
 
-Well when I worked at Zip, a company that was about 8 years old at the time, my husband worked in a marketing agency that was a similar age to Zip. Zip had 500 employees, has something like 8 countries at one point I think, and had an active customer base of 2 million people. Ben's company on the other hand had about 30 employees and influenced very little of the world compared to Zip.
+Well when I worked at Zip, a company that was about 8 years old at the time, my husband worked in a marketing agency that was a similar age to Zip. Zip had 500 employees, something like 8 countries at one point I think, and had an active customer base of over 2 million people. Ben's company on the other hand had about 30 employees and influenced very little of the world compared to Zip.
 
-Why? They existed as companies from the same amount of time, started similarly small. What is the difference between these companies that made 1 scale up and 1 stay tiny?
+Why? They existed as companies for the same amount of time, started similarly small. What is the difference between these companies that made 1 scale up and 1 stay tiny?
 
-I think it's because the founders of Zip knew how to scale whereas the owner of Ben's company, let's say they had trust issues.
+I think it's because the founders of Zip knew how to scale. The owner of Ben's company, let's say they had trust issues.
 
 The more I spend time coding and learning about people management, the more overlap I can observe in the concepts or principals that scale well in code and also that scale well in leading humans or commanding AI.
 
 ## What do we mean by concepts that 'scale'?
 
-Perhaps it would be easier to understand by demonstrating to you a concept that does not scale. For instance, not trusting other people to handle things.
+Perhaps it would be easier to understand by demonstrating to you a concept that does not scale. For instance, _not trusting other people to handle things._
 
 Why does this not scale? For several reasons, examples include:
 
@@ -38,11 +38,11 @@ Why does this not scale? For several reasons, examples include:
 
 2. **If someone else does it, and they haven't done it before, then they learn a little bit** (we hope) so that they are more competent for future tasks. This is the inverse of a concept that scales - teaching others.
 
-3. **By not trusting someone, you are saying you don't believe in them to do it.** You are putting yourself above them (yes, they are usually smart enough to notice it) and therefore, making them feel like you can't be bothered investing in them. This will make them more disengaged and therefore less likely to want to future tasks when you REALLY need them.
+3. **By not trusting someone, you are saying you don't believe in them to do it.** You are putting yourself above them (yes, they are usually smart enough to notice) and therefore, making them feel like you can't be bothered investing in them. This will make them more disengaged and therefore less likely to want to future tasks when you REALLY need them.
 
 ---
 
-I hope it's clear why trusting others is an important concept that scales well. Arguably, it is the most important concept that scales. It is the core that will help you grow your business, or your level of influence or your codebase or whatever you are doing.
+I hope it's clear why trusting others is an important concept that scales well. Arguably, it is the most important concept that scales. It is the core that will help you grow your business, or your level of influence or your codebase.
 
 Even if you don't actually think they will do it well, trusting them to do it will eventually be worth it.
 
@@ -59,3 +59,5 @@ This series will cover the following principals:
 3. **Balancing hands on teaching vs letting independence grow** - Finding the right balance for each individual
 4. **Focus on what not how** - Investing in clarity on outcomes rather than prescribing methods
 5. **Setting up good processes** - Creating processes that make sense, are easy to follow, and evolve over time
+
+Now let's get into it - [ Part 2: Separation of Concerns](/blog/principals-that-scale-separation-of-concerns)

@@ -10,11 +10,11 @@ tags:
   - work-culture
 ---
 
-*This is Part 4 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first.*
+_This is Part 4 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
 
 # Principal 3: Balancing hands on teaching vs letting independence grow
 
-First, let us dive into each of these and why they are important independently.
+First, let us dive into each of these and why they are important independently. Then, we will discuss the precarious balance that we need to strike.
 
 ---
 
@@ -66,17 +66,21 @@ The thing I believe that truly scales is finding the right balance for the indiv
 
 ### How do you know what the right balance is for that individual?
 
-Well, I don't know what the equation is, but I can list some of the variables that I believe I have observed:
+Well, I don't know what the equation is, but I can list some of the variables that feed into that function that I have observed:
 
 1. **Desire for independence** - Some people want to be spoon fed and want their hands held the whole time. Some people want nothing to do with your opinion on how to approach a task and will simply rebel if you attempt to get alongside them.
 
-2. **Their propensity to efficiently learn and teach themselves**
+2. **Their propensity to efficiently learn and teach themselves** - Of course some people pick things up and nut things out themselves super efficiently and don't need you to teach them. There are others who are perhaps less efficient as learning things...
 
-3. **The nature/complexity of the task** and their experience level in tasks of that nature.
+3. **The nature/complexity of the task** and their experience level in tasks of that nature. Know your delegates skill/experience level and measure the gap that exists in the nature/complexity of the task. Challenge them but be realistic.
 
-4. **Their need for constant recognition and validation** to know they are headed the right way.
+4. **Their need for constant recognition and validation** to know they are headed the right way. Part of teaching (I think) is validating them to say they are headed the right way. Some, more than others will need constant affirmation in order to feel less lost.
 
-So like for me, I would say I have a high propensity to learn and teach myself, but the nature/complexity of the task and my experience at that kind of task will really determine how much advice I feel like I need before I am ready to tackle the task. I don't really enjoy being mansplained at and I don't really care for constant recognition and validation as I am a bit too cocky to require that.
+This seems like a lot of variables, and I know this is not at all an exhaustive list.
+
+Let me make it easier to understand by applying it to myself. I would say I have a high propensity to learn and teach myself, but the nature/complexity of the task and my experience at that kind of task will really determine how much advice I feel like I need before I am ready to tackle the task. I don't really enjoy being mansplained at and I don't really care for constant recognition and validation as I am a bit too cocky to require that.
+
+By understanding a person and what balance you need to strike between hands on teaching and allowing their independence to grow, you are optimising their growth in skills and knowledge. By increasing their competence, you can delegate more responsibilities to them, thereby allowing you to take on other things and growing your impact or codebase.
 
 ---
 
@@ -88,4 +92,4 @@ How good it is at a task is unlikely to change much from you teaching it, unless
 
 Clearer instructions will absolutely make a big difference, but that is more like being hands on with explaining what you expect. Be super clear and don't spare detail and ask for creativity if you have a strong view on how something should work.
 
-This is a natural segway into the next section.
+This is a natural segway into the next section - [Part 5: Focus on What Not How](/blog/principals-that-scale-what-not-how)

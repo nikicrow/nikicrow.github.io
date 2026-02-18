@@ -4,7 +4,7 @@ slug: "philosophy-of-debugging"
 date: 2025-08-22
 category: Programming
 excerpt: "Debugging is more than finding bugs—it's a systematic approach to understanding complex systems."
-published: true
+published: false
 tags:
   - programming
   - debugging
