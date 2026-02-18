@@ -1,15 +1,15 @@
-import { useParams, Link, Navigate } from 'react-router';
-import { Calendar, Clock, ArrowLeft, Tag } from 'lucide-react';
-import { Badge } from '../components/ui/badge';
-import { Button } from '../components/ui/button';
-import { blogPosts } from '../data/blogPosts';
+import { useParams, Link, Navigate } from "react-router";
+import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
+import { Badge } from "../components/ui/badge";
+import { Button } from "../components/ui/button";
+import { blogPosts } from "../data/blogPosts";
 
 // Import highlight.js styles
-import 'highlight.js/styles/github-dark.css';
+import "highlight.js/styles/github-dark.css";
 
 export function BlogPost() {
   const { slug } = useParams();
-  const post = blogPosts.find(p => p.slug === slug);
+  const post = blogPosts.find((p) => p.slug === slug);
 
   if (!post) {
     return <Navigate to="/blog" replace />;
@@ -19,9 +19,12 @@ export function BlogPost() {
     <div className="container mx-auto px-4 py-12">
       <div className="max-w-3xl mx-auto">
         {/* Back Button */}
-        <Link to="/blog" className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors">
+        <Link
+          to="/blog"
+          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors"
+        >
           <ArrowLeft className="size-4" />
-          Back to Blog
+          Back to Blogs
         </Link>
 
         {/* Article Header */}
@@ -30,20 +33,27 @@ export function BlogPost() {
             <div className="flex flex-wrap gap-2 mb-4">
               <Badge variant="secondary">{post.category}</Badge>
               {!post.published && (
-                <Badge variant="outline" className="border-yellow-500 text-yellow-600">
+                <Badge
+                  variant="outline"
+                  className="border-yellow-500 text-yellow-600"
+                >
                   Draft
                 </Badge>
               )}
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-6">{post.title}</h1>
+            <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
+              {post.title}
+            </h1>
             <div className="flex items-center gap-4 text-muted-foreground mb-5">
               <div className="flex items-center gap-1.5">
                 <Calendar className="size-4" />
-                <span>{new Date(post.date).toLocaleDateString('en-US', {
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric'
-                })}</span>
+                <span>
+                  {new Date(post.date).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Clock className="size-4" />
@@ -55,7 +65,7 @@ export function BlogPost() {
             {post.tags.length > 0 && (
               <div className="flex items-center gap-2 flex-wrap">
                 <Tag className="size-4 text-muted-foreground" />
-                {post.tags.map(tag => (
+                {post.tags.map((tag) => (
                   <Badge key={tag} variant="outline" className="text-xs">
                     {tag}
                   </Badge>
@@ -90,11 +100,19 @@ export function BlogPost() {
           <footer className="mt-12 pt-8 border-t border-border">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-muted-foreground mb-2">Share this post</p>
+                <p className="text-sm text-muted-foreground mb-2">
+                  Share this post
+                </p>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm">Twitter</Button>
-                  <Button variant="outline" size="sm">LinkedIn</Button>
-                  <Button variant="outline" size="sm">Copy Link</Button>
+                  <Button variant="outline" size="sm">
+                    Twitter
+                  </Button>
+                  <Button variant="outline" size="sm">
+                    LinkedIn
+                  </Button>
+                  <Button variant="outline" size="sm">
+                    Copy Link
+                  </Button>
                 </div>
               </div>
             </div>
@@ -106,9 +124,9 @@ export function BlogPost() {
           <h3 className="text-2xl mb-6">More Posts</h3>
           <div className="grid gap-4">
             {blogPosts
-              .filter(p => p.slug !== slug)
+              .filter((p) => p.slug !== slug)
               .slice(0, 3)
-              .map(relatedPost => (
+              .map((relatedPost) => (
                 <Link
                   key={relatedPost.slug}
                   to={`/blog/${relatedPost.slug}`}
