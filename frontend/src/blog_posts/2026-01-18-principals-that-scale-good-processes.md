@@ -38,9 +38,7 @@ I've seen teams create elaborate 47-step deployment checklists that nobody reads
 
 ### What does simple look like?
 
-A good process should be explainable in under 2 minutes. If you can't explain it quickly, it's probably too complicated.
-
-Ask yourself:
+A simple process doesn't have to be short, but it must be clear and intuitive. Ask yourself:
 
 - Can a new starter follow this on their first day?
 - Is there a single source of truth for this process?
@@ -53,9 +51,11 @@ If the answer to any of these is no, it might be time to simplify.
 
 ## 5.2 Give people a dev environment
 
-This one is close to my heart as a data person. The number of times I've seen teams struggle because they don't have a safe place to experiment is honestly ridiculous.
+This one is close to my heart as a data person. The number of times I've seen dead production pipelines because we don't have a safe place to experiment is a bit ridiculous.
 
 A dev environment (or sandbox, or playground, whatever you want to call it) is a place where people can break things without consequence. It's where they can try out that weird idea, test that risky change, or just poke around and learn.
+
+THIS DOESN'T JUST APPLY TO CODE. You need to give people a safe place to fail when they are learning ANYTHING new. For example, lead a small POC project rather than leading a business critical high profile project when they haven't ever lead a project before.
 
 ### Why this matters for processes
 
@@ -76,7 +76,7 @@ Another classic from software engineering. YAGNI stands for "You Aren't Gonna Ne
 
 Applied to processes, this means: **don't create a process for a problem you don't have yet**.
 
-I've seen teams spend weeks designing elaborate approval workflows, complex branching strategies, and intricate notification systems for scenarios that have never happened and probably never will.
+I've seen teams spend weeks designing elaborate parent class structures, complex unit tests for edge cases that are probably impossble, and intricate notification systems for scenarios that have never happened and probably never will. This is all mental overhead, adding complexity to a codebase and time that is disappearing instead of going somewhere impactful and productive.
 
 ### The premature process problem
 
@@ -92,9 +92,9 @@ Ask yourself:
 
 1. Has this problem actually happened more than once?
 2. Did the lack of process cause real pain?
-3. Will the process actually prevent the problem, or just add steps?
+3. Will the process actually prevent the problem, or just add steps/work to our day?
 
-If you can't answer yes to all three, you probably don't need that process yet.
+If you can't answer yes to all three, you probably don't need that process yet. If you have great thoughts for a process that doesn't need to exist yet, write it down (principal 2 - the written word) and come back to it later.
 
 ---
 
@@ -109,19 +109,6 @@ When people understand _why_ they're doing something, they:
 - Are more likely to actually do it
 - Can make intelligent decisions when edge cases arise
 - Know when the process might be outdated (if the "why" no longer applies)
-
-### Example
-
-**Bad documentation:**
-
-> Step 3: Tag the release with the current date
-
-**Good documentation:**
-
-> Step 3: Tag the release with the current date
-> _Why: Our monitoring dashboard uses these tags to correlate deployments with metrics. Without the tag, we can't tell which release caused that spike in errors at 3am._
-
-Now when someone asks "do I really need to do this?", they can see exactly what breaks if they don't.
 
 ---
 

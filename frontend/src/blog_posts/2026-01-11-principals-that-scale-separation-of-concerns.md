@@ -10,7 +10,7 @@ tags:
   - work-culture
 ---
 
-*This is Part 2 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first.*
+_This is Part 2 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
 
 # Principal 1: Separation of Concerns
 
@@ -30,7 +30,7 @@ Let's say you are making satay chicken wraps (which is what I was actually makin
 
 You can choose to chuck them all in a wok or frypan and cook it all together. This is fast, delicious, and you only have 1 pan to clean up and can easily house leftovers in 1 container.
 
-Now let's say now you have a few fussier members of the family, and you don't want to risk them deciding arbitrarily that they don't like carrots and therefore wont touch any of the meal, or they don't like the satay sauce and its covered everything. Let's say also, you want to efficiently make shephards pie for dinner and can reuse left over cooked carrot, zucchini and onion but only if its not satay flavoured.
+Now let's say now you have a few fussier members of the family, and you don't want to risk them deciding arbitrarily that they don't like carrots and therefore won't touch any of the meal, or they don't like the satay sauce and it's covered everything. Let's say also, you want to efficiently make shephards pie for dinner and can reuse left over cooked carrot, zucchini and onion but only if its not satay flavoured.
 
 Now there is a good argument for separating each of our ingredients and cooking them seperately, or cooking the ones that are most similar by cooking time e.g. carrot and onion by cooking them together, but everything else individually.
 
@@ -40,7 +40,7 @@ This has pros and cons. Cooking things seperately is more work for one cook like
 
 But now let's say I am a chef in an industrial restaurant and want to as efficiently as possible cook many dishes at great quantities. I am in a large team of chefs. Now this starts to make sense to have a zucchini specialist, carrot specialist, chicken satay specialist and so on. Each chef improves in cooking their own special thing. There are coordinators that combine cooked ingredients to create the final dishes.
 
-Now we are cooking with gas!
+Now we are cooking with gas! This is the beauty of scale that separation of concerns unlocks for us.
 
 ---
 
@@ -58,6 +58,8 @@ For one task, having 5 people involved feels a bit overkill, but when we want to
 
 Each sub-agent becomes an expert at their own little jobs. The project managers 'concern' ends when the project management is finished and they have handed things off to someone else who is an expert at what they do.
 
-Does this feel like a very functional team of people rather than a single person being a jack of all trades?
+Does this feel like a very functional team of efficient and specialised people rather than a single person who only experiences 24 hours a day being a jack of all trades?
 
 **This is a principle that scales well!** Rather than telling one person to do a task, it is better to have a team of specialised experts in their own fields.
+
+Next up - [Part 3: The Written Word](/blog/principals-that-scale-written-word)
