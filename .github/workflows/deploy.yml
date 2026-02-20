@@ -35,6 +35,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Create .nojekyll file
+        if: github.event_name == 'push'
+        run: touch build/.nojekyll
+
       - name: Copy 404.html for SPA routing
         if: github.event_name == 'push'
         run: cp build/index.html build/404.html
