@@ -63,9 +63,6 @@ npm --version    # Should output 9.x.x or higher
 git clone https://github.com/nikicrow/nikicrow.github.io.git
 cd nikicrow.github.io
 
-# Navigate to frontend
-cd frontend
-
 # Install dependencies
 npm install
 
@@ -120,9 +117,12 @@ nikicrow.github.io/
 │   │   ├── routes.tsx          # Route definitions
 │   │   └── index.css           # Global styles
 │   │
-│   ├── package.json            # Dependencies
-│   └── vite.config.ts          # Build configuration
+│   └── public/                 # Static assets
 │
+├── index.html                  # Entry HTML file
+├── package.json                # Dependencies
+├── vite.config.ts              # Build configuration
+├── tsconfig.json               # TypeScript configuration
 ├── build/                      # Production build output
 └── .github/                    # GitHub Actions for deployment
 ```
