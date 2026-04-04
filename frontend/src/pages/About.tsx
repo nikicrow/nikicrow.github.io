@@ -31,8 +31,8 @@ export function About() {
           </CardHeader>
           <CardContent className="space-y-4 text-muted-foreground">
             <p>
-              Hey there! 👋 I'm a data scientist and machine learning engineer who also happens 
-              to be a mum to an energetic 2-year-old and currently pregnant with baby number two.
+              Hey there! 👋 I'm a data scientist and machine learning engineer who also happens
+              to be a mum to two daughters: an energetic toddler called Ember and a newborn called Imogen.
             </p>
             <p>
               I studied Mechanical Engineering and Pure Mathematics at the University of Sydney,
@@ -58,18 +58,18 @@ export function About() {
               a large telco where I built and deployed ML systems in production. After less than a year there,
               I was leading a team of data scientists, engineers and analysts to deploy and end to end MLOps 
               system to automate the process of building, deploying and monitoring ML models in production. 
-              They recognised my work (despite getting pregnant again) and I got promoted to Lead Machine 
+              They recognised my work (despite getting pregnant again) and I got promoted to Lead Machine
               Learning Engineer, which is my current role.
             </p>
             <p>
-              These days, I build, deploy and monitor production ML systems while navigating the beautiful 
-              chaos of toddlerhood and pregnancy. I'm passionate about creating systems that actually 
+              These days, I build, deploy and monitor production ML systems while navigating the beautiful
+              chaos of life with a toddler and a newborn. I'm passionate about creating systems that actually
               work in production. Note: not all functional and useful systems need to be ML.
             </p>
             <p>
-              My blog reflects the full spectrum of my life: technical deep dives into ML and trading, 
-              honest reflections on pregnancy and parenting in tech, and everything in between. Because 
-              I'm not just an engineer or just a mum—I'm both, simultaneously, and that intersection 
+              My blog reflects the full spectrum of my life: technical deep dives into ML and trading,
+              honest reflections on pregnancy and parenting in tech, and everything in between. Because
+              I'm not just an engineer or just a mum—I'm both, simultaneously, and that intersection
               is where life gets really interesting.
             </p>
             <p>

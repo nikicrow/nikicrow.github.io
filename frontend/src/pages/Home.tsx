@@ -18,13 +18,13 @@ export function Home() {
           Data Scientist.<br />
           <span className="text-muted-foreground">ML Engineer.</span><br />
           <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-            Mum of Soon-to-be Two.
+            Mum of Two.
           </span>
         </h1>
         
         <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Building intelligent systems by day, raising humans by night. Writing about machine learning, 
-          data, AI, financial markets, parenting, pregnancy, and the beautiful chaos of doing it all. 
+          Building intelligent systems by day, raising humans by night. Writing about machine learning,
+          data, AI, financial markets, parenting, pregnancy, and the beautiful chaos of doing it all.
         </p>
         
         <div className="flex gap-4 justify-center flex-wrap">
@@ -142,7 +142,7 @@ export function Home() {
               </div>
               <h3 className="text-xl mb-2">Parenting & Pregnancy</h3>
               <p className="text-muted-foreground">
-                Documenting the adventure of raising a toddler while pregnant and working in tech. 
+                Documenting the adventure of raising two girls while working in tech.
                 Sleep deprivation, debugging tantrums, and finding joy in the chaos.
               </p>
             </CardContent>
