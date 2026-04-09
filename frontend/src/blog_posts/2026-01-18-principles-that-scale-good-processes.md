@@ -1,6 +1,6 @@
 ---
-title: "Principals that scale Part 6: Setting up good processes"
-slug: "principals-that-scale-good-processes"
+title: "Principles that scale Part 6: Setting up good processes"
+slug: "principles-that-scale-good-processes"
 date: 2026-01-18
 category: Work
 excerpt: "How to create processes that make sense, are easy to follow, and evolve over time"
@@ -10,11 +10,11 @@ tags:
   - work-culture
 ---
 
-_This is Part 6 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
+_This is Part 6 of a 6-part series on principles that scale well. Read [Part 1: Introduction](/blog/principles-that-scale-intro) first._
 
 ---
 
-# Principal 5: Setting up good processes
+# Principle 5: Setting up good processes
 
 Processes need to make sense and be easy to follow, be there for a good reason, and be well communicated, documented and maintained.
 
@@ -94,7 +94,7 @@ Ask yourself:
 2. Did the lack of process cause real pain?
 3. Will the process actually prevent the problem, or just add steps/work to our day?
 
-If you can't answer yes to all three, you probably don't need that process yet. If you have great thoughts for a process that doesn't need to exist yet, write it down (principal 2 - the written word) and come back to it later.
+If you can't answer yes to all three, you probably don't need that process yet. If you have great thoughts for a process that doesn't need to exist yet, write it down (principle 2 - the written word) and come back to it later.
 
 ---
 
@@ -114,7 +114,7 @@ When people understand _why_ they're doing something, they:
 
 ## Wrapping up the series
 
-And that's a wrap on this 6-part series on principals that scale!
+And that's a wrap on this 6-part series on principles that scale!
 
 To recap, we've covered:
 

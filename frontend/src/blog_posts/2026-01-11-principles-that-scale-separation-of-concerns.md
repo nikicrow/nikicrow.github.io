@@ -1,6 +1,6 @@
 ---
-title: "Principals that scale Part 2: Separation of Concerns"
-slug: "principals-that-scale-separation-of-concerns"
+title: "Principles that scale Part 2: Separation of Concerns"
+slug: "principles-that-scale-separation-of-concerns"
 date: 2026-01-11
 category: Work
 excerpt: "How dividing work into distinct sections helps you scale"
@@ -10,9 +10,9 @@ tags:
   - work-culture
 ---
 
-_This is Part 2 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
+_This is Part 2 of a 6-part series on principles that scale well. Read [Part 1: Introduction](/blog/principles-that-scale-intro) first._
 
-# Principal 1: Separation of Concerns
+# Principle 1: Separation of Concerns
 
 This is an interesting one that I have borrowed (at least conceptually) from a software design strategy.
 
@@ -62,4 +62,4 @@ Does this feel like a very functional team of efficient and specialised people r
 
 **This is a principle that scales well!** Rather than telling one person to do a task, it is better to have a team of specialised experts in their own fields.
 
-Next up - [Part 3: The Written Word](/blog/principals-that-scale-written-word)
+Next up - [Part 3: The Written Word](/blog/principles-that-scale-written-word)

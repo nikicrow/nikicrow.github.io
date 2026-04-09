@@ -1,6 +1,6 @@
 ---
-title: "Principals that scale Part 5: Focus on what not how"
-slug: "principals-that-scale-what-not-how"
+title: "Principles that scale Part 5: Focus on what not how"
+slug: "principles-that-scale-what-not-how"
 date: 2026-01-16
 category: Work
 excerpt: "Why focusing on outcomes rather than methods helps you scale"
@@ -10,9 +10,9 @@ tags:
   - work-culture
 ---
 
-_This is Part 5 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
+_This is Part 5 of a 6-part series on principles that scale well. Read [Part 1: Introduction](/blog/principles-that-scale-intro) first._
 
-# Principal 4: Focus on what not how
+# Principle 4: Focus on what not how
 
 When you focus on the outcome and not the method, you are investing your time into making the task more clear to the 'do-er' so they can do what they need to do without as much of your time.
 
@@ -36,7 +36,7 @@ It also may mean they have to learn the hard way why their way was not going to 
 
 ## Example: The Feature Store
 
-Let me demonstrate this principal with an example of where I think this worked: the feature store built by the MLOps pod at the time which I lead.
+Let me demonstrate this principle with an example of where I think this worked: the feature store built by the MLOps pod at the time which I lead.
 
 **The problem:** I wanted a series of tables built in a clear and repeatable pattern to build machine learning features for several different ML models we have in production.
 
@@ -58,4 +58,4 @@ The requirements were clear and well defined and made the decision easier for th
 
 In the end we got a great solution (the incremental merge strategy - what a beaut dbt), and I learnt from how they did it!
 
-Next up we have the final principal (until I think of more) - [Part 6: Setting Up Good Processes](/blog/principals-that-scale-good-processes)
+Next up we have the final principle (until I think of more) - [Part 6: Setting Up Good Processes](/blog/principles-that-scale-good-processes)

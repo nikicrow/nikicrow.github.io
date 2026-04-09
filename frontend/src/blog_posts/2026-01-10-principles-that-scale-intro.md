@@ -1,20 +1,20 @@
 ---
-title: "Principals that scale Part 1: Introduction"
-slug: "principals-that-scale-intro"
+title: "Principles that scale Part 1: Introduction"
+slug: "principles-that-scale-intro"
 date: 2026-01-10
 category: Work
-excerpt: "Principals that scale well - an introduction to concepts that help you grow your influence, codebase, and business"
+excerpt: "Principles that scale well - an introduction to concepts that help you grow your influence, codebase, and business"
 published: true
 tags:
   - tech
   - work-culture
 ---
 
-_This is Part 1 of a 6-part series on principals that scale well. This article covers the introduction and provides an overview of all the principals in the series._
+_This is Part 1 of a 6-part series on principles that scale well. This article covers the introduction and provides an overview of all the principles in the series._
 
 # Introduction
 
-Principals that scale are relevant to developers that code, but also to leaders and managers. Even anyone who want to increase their sphere of influence perhaps.
+Principles that scale are relevant to developers that code, but also to leaders and managers. Even anyone who want to increase their sphere of influence perhaps.
 
 This may seem overly abstract to be a very relevant topic. To some, that may be true, but I will try and be practical in the implications of the concepts because I really think this is not so abstract at all.
 
@@ -26,7 +26,7 @@ Why? They existed as companies for the same amount of time, started similarly sm
 
 I think it's because the founders of Zip knew how to scale. The owner of Ben's company, let's say they had trust issues.
 
-The more I spend time coding and learning about people management, the more overlap I can observe in the concepts or principals that scale well in code and also that scale well in leading humans or commanding AI.
+The more I spend time coding and learning about people management, the more overlap I can observe in the concepts or principles that scale well in code and also that scale well in leading humans or commanding AI.
 
 ## What do we mean by concepts that 'scale'?
 
@@ -52,7 +52,7 @@ Let's dive a little deeper into some more concepts that scale well.
 
 # Series Overview
 
-This series will cover the following principals:
+This series will cover the following principles:
 
 1. **Separation of Concerns** - Dividing work into distinct sections, each handling specific functionality
 2. **The written word** - The power of solid documentation and async communication
@@ -60,4 +60,4 @@ This series will cover the following principals:
 4. **Focus on what not how** - Investing in clarity on outcomes rather than prescribing methods
 5. **Setting up good processes** - Creating processes that make sense, are easy to follow, and evolve over time
 
-Now let's get into it - [ Part 2: Separation of Concerns](/blog/principals-that-scale-separation-of-concerns)
+Now let's get into it - [ Part 2: Separation of Concerns](/blog/principles-that-scale-separation-of-concerns)

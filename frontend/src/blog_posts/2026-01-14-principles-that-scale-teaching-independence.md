@@ -1,6 +1,6 @@
 ---
-title: "Principals that scale Part 4: Balancing hands on teaching vs letting independence grow"
-slug: "principals-that-scale-teaching-independence"
+title: "Principles that scale Part 4: Balancing hands on teaching vs letting independence grow"
+slug: "principles-that-scale-teaching-independence"
 date: 2026-01-14
 category: Work
 excerpt: "Finding the right balance between teaching and letting people learn independently"
@@ -10,9 +10,9 @@ tags:
   - work-culture
 ---
 
-_This is Part 4 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
+_This is Part 4 of a 6-part series on principles that scale well. Read [Part 1: Introduction](/blog/principles-that-scale-intro) first._
 
-# Principal 3: Balancing hands on teaching vs letting independence grow
+# Principle 3: Balancing hands on teaching vs letting independence grow
 
 First, let us dive into each of these and why they are important independently. Then, we will discuss the precarious balance that we need to strike.
 
@@ -92,4 +92,4 @@ How good it is at a task is unlikely to change much from you teaching it, unless
 
 Clearer instructions will absolutely make a big difference, but that is more like being hands on with explaining what you expect. Be super clear and don't spare detail and ask for creativity if you have a strong view on how something should work.
 
-This is a natural segway into the next section - [Part 5: Focus on What Not How](/blog/principals-that-scale-what-not-how)
+This is a natural segway into the next section - [Part 5: Focus on What Not How](/blog/principles-that-scale-what-not-how)

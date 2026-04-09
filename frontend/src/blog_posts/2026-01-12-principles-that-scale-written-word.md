@@ -1,6 +1,6 @@
 ---
-title: "Principals that scale Part 3: The written word"
-slug: "principals-that-scale-written-word"
+title: "Principles that scale Part 3: The written word"
+slug: "principles-that-scale-written-word"
 date: 2026-01-12
 category: Work
 excerpt: "How solid documentation and async communication help you scale"
@@ -10,9 +10,9 @@ tags:
   - work-culture
 ---
 
-_This is Part 3 of a 6-part series on principals that scale well. Read [Part 1: Introduction](/blog/principals-that-scale-intro) first._
+_This is Part 3 of a 6-part series on principles that scale well. Read [Part 1: Introduction](/blog/principles-that-scale-intro) first._
 
-# Principal 2: The written word
+# Principle 2: The written word
 
 This section refers to two different ways you can scale that both involve writing things down.
 
@@ -64,4 +64,4 @@ The other way I have seen this scale well is to keep everyone relevant in the lo
 
 Now I hope it's clear that WRITING THINGS DOWN where people read them is very scalable. I definitely prefer this to 'Hey do you have 5 minutes for a call?' (even though I often do that). Not really, and now I feel anxious that you are calling me to tell me I did something bad. Documentation has also really saved me so much time and has given me reassurance when I forget things.
 
-Next up - [Part 4: Balancing Hands On Teaching vs Letting Independence Grow](/blog/principals-that-scale-teaching-independence)
+Next up - [Part 4: Balancing Hands On Teaching vs Letting Independence Grow](/blog/principles-that-scale-teaching-independence)
