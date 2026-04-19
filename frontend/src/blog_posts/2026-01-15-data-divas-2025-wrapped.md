@@ -26,17 +26,17 @@ Data Divas was born. Small caveat on the name: you don't have to be a lady to be
 
 ## What we actually did in 2025
 
-**February launch** — Kieren Cooney (Group Executive Consumer) joined as our launch speaker alongside panelists Biji George, Christopher S., and external speaker Viv. Setting the tone from day one: this group is serious.
+**February launch** — Kieren Cooney (Group Executive Consumer) joined as our launch speaker alongside panelists Biji George, Christopher S., and external speaker Viv. To get a person at this level to join us in the launch was huge! It showed that they
 
-**AWS partnership events** — Tatjana Pandurevic on AI at TPG. Caroline Clerc (Lamaison) on AI strategy. Real, relevant, technical content from people who'd actually done the work.
+**AWS partnership events** — Tatjana Pandurevic, an AI Specialist from AWS. Caroline Clerc on AI strategy from TPG. Both presented on the challenges that are currently present in the AI landscape.
 
-**Databricks event** — Career journeys with two Databricks speakers plus TPG's own Danielle A., hosted by Jessica McGregor. Hearing non-linear career paths laid out honestly is always reassuring. Nobody got here in a straight line.
+**Databricks event** — Career journeys with two Databricks speakers plus TPG's own Danielle Azar, hosted by Jessica McGregor. Hearing non-linear career paths laid out honestly is always reassuring. Nobody got here in a straight line.
 
-**Amazon Fulfillment Centre excursion** — Behind-the-scenes look at automation and innovation in action. Celine Wang and Sam Haskins got us the access, which was no small thing. Getting out of the office and seeing what's possible elsewhere does something for your brain.
+**Amazon Fulfillment Centre excursion** — Behind-the-scenes look at automation and innovation in action. Celine Wang and Sam Haskins got us the access, which was no small feat. Getting out of the office and seeing what's possible elsewhere does something for your brain.
 
-**Two fireside chats** — Both so popular people had to stand. AWS speakers, TPG's CMO Rebecca Darley and Executive GM Melanie Van De Merwe, all hosted by Stephanie Moll. Watching senior women be candid in front of a room full of people who needed to hear it — that's the whole point.
+**Two fireside chats** — Both so popular people had to stand. AWS speakers, TPG's CMO Rebecca Darley and Executive GM Melanie Van De Merwe, hosted by Celine Wang and then Stephanie Moll. Watching senior women be candid in front of a room full of people who needed to hear it — that's the whole point.
 
-**Analytics CoP collaboration** — Partnered with Pabs Tuladhar and AWS to connect with the broader analytics community. Cross-pollination of communities is underrated.
+**Analytics CoP collaboration** — Partnered with Pabs Tuladhar from ACoP and AWS to connect with the broader analytics community. Cross-pollination of communities is underrated.
 
 **OneTech and STEMPower** — We joined OneTech and connected with Madeleine Gillard and STEMPower. Plugging into the bigger ecosystem felt right. We're not the only ones doing this work and we shouldn't act like we are.
 
