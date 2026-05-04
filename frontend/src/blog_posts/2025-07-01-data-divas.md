@@ -1,15 +1,66 @@
 ---
-title: "Data Divas"
-slug: "data-divas-at-tpg"
-date: 2026-02-11
-category: Career
-excerpt: "Data Divas - how it started, what it is, and where its going"
+title: "Data Divas: 2025 Wrapped"
+slug: "data-divas-2025-wrapped"
+date: 2026-01-15
+category: Community
+excerpt: "How a slightly awkward HR meeting turned into 80+ members, a killer mentoring program, and one of the best things I've done at work."
 published: true
 tags:
-  - career
-  - networking
-  - women-in-stem
+  - community
   - women-in-data
+  - leadership
 ---
 
-At the time of writing, I am working at TPG Telecom. One of Australia's largest telecommunications providers with well known brands like Vodafone, iiNet and TPG. I am in the Data and Analytics Department under IT. This article is about a women in data networking group that my colleague and I started and the journey that we have been on to make this a thriving community of over 80 members in under a year, partnering with AWS, Databricks and running many cool events.
+Let me tell you how Data Divas actually started, because the origin story is not particularly glamorous and I think that's the point.
+
+There was a restructure at TPG. The only woman at head-of-level in our data department was made redundant. HR — to their credit — gathered the women in the team and asked: are you okay?
+
+The room was honest. Not entirely, no. No groups, no mentoring, nothing that made you feel like being a woman in this space was something anyone had thought about. HR asked if anyone wanted to try to fix that.
+
+I volunteered. I've gotten a lot out of Women in STEM and Women in Tech programs and I wanted to give back — something that didn't require you to leave the building to feel supported. My colleague Biji George also volunteered. We developed ideas, took them back to the group to ideate on a name and a mission statement, then reached out externally. AWS came on board. Databricks came on board. The AWS relationship really stuck.
+
+Data Divas was born. Small caveat on the name: you don't have to be a lady to be a diva. The group is for everyone. We just liked the name.
+
+---
+
+## What we actually did in 2025
+
+**February launch** — Kieren Cooney (Group Executive Consumer) joined as our launch speaker alongside panelists Biji George, Chris S., and external speaker Viv. To get a person at the C-suite level to join us in the launch was huge! It showed that they really care for programs like this and wanted to invest.
+
+**AWS partnership events** — Tatjana Pandurevic, an AI Specialist from AWS. Caroline Clerc on AI strategy from TPG. Both presented on the challenges that are currently present in the AI landscape.
+
+**Databricks event** — Career journeys with two Databricks speakers plus TPG's own Danielle Azar, hosted by Jessica McGregor. Hearing non-linear career paths laid out honestly is always reassuring. Nobody got here in a straight line.
+
+**Amazon Fulfillment Centre excursion** — Behind-the-scenes look at automation and innovation in action. Celine Wang and Sam Haskins got us the access, which was no small feat. Getting out of the office and seeing the level of automation that Amazon has in its fulfillment centre was wildly inspirational! I was flabbergastered.
+
+**Two fireside chats** — Both so popular people had to stand. AWS speakers, TPG's CMO Rebecca Darley and Executive GM Melanie Van De Merwe, hosted by Celine Wang and then Stephanie Moll. Watching senior women be candid in front of a room full of people who needed to hear it — that's the whole point. I'm still mulling over a few lines I heard in these sessions.
+
+**Analytics Community of Practice collaboration** — Partnered with Pabs Tuladhar from ACoP and AWS to connect with the broader analytics community. Cross-pollination of communities is underrated.
+
+**OneTech and STEMPower** — We joined OneTech and connected with Madeleine Gillard and STEMPower. Plugging into the bigger ecosystem felt right. We're not the only ones doing this work and we shouldn't act like we are.
+
+**The mentoring program** — My favourite thing we built all year! 18 mentees paired with 18 mentors. We ran mentor training, put together proper guidelines, and wrapped the year with a lunch near the office. Watching people walk in not knowing each other and leave with a relationship that might genuinely shape their careers — that's what you're doing it for.
+
+---
+
+## The number that matters
+
+Zero to 80+ members in one year.
+
+Eighty people who opted in. Who came to events when they didn't have to. Who signed up to mentor or be mentored.
+
+How wild :D
+
+---
+
+## Thank yous
+
+**Biji George** — my co-founder and co-conspirator. She is the reason Data Divas exists in the shape it does and I'd do it all again with her.
+
+**The CoE leadership team** — Ben Thomas, Michael Gumbley, Pedram Keshavarzian, and Scott Young / Chris Michael. You backed us and gave us room to run. That matters more than I can fully articulate.
+
+**Sam Haskins and Celine Wang from AWS** — You turned up for us, time and again. The partnership never felt transactional. It felt like you actually wanted this to work, and we noticed.
+
+And to everyone who came to an event, agreed to speak, signed up to mentor, or just told someone else the group existed: communities are built by the people in them. Thank you.
+
+Here's to 2026.
