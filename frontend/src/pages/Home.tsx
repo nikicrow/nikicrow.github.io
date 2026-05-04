@@ -1,186 +1,200 @@
 import { Link } from 'react-router';
-import { ArrowRight, TrendingUp, Code, BookOpen, Rocket, Star } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Card, CardContent } from '../components/ui/card';
-import { Badge } from '../components/ui/badge';
+import { Polaroid } from '../components/zine/Polaroid';
+import { WashiTape } from '../components/zine/WashiTape';
+import { Stamp } from '../components/zine/Stamp';
+import { TapeButton } from '../components/zine/TapeButton';
+import { useReveal } from '../components/zine/useReveal';
 import { featuredProjects } from '../data/projects';
 
-export function Home() {
-  return (
-    <div className="container mx-auto px-4 py-12">
-      {/* Hero Section */}
-      <section className="py-20 text-center max-w-4xl mx-auto">
-        <div className="inline-block mb-4 px-4 py-2 bg-gradient-to-r from-pink-100 to-purple-100 dark:from-pink-900/20 dark:to-purple-900/20 rounded-full text-sm">
-          <span className="font-mono">print("Coffee + Code + Chaos") 💻☕️👶</span>
-        </div>
-        
-        <h1 className="text-5xl md:text-6xl mb-6">
-          Data Scientist.<br />
-          <span className="text-muted-foreground">ML Engineer.</span><br />
-          <span className="bg-gradient-to-r from-pink-600 to-purple-600 bg-clip-text text-transparent">
-            Mum of Two.
-          </span>
-        </h1>
-        
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-          Building intelligent systems by day, raising humans by night. Writing about machine learning,
-          data, AI, financial markets, parenting, pregnancy, and the beautiful chaos of doing it all.
-        </p>
-        
-        <div className="flex gap-4 justify-center flex-wrap">
-          <Link to="/portfolio">
-            <Button size="lg" className="gap-2">
-              View My Fun Projects
-              <ArrowRight className="size-4" />
-            </Button>
-          </Link>
-          <Link to="/blog">
-            <Button size="lg" variant="outline" className="gap-2">
-              <BookOpen className="size-4" />
-              Read My Blog
-            </Button>
-          </Link>
-        </div>
-      </section>
+const ACCENT_COLORS = ['var(--zine-terracotta)', 'var(--zine-sage)', 'var(--zine-ochre)', 'var(--zine-blush)'];
 
-      {/* Featured Projects */}
-      {featuredProjects.length > 0 && (
-        <section className="py-12 max-w-5xl mx-auto">
-          <div className="flex items-center justify-between mb-8">
-            <h2 className="text-3xl flex items-center gap-2">
-              <Star className="size-8 text-yellow-500" />
-              Featured Personal Projects
-            </h2>
+const NOW = [
+  { label: 'reading', value: 'The Goal — Goldratt' },
+  { label: 'building', value: 'Baby Data App v0.4' },
+  { label: 'growing', value: 'tomatoes (too many)' },
+  { label: 'listening', value: 'lo-fi & farm noises' },
+];
+
+const THINGS = [
+  { t: 'Machine Learning', d: 'Production ML systems. Models that survive contact with reality, not just notebooks.', c: 'var(--zine-terracotta)', e: '🤖' },
+  { t: 'Garden + chickens', d: 'Three hens, one zucchini glut, an aspirational compost pile.', c: 'var(--zine-sage)', e: '🌿' },
+  { t: 'Mum of two', d: 'Toddler Ember, newborn Imogen. Sleep-deprived, mostly delighted.', c: 'var(--zine-blush)', e: '🍼' },
+  { t: 'Writing', d: 'Honest essays on tech, trading, and the messy bits of work-life integration.', c: 'var(--zine-ochre)', e: '✏️' },
+];
+
+export function Home() {
+  useReveal();
+
+  return (
+    <div>
+      {/* Hero */}
+      <section style={{ position: 'relative', minHeight: 540, marginTop: 16 }}>
+        {/* Left col */}
+        <div style={{ position: 'absolute', top: 30, left: 0, right: 380 }}>
+          <Stamp rotate={-3}>print("hello world")</Stamp>
+          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 86, lineHeight: 0.95, margin: '18px 0 10px', fontWeight: 600, letterSpacing: -1 }}>
+            Data scientist,<br />
+            <span style={{ fontStyle: 'italic', color: 'var(--zine-terracotta2)' }}>ML engineer,</span><br />
+            <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 108, color: 'var(--zine-sage)' }}>mum of two.</span>
+          </h1>
+          <p style={{ maxWidth: 460, fontSize: 17, lineHeight: 1.6, color: 'var(--zine-ink2)', marginTop: 14 }}>
+            Building production ML systems by day, raising humans by night. I write about machine learning,
+            financial markets, parenting in tech, and the joyful chaos of doing it all at once.
+          </p>
+          <div style={{ display: 'flex', gap: 14, marginTop: 22, alignItems: 'center' }}>
             <Link to="/portfolio">
-              <Button variant="outline" className="gap-2">
-                View All
-                <ArrowRight className="size-4" />
-              </Button>
+              <TapeButton>see my projects →</TapeButton>
+            </Link>
+            <Link to="/blog" style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink2)', transform: 'rotate(-3deg)', display: 'inline-block', textDecoration: 'none' }}>
+              or read the blog ↗
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {featuredProjects.slice(0, 4).map((project) => (
-              <Link key={project.id} to={`/portfolio/${project.id}`}>
-                <Card className="h-full hover:shadow-lg transition-shadow">
-                  <CardContent className="pt-6">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Badge variant="secondary">{project.category}</Badge>
-                      {project.metrics && project.metrics[0] && (
-                        <Badge variant="outline" className="font-mono">
-                          {project.metrics[0].value}
-                        </Badge>
-                      )}
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                    <p className="text-muted-foreground text-sm mb-4 line-clamp-2">
-                      {project.description}
-                    </p>
-                    <div className="flex flex-wrap gap-1">
-                      {project.tech.slice(0, 4).map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-2 py-1 bg-accent text-xs rounded"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.tech.length > 4 && (
-                        <span className="px-2 py-1 text-xs text-muted-foreground">
-                          +{project.tech.length - 4}
-                        </span>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+        </div>
 
-      {/* Featured Areas */}
-      <section className="py-12 max-w-5xl mx-auto">
-        <h2 className="text-3xl mb-8 text-center">What I Do (When Not Changing Nappies)</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardContent className="pt-6">
-              <div className="mb-4">
-                <div className="inline-block p-2 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg mb-4">
-                  <Code className="size-6 text-white" />
-                </div>
-              </div>
-              <h3 className="text-xl mb-2">Machine Learning & Data Science</h3>
-              <p className="text-muted-foreground">
-                Building and deploying production ML systems. From model development 
-                to MLOps, I transform data and juicy algorithms into automated systems and actionable insights.
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardContent className="pt-6">
-              <div className="mb-4">
-                <div className="inline-block p-2 bg-gradient-to-br from-green-500 to-teal-500 rounded-lg mb-4">
-                  <TrendingUp className="size-6 text-white" />
-                </div>
-              </div>
-              <h3 className="text-xl mb-2">Side Projects</h3>
-              <p className="text-muted-foreground">
-                Gardening, crochet, cooking, and DIY home improvement. 
-                When I'm not coding, I'm juggling too many responsibilies as wife, a mum, dog owner of a rescue border collie x,
-                3 chickens, and a prolific veggie patch.
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardContent className="pt-6">
-              <div className="mb-4">
-                <div className="inline-block p-2 bg-gradient-to-br from-pink-500 to-rose-500 rounded-lg mb-4">
-                  <span className="text-2xl">💝</span>
-                </div>
-              </div>
-              <h3 className="text-xl mb-2">Parenting & Pregnancy</h3>
-              <p className="text-muted-foreground">
-                Documenting the adventure of raising two girls while working in tech.
-                Sleep deprivation, debugging tantrums, and finding joy in the chaos.
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="hover:shadow-lg transition-shadow">
-            <CardContent className="pt-6">
-              <div className="mb-4">
-                <div className="inline-block p-2 bg-gradient-to-br from-orange-500 to-yellow-500 rounded-lg mb-4">
-                  <span className="text-2xl">⚖️</span>
-                </div>
-              </div>
-              <h3 className="text-xl mb-2">Work-Life Integration</h3>
-              <p className="text-muted-foreground">
-                Sharing what I've learned about balancing technical leadership, career growth, 
-                and motherhood. Spoiler: "balance" is a myth, but you can still thrive.
-              </p>
-            </CardContent>
-          </Card>
+        {/* Right col — polaroid collage */}
+        <div style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
+          <WashiTape x={70} y={6} w={120} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 22, left: 50 }}>
+            <Polaroid caption="me, probably debugging" rotate={-6} color="var(--zine-blush)" label="self portrait" />
+          </div>
+          <WashiTape x={20} y={210} w={100} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 220, left: 0 }}>
+            <div className="hen-waddle" style={{ transformOrigin: 'center bottom' }}>
+              <Polaroid caption="hens 🐔" rotate={4} color="var(--zine-sage)" w={180} h={130} label="garden" />
+            </div>
+          </div>
+          <WashiTape x={170} y={320} w={90} rotate={-12} color="var(--zine-terracotta)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 330, left: 150 }}>
+            <Polaroid caption="Ember + Imogen" rotate={7} color="var(--zine-ochre)" w={170} h={120} label="the chaos" />
+          </div>
+        </div>
+
+        {/* Decorative arrow */}
+        <svg width="180" height="60" style={{ position: 'absolute', left: 380, top: 380 }}>
+          <path data-draw="true" d="M5 30 Q40 5, 80 30 T155 30" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+          <path data-draw="true" d="M150 22 L162 30 L150 38" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+        </svg>
+      </section>
+
+      {/* Things I do */}
+      <section className="reveal" style={{ marginTop: 60 }}>
+        <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 40, marginBottom: 4, fontStyle: 'italic' }}>
+          things I do{' '}
+          <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 36, color: 'var(--zine-sage)' }}>(when not changing nappies)</span>
+        </h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: 26 }}>
+          {THINGS.map((x, i) => (
+            <div
+              key={i}
+              className="zine-card"
+              style={{
+                background: '#fff',
+                padding: '18px 16px 20px',
+                boxShadow: '0 4px 14px rgba(43,36,24,0.10)',
+                transform: `rotate(${([-1.5, 1, -0.8, 1.6])[i]}deg)`,
+                borderTop: `8px solid ${x.c}`,
+              }}
+            >
+              <div style={{ fontSize: 28, marginBottom: 6 }}>{x.e}</div>
+              <h3 style={{ fontFamily: 'var(--zine-display)', fontSize: 22, margin: '4px 0 6px' }}>{x.t}</h3>
+              <p style={{ fontSize: 14, color: 'var(--zine-ink2)', lineHeight: 1.5, margin: 0 }}>{x.d}</p>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 text-center">
-        <div className="max-w-2xl mx-auto p-8 border-2 border-dashed border-border rounded-lg">
-          <h2 className="text-3xl mb-4">Let's Connect</h2>
-          <p className="text-muted-foreground mb-6">
-            Interested in collaborating or just want to chat about data, 
-            markets, or the latest in ML?
-          </p>
-          <Link to="/about">
-            <Button size="lg" className="gap-2">
-              Get in Touch
-              <ArrowRight className="size-4" />
-            </Button>
+      {/* Featured projects */}
+      <section className="reveal" style={{ marginTop: 60 }}>
+        <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 22 }}>
+          <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 40, margin: 0, fontStyle: 'italic' }}>
+            featured projects{' '}
+            <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 30, color: 'var(--zine-terracotta2)' }}>★</span>
+          </h2>
+          <Link to="/portfolio" className="zine-nav-link" style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-ink2)', textDecoration: 'none' }}>
+            see all ↗
           </Link>
         </div>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
+          {featuredProjects.slice(0, 4).map((p, i) => (
+            <Link key={p.id} to={`/portfolio/${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <div
+                className="zine-card"
+                style={{
+                  background: '#fff',
+                  padding: 20,
+                  position: 'relative',
+                  boxShadow: '0 4px 14px rgba(43,36,24,0.08)',
+                  transform: `rotate(${([-0.6, 0.7, -0.4, 0.5])[i]}deg)`,
+                  borderLeft: `4px solid ${ACCENT_COLORS[i % 4]}`,
+                }}
+              >
+                <WashiTape x={20} y={-10} w={70} rotate={-6} color="var(--zine-ochre)" pattern="stripes" />
+                <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: 8 }}>
+                  <span style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5 }}>
+                    {p.category.toUpperCase()}
+                  </span>
+                  {p.metrics?.[0] && (
+                    <span style={{ fontFamily: 'var(--zine-mono)', fontSize: 11, color: 'var(--zine-ink2)' }}>
+                      {p.metrics[0].value} {p.metrics[0].label}
+                    </span>
+                  )}
+                </div>
+                <h3 style={{ fontFamily: 'var(--zine-display)', fontSize: 24, margin: '4px 0 8px' }}>{p.title}</h3>
+                <p style={{ fontSize: 14, color: 'var(--zine-ink2)', lineHeight: 1.5, marginBottom: 12 }}>{p.description}</p>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                  {p.tech.slice(0, 4).map((t) => (
+                    <span key={t} style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, padding: '3px 8px', background: 'var(--zine-cream)', borderRadius: 999, color: 'var(--zine-ink2)' }}>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
       </section>
+
+      {/* Currently widget */}
+      <section className="reveal" style={{ marginTop: 60, background: '#fff', padding: 28, boxShadow: '0 4px 14px rgba(43,36,24,0.08)', transform: 'rotate(-0.4deg)', position: 'relative' }}>
+        <WashiTape x={40} y={-12} w={110} rotate={-3} color="var(--zine-sage)" pattern="dots" />
+        <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 28, fontStyle: 'italic', marginTop: 0, marginBottom: 14 }}>currently…</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
+          {NOW.map((n) => (
+            <div key={n.label}>
+              <div style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5 }}>
+                {n.label.toUpperCase()}
+              </div>
+              <div style={{ fontFamily: 'var(--zine-hand)', fontSize: 24, color: 'var(--zine-ink)', lineHeight: 1.2, marginTop: 4 }}>
+                {n.value}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="reveal" style={{ marginTop: 60, textAlign: 'center', padding: '36px 28px', border: '2px dashed rgba(90,74,54,0.33)', borderRadius: 8, position: 'relative' }}>
+        <Stamp color="var(--zine-sage2)" rotate={2}>let&apos;s talk</Stamp>
+        <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 36, fontStyle: 'italic', margin: '14px 0 8px' }}>like what you see?</h2>
+        <p style={{ color: 'var(--zine-ink2)', marginBottom: 22, maxWidth: 500, marginLeft: 'auto', marginRight: 'auto' }}>
+          I&apos;m always up for chatting about ML, markets, parenting in tech, or the right way to compost.
+        </p>
+        <Link to="/about">
+          <TapeButton>get in touch →</TapeButton>
+        </Link>
+      </section>
+
+      {/* Wavy divider */}
+      <svg width="100%" height="40" style={{ marginTop: 50, display: 'block' }} viewBox="0 0 1100 40" preserveAspectRatio="none">
+        <path
+          data-draw="true"
+          d="M10 20 Q 60 5, 110 20 T 210 20 T 310 20 T 410 20 T 510 20 T 610 20 T 710 20 T 810 20 T 910 20 T 1010 20 T 1090 20"
+          stroke="var(--zine-terracotta)"
+          strokeWidth="2"
+          fill="none"
+          strokeLinecap="round"
+        />
+      </svg>
     </div>
   );
 }

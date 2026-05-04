@@ -1,153 +1,114 @@
-import { useParams, Link, Navigate } from "react-router";
-import { Calendar, Clock, ArrowLeft, Tag } from "lucide-react";
-import { Badge } from "../components/ui/badge";
-import { Button } from "../components/ui/button";
-import { blogPosts } from "../data/blogPosts";
+import { useParams, Link, Navigate } from 'react-router';
+import { blogPosts } from '../data/blogPosts';
+import { Stamp } from '../components/zine/Stamp';
+import { WashiTape } from '../components/zine/WashiTape';
 
-// Import highlight.js styles
-import "highlight.js/styles/github-dark.css";
+import 'highlight.js/styles/github-dark.css';
 
 export function BlogPost() {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
 
-  if (!post) {
-    return <Navigate to="/blog" replace />;
-  }
+  if (!post) return <Navigate to="/blog" replace />;
+
+  const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
 
   return (
-    <div className="container mx-auto px-4 py-12">
-      <div className="max-w-3xl mx-auto">
-        {/* Back Button */}
-        <Link
-          to="/blog"
-          className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary mb-8 transition-colors"
-        >
-          <ArrowLeft className="size-4" />
-          Back to Blogs
-        </Link>
+    <div>
+      {/* Back link */}
+      <Link
+        to="/blog"
+        style={{ fontFamily: 'var(--zine-mono)', fontSize: 12, color: 'var(--zine-ink2)', textDecoration: 'none', display: 'inline-block', marginBottom: 28 }}
+      >
+        ← back to blog
+      </Link>
 
-        {/* Article Header */}
-        <article>
-          <header className="mb-10">
-            <div className="flex flex-wrap gap-2 mb-4">
-              <Badge variant="secondary">{post.category}</Badge>
-              {!post.published && (
-                <Badge
-                  variant="outline"
-                  className="border-yellow-500 text-yellow-600"
-                >
-                  Draft
-                </Badge>
-              )}
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight mb-6">
-              {post.title}
-            </h1>
-            <div className="flex items-center gap-4 text-muted-foreground mb-5">
-              <div className="flex items-center gap-1.5">
-                <Calendar className="size-4" />
-                <span>
-                  {new Date(post.date).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
+      {/* Article */}
+      <article style={{ maxWidth: 720, margin: '0 auto' }}>
+        {/* Header */}
+        <header style={{ marginBottom: 28 }}>
+          <div style={{ display: 'flex', gap: 10, marginBottom: 14, flexWrap: 'wrap', alignItems: 'center' }}>
+            <Stamp color="var(--zine-terracotta2)">{post.category ?? 'general'}</Stamp>
+            <span style={{ fontFamily: 'var(--zine-mono)', fontSize: 11, color: 'var(--zine-ink2)' }}>
+              {new Date(post.date).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })} · {post.readTime}
+            </span>
+          </div>
+
+          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 56, fontStyle: 'italic', lineHeight: 1.05, fontWeight: 600, margin: '0 0 14px' }}>
+            {post.title}
+          </h1>
+
+          <p style={{ fontFamily: 'var(--zine-body)', fontSize: 20, fontStyle: 'italic', color: 'var(--zine-ink2)', lineHeight: 1.55, marginBottom: 18 }}>
+            {post.excerpt}
+          </p>
+
+          {/* Tags */}
+          {(Array.isArray(post.tags) ? post.tags : []).length > 0 && (
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6, marginBottom: 20 }}>
+              {(Array.isArray(post.tags) ? post.tags : []).map((tag) => (
+                <span key={tag} style={{
+                  padding: '3px 10px',
+                  background: 'var(--zine-cream)',
+                  fontFamily: 'var(--zine-mono)',
+                  fontSize: 10,
+                  borderRadius: 999,
+                  color: 'var(--zine-ink2)',
+                }}>
+                  #{tag}
                 </span>
-              </div>
-              <div className="flex items-center gap-1.5">
-                <Clock className="size-4" />
-                <span>{post.readTime}</span>
-              </div>
-            </div>
-
-            {/* Tags */}
-            {post.tags.length > 0 && (
-              <div className="flex items-center gap-2 flex-wrap">
-                <Tag className="size-4 text-muted-foreground" />
-                {post.tags.map((tag) => (
-                  <Badge key={tag} variant="outline" className="text-xs">
-                    {tag}
-                  </Badge>
-                ))}
-              </div>
-            )}
-          </header>
-
-          {/* Cover Image */}
-          {post.coverImage && (
-            <div className="mb-8">
-              <img
-                src={post.coverImage}
-                alt={post.title}
-                className="w-full rounded-lg object-cover max-h-96"
-              />
+              ))}
             </div>
           )}
 
-          {/* Article Content */}
-          <div className="prose prose-lg max-w-none dark:prose-invert">
-            <p className="text-xl text-muted-foreground mb-10 italic lead border-l-4 border-muted pl-5 py-2">
-              {post.excerpt}
-            </p>
-            <div
-              className="text-foreground"
-              dangerouslySetInnerHTML={{ __html: post.htmlContent }}
-            />
+          <hr style={{ border: 'none', borderTop: '1px dashed rgba(90,74,54,0.33)', marginBottom: 28 }} />
+        </header>
+
+        {/* Cover image */}
+        {post.coverImage && (
+          <div style={{ marginBottom: 32 }}>
+            <img src={post.coverImage} alt={post.title} style={{ width: '100%', borderRadius: 2, objectFit: 'cover', maxHeight: 380 }} />
           </div>
+        )}
 
-          {/* Article Footer */}
-          <footer className="mt-12 pt-8 border-t border-border">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="text-sm text-muted-foreground mb-2">
-                  Share this post
-                </p>
-                <div className="flex gap-2">
-                  <Button variant="outline" size="sm">
-                    Twitter
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    LinkedIn
-                  </Button>
-                  <Button variant="outline" size="sm">
-                    Copy Link
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </footer>
-        </article>
+        {/* Body */}
+        <div
+          className="zine-prose"
+          dangerouslySetInnerHTML={{ __html: post.htmlContent }}
+        />
 
-        {/* Related Posts */}
-        <div className="mt-12">
-          <h3 className="text-2xl mb-6">More Posts</h3>
-          <div className="grid gap-4">
-            {blogPosts
-              .filter((p) => p.slug !== slug)
-              .slice(0, 3)
-              .map((relatedPost) => (
-                <Link
-                  key={relatedPost.slug}
-                  to={`/blog/${relatedPost.slug}`}
-                  className="p-4 border border-border rounded-lg hover:bg-accent transition-colors"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <Badge variant="secondary" className="mb-2">
-                        {relatedPost.category}
-                      </Badge>
-                      <h4 className="mb-1">{relatedPost.title}</h4>
-                      <p className="text-sm text-muted-foreground">
-                        {relatedPost.excerpt.substring(0, 100)}...
-                      </p>
-                    </div>
+        {/* Footer card */}
+        <div style={{ marginTop: 48, background: '#fff', padding: '24px 28px', position: 'relative', boxShadow: '0 4px 14px rgba(43,36,24,0.08)' }}>
+          <WashiTape x={30} y={-10} w={80} rotate={-3} color="var(--zine-sage)" pattern="dots" />
+          <p style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink)', margin: '0 0 8px' }}>thanks for reading ✿</p>
+          <Link to="/blog" style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-terracotta2)', textDecoration: 'none' }}>
+            ← back to the blog
+          </Link>
+        </div>
+      </article>
+
+      {/* Related posts */}
+      {relatedPosts.length > 0 && (
+        <div style={{ maxWidth: 720, margin: '48px auto 0' }}>
+          <h3 style={{ fontFamily: 'var(--zine-display)', fontSize: 28, fontStyle: 'italic', marginBottom: 18 }}>more posts</h3>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 14 }}>
+            {relatedPosts.map((rel) => (
+              <Link
+                key={rel.slug}
+                to={`/blog/${rel.slug}`}
+                style={{ textDecoration: 'none', color: 'inherit' }}
+              >
+                <div className="zine-card" style={{ background: '#fff', padding: '16px 20px', boxShadow: '0 4px 14px rgba(43,36,24,0.08)', borderLeft: '4px solid var(--zine-terracotta)' }}>
+                  <div style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5, marginBottom: 4 }}>
+                    {rel.category.toUpperCase()}
                   </div>
-                </Link>
-              ))}
+                  <h4 style={{ fontFamily: 'var(--zine-display)', fontSize: 20, fontStyle: 'italic', margin: '0 0 4px' }}>{rel.title}</h4>
+                  <p style={{ fontSize: 13, color: 'var(--zine-ink2)', lineHeight: 1.5, margin: 0 }}>{rel.excerpt.substring(0, 100)}…</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

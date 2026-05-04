@@ -3,11 +3,171 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ── Zine design tokens ── */
+:root {
+  --zine-cream: #f5ecdc;
+  --zine-paper: #efe4cf;
+  --zine-ink: #2b2418;
+  --zine-ink2: #5a4a36;
+  --zine-terracotta: #c66a3a;
+  --zine-terracotta2: #a8512b;
+  --zine-ochre: #d99e3a;
+  --zine-sage: #7a8b5e;
+  --zine-sage2: #5e7048;
+  --zine-blush: #e3a892;
+  --zine-display: 'Fraunces', Georgia, serif;
+  --zine-body: 'Nunito', 'Helvetica Neue', sans-serif;
+  --zine-hand: 'Caveat', cursive;
+  --zine-mono: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+/* ── Zine global base ── */
+body {
+  background-color: var(--zine-paper);
+  color: var(--zine-ink);
+  font-family: var(--zine-body);
+}
+
+/* Paper grain overlay on the root wrapper */
+.zine-paper-bg {
+  background-color: var(--zine-paper);
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(0,0,0,0.04) 1px, transparent 2px),
+    radial-gradient(circle at 80% 60%, rgba(0,0,0,0.04) 1px, transparent 2px),
+    radial-gradient(circle at 40% 80%, rgba(0,0,0,0.03) 1px, transparent 2px);
+  background-size: 160px 160px, 200px 200px, 240px 240px;
+}
+
+/* ── Zine card hover wobble ── */
+.zine-card {
+  transition: transform 0.25s cubic-bezier(.2,.8,.4,1.2), box-shadow 0.25s;
+  cursor: pointer;
+}
+.zine-card:hover {
+  transform: rotate(0deg) translateY(-4px) !important;
+  box-shadow: 0 10px 24px rgba(43,36,24,0.18) !important;
+}
+
+/* ── Nav link ── */
+.zine-nav-link {
+  position: relative;
+  cursor: pointer;
+  transition: color 0.15s;
+}
+.zine-nav-link:hover {
+  color: var(--zine-terracotta) !important;
+}
+
+/* ── Tape button ── */
+.zine-tape-button {
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+.zine-tape-button:hover {
+  transform: translateY(-2px) rotate(-1deg);
+}
+.zine-tape-button:active {
+  transform: translateY(1px) rotate(0deg);
+}
+
+/* ── Stamp ── */
+.zine-stamp {
+  display: inline-block;
+}
+
+/* ── Reveal on scroll ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.2,.8,.4,1);
+}
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Page fade-in ── */
+@keyframes zine-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.zine-page-fade {
+  animation: zine-fade-in 0.3s ease-out;
+}
+
+/* ── Hen waddle ── */
+@keyframes waddle {
+  0%, 100% { transform: rotate(-4deg); }
+  50%       { transform: rotate(4deg); }
+}
+.hen-waddle {
+  animation: waddle 1.4s ease-in-out infinite;
+}
+
+/* ── Konami toast pop-in ── */
+@keyframes zine-pop-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+.zine-toast {
+  animation: zine-pop-in 0.4s cubic-bezier(.2,.8,.4,1.4);
+}
+
+/* ── Blog / project prose overrides ── */
+.zine-prose {
+  font-family: var(--zine-body);
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--zine-ink);
+}
+.zine-prose h2, .zine-prose h3 {
+  font-family: var(--zine-display);
+  font-style: italic;
+  color: var(--zine-ink);
+}
+.zine-prose h2 { font-size: 30px; margin: 32px 0 12px; }
+.zine-prose h3 { font-size: 24px; margin: 24px 0 8px; }
+.zine-prose p { margin-bottom: 18px; }
+.zine-prose blockquote {
+  border-left: 4px solid var(--zine-terracotta);
+  font-family: var(--zine-display);
+  font-style: italic;
+  font-size: 22px;
+  padding-left: 18px;
+  margin: 28px 0;
+  color: var(--zine-ink2);
+}
+.zine-prose pre, .zine-prose code {
+  font-family: var(--zine-mono);
+  font-size: 13px;
+  background: var(--zine-cream);
+  border-left: 4px solid var(--zine-sage);
+  padding: 18px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+.zine-prose :not(pre) > code {
+  background: var(--zine-cream);
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-size: 13px;
+}
+.zine-prose p:first-of-type::first-letter {
+  font-family: var(--zine-display);
+  font-size: 72px;
+  font-weight: 600;
+  color: var(--zine-terracotta2);
+  float: left;
+  line-height: 0.75;
+  margin-right: 8px;
+  margin-top: 6px;
+}
+
 :root {
   --font-size: 16px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
+  --background: var(--zine-paper);
+  --foreground: var(--zine-ink);
   --card: #ffffff;
+  --card-foreground: var(--zine-ink);
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
