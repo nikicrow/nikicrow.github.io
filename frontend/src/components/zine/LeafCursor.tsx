@@ -41,9 +41,9 @@ export function LeafCursor() {
       }}
     >
       <svg
-        viewBox="0 0 24 32"
-        width="22"
-        height="30"
+        viewBox="0 0 20 30"
+        width="18"
+        height="26"
         style={{
           transform: 'rotate(-20deg)',
           filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.18))',
@@ -51,13 +51,13 @@ export function LeafCursor() {
         }}
       >
         <path
-          d="M 12 2 C 19 5 22 12 20 18 C 18 24 15 28 12 29 C 9 28 6 24 4 18 C 2 12 5 5 12 2 Z"
+          d="M 10 1 C 21 7 21 22 10 28 C -1 22 -1 7 10 1 Z"
           fill="var(--zine-sage)"
         />
         <path
-          d="M 12 3 L 12 29 Q 10 32 8 33"
+          d="M 10 2 L 10 27 Q 8 30 6 31"
           stroke="var(--zine-sage2)"
-          strokeWidth="1"
+          strokeWidth="0.9"
           strokeLinecap="round"
           fill="none"
         />
