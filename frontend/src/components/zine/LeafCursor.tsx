@@ -41,36 +41,26 @@ export function LeafCursor() {
       }}
     >
       <svg
-        viewBox="0 0 48 58"
-        width="42"
-        height="50"
+        viewBox="0 0 24 32"
+        width="22"
+        height="30"
         style={{
           transform: 'rotate(-20deg)',
-          filter: 'drop-shadow(0 2px 5px rgba(0,0,0,0.25))',
+          filter: 'drop-shadow(0 1px 3px rgba(0,0,0,0.18))',
           display: 'block',
         }}
       >
-        <defs>
-          <radialGradient id="leafGrad" cx="65%" cy="28%" r="75%">
-            <stop offset="0%" stopColor="#70cc44" />
-            <stop offset="100%" stopColor="#3a8c22" />
-          </radialGradient>
-        </defs>
         <path
-          d="M 24 2 Q 36 4 40 14 Q 38 18 32 20 Q 40 24 44 32 Q 40 38 34 38 Q 30 46 24 52 Q 18 46 14 38 Q 8 38 4 32 Q 8 24 16 20 Q 10 18 8 14 Q 12 4 24 2 Z"
-          fill="url(#leafGrad)"
-          stroke="#1a5c12"
-          strokeWidth="1.8"
-          strokeLinejoin="round"
+          d="M 12 2 C 19 5 22 12 20 18 C 18 24 15 28 12 29 C 9 28 6 24 4 18 C 2 12 5 5 12 2 Z"
+          fill="var(--zine-sage)"
         />
-        <path d="M 24 5 L 24 50" stroke="#1a5c12" strokeWidth="1.2" strokeLinecap="round" fill="none" />
-        <path d="M 24 18 Q 17 15 11 17" stroke="#1a5c12" strokeWidth="0.8" fill="none" strokeLinecap="round" />
-        <path d="M 24 18 Q 31 15 37 17" stroke="#1a5c12" strokeWidth="0.8" fill="none" strokeLinecap="round" />
-        <path d="M 24 30 Q 15 27 8 30" stroke="#1a5c12" strokeWidth="0.8" fill="none" strokeLinecap="round" />
-        <path d="M 24 30 Q 33 27 40 30" stroke="#1a5c12" strokeWidth="0.8" fill="none" strokeLinecap="round" />
-        <path d="M 24 42 Q 19 40 15 40" stroke="#1a5c12" strokeWidth="0.8" fill="none" strokeLinecap="round" />
-        <path d="M 24 42 Q 29 40 33 40" stroke="#1a5c12" strokeWidth="0.8" fill="none" strokeLinecap="round" />
-        <path d="M 24 52 Q 22 56 20 57" stroke="#1a5c12" strokeWidth="2.2" fill="none" strokeLinecap="round" />
+        <path
+          d="M 12 3 L 12 29 Q 10 32 8 33"
+          stroke="var(--zine-sage2)"
+          strokeWidth="1"
+          strokeLinecap="round"
+          fill="none"
+        />
       </svg>
     </div>
   );
