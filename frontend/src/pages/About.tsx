@@ -15,7 +15,7 @@ export function About() {
   return (
     <div>
       {/* Hero: two-column */}
-      <section style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: 48, alignItems: 'flex-start', marginBottom: 48 }}>
+      <section className="zine-grid-about" style={{ display: 'grid', gridTemplateColumns: '320px 1fr', gap: 48, alignItems: 'flex-start', marginBottom: 48 }}>
         {/* Left: polaroid */}
         <div style={{ position: 'relative', paddingTop: 20 }}>
           <WashiTape x={40} y={8} w={100} rotate={-5} color="var(--zine-ochre)" pattern="stripes" zIndex={5} />
@@ -25,10 +25,10 @@ export function About() {
         {/* Right: bio intro */}
         <div>
           <Stamp color="var(--zine-sage2)" rotate={-2}>about me</Stamp>
-          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 64, fontStyle: 'italic', lineHeight: 1.05, margin: '10px 0 0', fontWeight: 600 }}>
+          <h1 className="zine-about-h1" style={{ fontFamily: 'var(--zine-display)', fontSize: 64, fontStyle: 'italic', lineHeight: 1.05, margin: '10px 0 0', fontWeight: 600 }}>
             Hi, I&apos;m
           </h1>
-          <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 90, color: 'var(--zine-terracotta2)', lineHeight: 0.9, display: 'block', marginBottom: 14 }}>
+          <span className="zine-about-name" style={{ fontFamily: 'var(--zine-hand)', fontSize: 90, color: 'var(--zine-terracotta2)', lineHeight: 0.9, display: 'block', marginBottom: 14 }}>
             Niki
           </span>
           <div style={{ display: 'flex', flexDirection: 'column', gap: 4, marginBottom: 18 }}>
@@ -44,7 +44,7 @@ export function About() {
       {/* My story */}
       <section style={{ background: '#fff', padding: 32, boxShadow: '0 4px 14px rgba(43,36,24,0.08)', transform: 'rotate(-0.3deg)', position: 'relative', marginBottom: 40 }}>
         <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 36, fontStyle: 'italic', margin: '0 0 18px' }}>my story</h2>
-        <div style={{ columns: 2, columnGap: 36, fontFamily: 'var(--zine-body)', fontSize: 15, lineHeight: 1.7, color: 'var(--zine-ink2)' }}>
+        <div className="zine-cols-2" style={{ columns: 2, columnGap: 36, fontFamily: 'var(--zine-body)', fontSize: 15, lineHeight: 1.7, color: 'var(--zine-ink2)' }}>
           <p style={{ marginBottom: 14 }}>
             I studied Mechanical Engineering and Pure Mathematics at the University of Sydney, where I discovered my love for algorithms and problem-solving. After graduation, I transitioned into the world of finance at Goldman Sachs — trading swaps, swaptions and exotic bonds in AUD and JPY markets.
           </p>
@@ -63,7 +63,7 @@ export function About() {
       {/* Skills */}
       <section style={{ marginBottom: 40 }}>
         <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 36, fontStyle: 'italic', marginBottom: 20 }}>skills</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
+        <div className="zine-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 20 }}>
           {Object.entries(SKILLS).map(([group, skills], i) => (
             <div
               key={group}
@@ -101,7 +101,7 @@ export function About() {
       <section style={{ background: 'var(--zine-terracotta)', color: 'var(--zine-cream)', padding: '32px 36px', position: 'relative', borderRadius: 2 }}>
         <WashiTape x={50} y={-12} w={120} rotate={-3} color="var(--zine-ochre)" pattern="dots" />
         <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 32, fontStyle: 'italic', margin: '0 0 20px' }}>say hi</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
+        <div className="zine-grid-3" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
           {[
             { label: 'EMAIL', value: 'not.telling@isthissafetho.com', href: 'mailto:not.telling@isthissafetho.com' },
             { label: 'LINKEDIN', value: '/in/niki-crow-bb329313b', href: 'https://www.linkedin.com/in/niki-crow-bb329313b/' },

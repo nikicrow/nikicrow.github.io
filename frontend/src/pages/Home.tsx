@@ -28,14 +28,14 @@ export function Home() {
   return (
     <div>
       {/* Hero */}
-      <section style={{ position: 'relative', minHeight: 540, marginTop: 16 }}>
+      <section className="zine-hero" style={{ position: 'relative', minHeight: 540, marginTop: 16 }}>
         {/* Left col */}
-        <div style={{ position: 'absolute', top: 30, left: 0, right: 380 }}>
+        <div className="zine-hero-left" style={{ position: 'absolute', top: 30, left: 0, right: 380 }}>
           <Stamp rotate={-3}>print("hello world")</Stamp>
-          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 86, lineHeight: 0.95, margin: '18px 0 10px', fontWeight: 600, letterSpacing: -1 }}>
+          <h1 className="zine-hero-h1" style={{ fontFamily: 'var(--zine-display)', fontSize: 86, lineHeight: 0.95, margin: '18px 0 10px', fontWeight: 600, letterSpacing: -1 }}>
             Data scientist,<br />
             <span style={{ fontStyle: 'italic', color: 'var(--zine-terracotta2)' }}>ML engineer,</span><br />
-            <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 108, color: 'var(--zine-sage)' }}>mum of two.</span>
+            <span className="zine-hero-hand" style={{ fontFamily: 'var(--zine-hand)', fontSize: 108, color: 'var(--zine-sage)' }}>mum of two.</span>
           </h1>
           <p style={{ maxWidth: 460, fontSize: 17, lineHeight: 1.6, color: 'var(--zine-ink2)', marginTop: 14 }}>
             Building production ML systems by day, raising humans by night. I write about machine learning,
@@ -52,7 +52,7 @@ export function Home() {
         </div>
 
         {/* Right col — polaroid collage */}
-        <div style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
+        <div className="zine-hero-right" style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
           <WashiTape x={70} y={6} w={120} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
           <div className="reveal" style={{ position: 'absolute', top: 22, left: 50 }}>
             <Polaroid caption="me, probably debugging" rotate={-6} color="var(--zine-blush)" label="self portrait" />
@@ -70,7 +70,7 @@ export function Home() {
         </div>
 
         {/* Decorative arrow */}
-        <svg width="180" height="60" style={{ position: 'absolute', left: 380, top: 380 }}>
+        <svg className="zine-hero-arrow" width="180" height="60" style={{ position: 'absolute', left: 380, top: 380 }}>
           <path data-draw="true" d="M5 30 Q40 5, 80 30 T155 30" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
           <path data-draw="true" d="M150 22 L162 30 L150 38" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
         </svg>
@@ -82,7 +82,7 @@ export function Home() {
           things I do{' '}
           <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 36, color: 'var(--zine-sage)' }}>(when not changing nappies)</span>
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: 26 }}>
+        <div className="zine-grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: 26 }}>
           {THINGS.map((x, i) => (
             <div
               key={i}
@@ -114,7 +114,7 @@ export function Home() {
             see all ↗
           </Link>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
+        <div className="zine-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
           {featuredProjects.slice(0, 4).map((p, i) => (
             <Link key={p.id} to={`/portfolio/${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
               <div
@@ -158,7 +158,7 @@ export function Home() {
       <section className="reveal" style={{ marginTop: 60, background: '#fff', padding: 28, boxShadow: '0 4px 14px rgba(43,36,24,0.08)', transform: 'rotate(-0.4deg)', position: 'relative' }}>
         <WashiTape x={40} y={-12} w={110} rotate={-3} color="var(--zine-sage)" pattern="dots" />
         <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 28, fontStyle: 'italic', marginTop: 0, marginBottom: 14 }}>currently…</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
+        <div className="zine-grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
           {NOW.map((n) => (
             <div key={n.label}>
               <div style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5 }}>

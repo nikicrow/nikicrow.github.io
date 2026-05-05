@@ -471,3 +471,98 @@ html {
 .prose ol > li::marker {
   color: var(--muted-foreground);
 }
+
+/* === Mobile-first responsive === */
+
+@media (max-width: 767px) {
+  .zine-container {
+    padding: 20px 16px 60px !important;
+  }
+
+  /* Hero: replace absolute layout with flex column */
+  .zine-hero {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 32px !important;
+    min-height: auto !important;
+  }
+  .zine-hero-left {
+    position: static !important;
+    right: auto !important;
+    left: auto !important;
+    top: auto !important;
+  }
+  .zine-hero-right {
+    position: relative !important;
+    right: auto !important;
+    top: auto !important;
+    width: 100% !important;
+    height: 460px !important;
+  }
+  .zine-hero-arrow {
+    display: none !important;
+  }
+  .zine-hero-h1 {
+    font-size: 48px !important;
+    margin: 12px 0 8px !important;
+  }
+  .zine-hero-hand {
+    font-size: 60px !important;
+  }
+
+  /* 4-column → 2-column */
+  .zine-grid-4 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* 3-column → 1-column */
+  .zine-grid-3 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About hero grid: stack */
+  .zine-grid-about {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+
+  /* CSS newspaper columns → single column */
+  .zine-cols-2 {
+    columns: 1 !important;
+  }
+
+  /* Page titles */
+  .zine-page-h1 {
+    font-size: 44px !important;
+    line-height: 1.05 !important;
+  }
+  .zine-about-h1 {
+    font-size: 44px !important;
+  }
+  .zine-about-name {
+    font-size: 60px !important;
+  }
+
+  /* Footer: stack vertically */
+  .zine-footer {
+    flex-direction: column !important;
+    gap: 8px !important;
+    align-items: center !important;
+    text-align: center !important;
+  }
+}
+
+/* 2-column → 1-column at small mobile */
+@media (max-width: 599px) {
+  .zine-grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Shrink nav gap on very small screens */
+@media (max-width: 479px) {
+  .zine-nav {
+    gap: 14px !important;
+    font-size: 12px !important;
+  }
+}
