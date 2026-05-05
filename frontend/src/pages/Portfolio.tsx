@@ -32,7 +32,7 @@ export function Portfolio() {
       {/* Header */}
       <div style={{ marginTop: 16, marginBottom: 28, position: 'relative' }}>
         <Stamp>side quests</Stamp>
-        <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 76, fontStyle: 'italic', margin: '8px 0 4px', fontWeight: 600, lineHeight: 1 }}>
+        <h1 className="zine-page-h1" style={{ fontFamily: 'var(--zine-display)', fontSize: 76, fontStyle: 'italic', margin: '8px 0 4px', fontWeight: 600, lineHeight: 1 }}>
           fun projects{' '}
           <span style={{ fontFamily: 'var(--zine-hand)', color: 'var(--zine-terracotta2)' }}>&amp;</span>{' '}
           experiments
@@ -72,7 +72,7 @@ export function Portfolio() {
       </div>
 
       {/* Projects grid */}
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
+      <div className="zine-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 24 }}>
         {filteredProjects.map((p, i) => {
           const color = ACCENT_COLORS[i % ACCENT_COLORS.length];
           const rot = ROTS[i % ROTS.length];

@@ -71,14 +71,14 @@ export function Layout() {
     <div className="zine-paper-bg" style={{ minHeight: '100vh', color: 'var(--zine-ink)', fontFamily: 'var(--zine-body)' }}>
       <LeafCursor />
 
-      <div style={{ maxWidth: 1180, margin: '0 auto', padding: '32px 56px 80px' }}>
+      <div className="zine-container" style={{ maxWidth: 1180, margin: '0 auto', padding: '32px 56px 80px' }}>
         {/* Header */}
         <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 28, position: 'relative', zIndex: 4 }}>
           <Link to="/" style={{ textDecoration: 'none' }}>
             <NikiLogo />
           </Link>
 
-          <nav style={{ display: 'flex', gap: 22, fontFamily: 'var(--zine-mono)', fontSize: 13 }}>
+          <nav className="zine-nav" style={{ display: 'flex', gap: 22, fontFamily: 'var(--zine-mono)', fontSize: 13 }}>
             {navItems.map((item) => {
               const active = isActive(item.to);
               return (
@@ -117,7 +117,7 @@ export function Layout() {
         </main>
 
         {/* Footer */}
-        <footer style={{
+        <footer className="zine-footer" style={{
           marginTop: 60,
           paddingTop: 20,
           borderTop: '1px dashed rgba(90,74,54,0.33)',

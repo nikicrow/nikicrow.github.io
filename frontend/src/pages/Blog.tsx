@@ -42,7 +42,7 @@ export function Blog() {
       {/* Header */}
       <div style={{ marginBottom: 36 }}>
         <Stamp color="var(--zine-sage2)">journal</Stamp>
-        <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 76, fontStyle: 'italic', margin: '8px 0 4px', fontWeight: 600, lineHeight: 1 }}>
+        <h1 className="zine-page-h1" style={{ fontFamily: 'var(--zine-display)', fontSize: 76, fontStyle: 'italic', margin: '8px 0 4px', fontWeight: 600, lineHeight: 1 }}>
           the{' '}
           <span style={{ fontFamily: 'var(--zine-hand)', color: 'var(--zine-terracotta2)' }}>blog</span>
         </h1>
