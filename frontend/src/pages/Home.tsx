@@ -55,17 +55,17 @@ export function Home() {
         <div className="zine-hero-right" style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
           <WashiTape x={70} y={6} w={120} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
           <div className="reveal" style={{ position: 'absolute', top: 22, left: 50 }}>
-            <Polaroid caption="me, probably debugging" rotate={-6} color="var(--zine-blush)" label="self portrait" />
+            <Polaroid caption="me + my mat-leave baby" rotate={-6} color="var(--zine-blush)" src="/photos/me-and-imogen.jpg" alt="Me holding my baby while on maternity leave" />
           </div>
           <WashiTape x={20} y={210} w={100} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
           <div className="reveal" style={{ position: 'absolute', top: 220, left: 0 }}>
             <div className="hen-waddle" style={{ transformOrigin: 'center bottom' }}>
-              <Polaroid caption="hens 🐔" rotate={4} color="var(--zine-sage)" w={180} h={130} label="garden" />
+              <Polaroid caption="my two daughters" rotate={4} color="var(--zine-sage)" w={180} h={130} src="/photos/ember-and-imogen.jpg" alt="My two daughters lying side by side" />
             </div>
           </div>
           <WashiTape x={170} y={320} w={90} rotate={-12} color="var(--zine-terracotta)" zIndex={5} />
           <div className="reveal" style={{ position: 'absolute', top: 330, left: 150 }}>
-            <Polaroid caption="Ember + Imogen" rotate={7} color="var(--zine-ochre)" w={170} h={120} label="the chaos" />
+            <Polaroid caption="my overgrown veggie patch" rotate={7} color="var(--zine-ochre)" w={170} h={120} src="/photos/veggie-patch.jpg" alt="My overgrown vegetable patch" />
           </div>
         </div>
 
