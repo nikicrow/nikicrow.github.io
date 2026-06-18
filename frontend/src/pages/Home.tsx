@@ -19,7 +19,7 @@ const THINGS = [
   { t: 'Machine Learning', d: 'Production ML systems. Models that survive contact with reality, not just notebooks.', c: 'var(--zine-terracotta)', e: '🤖' },
   { t: 'Garden + animals', d: 'Border collie, chickens, veggie patch and an aspirational compost pile.', c: 'var(--zine-sage)', e: '🌿' },
   { t: 'Mum of two', d: 'Two girls, a toddler and a newborn. Lacking sleep, adult company but rich in wholesome family time.', c: 'var(--zine-blush)', e: '🍼' },
-  { t: 'Writing', d: 'Honest essays on tech, trading, and the messy bits of work-life integration.', c: 'var(--zine-ochre)', e: '✏️' },
+  { t: 'Writing', d: 'Honest essays on tech, parenting, and the messy bits of work-life integration.', c: 'var(--zine-ochre)', e: '✏️' },
 ];
 
 export function Home() {
