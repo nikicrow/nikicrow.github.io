@@ -9,17 +9,17 @@ import { featuredProjects } from '../data/projects';
 const ACCENT_COLORS = ['var(--zine-terracotta)', 'var(--zine-sage)', 'var(--zine-ochre)', 'var(--zine-blush)'];
 
 const NOW = [
-  { label: 'reading', value: 'The Goal — Goldratt' },
-  { label: 'building', value: 'Baby Data App v0.4' },
+  { label: 'reading', value: 'Wind and Truth — Brandon Sanderson' },
+  { label: 'building', value: 'Baby Data App v0.4 and Landy' },
   { label: 'growing', value: 'tomatoes (too many)' },
-  { label: 'listening', value: 'lo-fi & farm noises' },
+  { label: 'listening', value: 'Incy Wincy Spider' },
 ];
 
 const THINGS = [
   { t: 'Machine Learning', d: 'Production ML systems. Models that survive contact with reality, not just notebooks.', c: 'var(--zine-terracotta)', e: '🤖' },
-  { t: 'Garden + chickens', d: 'Three hens, one zucchini glut, an aspirational compost pile.', c: 'var(--zine-sage)', e: '🌿' },
-  { t: 'Mum of two', d: 'Toddler Ember, newborn Imogen. Sleep-deprived, mostly delighted.', c: 'var(--zine-blush)', e: '🍼' },
-  { t: 'Writing', d: 'Honest essays on tech, trading, and the messy bits of work-life integration.', c: 'var(--zine-ochre)', e: '✏️' },
+  { t: 'Garden + animals', d: 'Border collie, chickens, veggie patch and an aspirational compost pile.', c: 'var(--zine-sage)', e: '🌿' },
+  { t: 'Mum of two', d: 'Two girls, a toddler and a newborn. Lacking sleep, adult company but rich in wholesome family time.', c: 'var(--zine-blush)', e: '🍼' },
+  { t: 'Writing', d: 'Honest essays on tech, parenting, and the messy bits of work-life integration.', c: 'var(--zine-ochre)', e: '✏️' },
 ];
 
 export function Home() {
