@@ -27,9 +27,9 @@ A standalone dbt project that takes the raw feeds, sleeps, diapers, growth and h
 
 ## Why a Separate Project?
 
-The Baby Data App's Python backend handles capture and storage; this project handles modelling. Splitting them means the data layer can evolve independently - new staging models, new marts, new tests - without touching the application code.
+This is a dbt wrapper around the [Baby Data App](/portfolio/baby-data-app)'s PostgreSQL database - the app's Python backend handles capture and storage, and this project handles modelling on top of it. Splitting them means the data layer can evolve independently - new staging models, new marts, new tests - without touching the application code.
 
-This is a different project from my old Jaffle Shop dbt sandbox, which was a fictional-data playground for experimenting with LLM-powered QA and entity resolution. This one models real data that actually matters to our family.
+It's a separate, unrelated project to my [Jaffle Shop dbt Experiments](/portfolio/jaffle-shop-dbt) sandbox - that one's a fictional-data playground for experimenting with LLM-powered QA and entity resolution. This one models real data that actually matters to our family.
 
 ## What It Does
 
