@@ -57,6 +57,11 @@ export function ProjectDetail() {
               <TapeButton primary={false}>↗ view code</TapeButton>
             </a>
           )}
+          {project.links?.blog && (
+            <Link to={project.links.blog} style={{ textDecoration: 'none' }}>
+              <TapeButton primary={false}>↗ read the blog post</TapeButton>
+            </Link>
+          )}
         </div>
       </header>
 
