@@ -9,10 +9,10 @@ import { featuredProjects } from '../data/projects';
 const ACCENT_COLORS = ['var(--zine-terracotta)', 'var(--zine-sage)', 'var(--zine-ochre)', 'var(--zine-blush)'];
 
 const NOW = [
-  { label: 'reading', value: 'The Goal — Goldratt' },
-  { label: 'building', value: 'Baby Data App v0.4' },
+  { label: 'reading', value: 'Wind and Truth — Brandon Sanderson' },
+  { label: 'building', value: 'Baby Data App v0.4 and Landy' },
   { label: 'growing', value: 'tomatoes (too many)' },
-  { label: 'listening', value: 'lo-fi & farm noises' },
+  { label: 'listening', value: 'Incy Wincy Spider' },
 ];
 
 const THINGS = [
