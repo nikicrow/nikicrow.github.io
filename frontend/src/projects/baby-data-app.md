@@ -17,6 +17,9 @@ tech:
 links:
   demo: "https://drive.google.com/file/d/1Zn6tmwO2j5m4HODhpte6v0-Wm9L2SvON/view?usp=drive_link"
   github: "https://github.com/nikicrow/baby-data-app-2025"
+relatedProjects:
+  - dbt-baby-data
+  - landy
 ---
 
 ## Overview
@@ -58,16 +61,15 @@ Two reasons:
 | **Frontend** | Vite, React |
 | **Backend** | Python, Pydantic |
 | **Database** | PostgreSQL |
-| **Data Modeling** | dbt (in progress) |
+| **Data Modeling** | [dbt](/portfolio/dbt-baby-data) |
 | **AI** | Coming soon |
 
 ## What's Next
 
 The core tracking functionality is complete. Next steps:
 
-1. **dbt integration**: Wrap the PostgreSQL database in dbt for proper data modeling (I've done this in a few smaller projects already)
-2. **Data modeling**: Structure the data for AI consumption
-3. **AI insights**: Give the LLM structured data and prompts to help predict and analyse baby patterns - when will they likely be hungry? Are they sleeping enough for their age?
+1. **AI insights**: Give the LLM structured data and prompts to help predict and analyse baby patterns - when will they likely be hungry? Are they sleeping enough for their age?
+2. The data modelling layer now lives in its own project - see [DBT Baby Data](/portfolio/dbt-baby-data)
 
 ## Work in Progress
 
