@@ -41,7 +41,7 @@ Landy runs as a **Hermes** agent connected to **Codex**, using my existing Codex
 
 ### Where it runs
 
-Landy lives on our "server laptop" - my old daily-driver laptop, bought eight years ago and finally retired 18 months ago when I got a new one. Instead of letting it gather dust, we wiped it, installed Linux, and now it sits in the corner running multiple Hermes instances around the clock. There's something satisfying about upcycling eight-year-old compute to raise a toddler.
+Landy lives on our "server laptop" - my old daily-driver laptop, bought eight years ago and finally retired 18 months ago when I got a new one. Instead of letting it gather dust, we wiped it, installed Linux, and now it sits closed and plugged in on a shelf in the study, quietly running multiple Hermes instances around the clock. No screen open, no fans you'd notice - just a lid-shut laptop earning its keep again. There's something satisfying about upcycling eight-year-old compute to raise a toddler.
 
 ### The daily loop, via Telegram
 
