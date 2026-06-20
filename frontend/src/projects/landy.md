@@ -12,6 +12,7 @@ tech:
   - Codex
   - Telegram
   - Obsidian
+  - Linux
 links:
   github: "https://github.com/nikicrow/early-learning-lab"
   blog: "/blog/landy-part-1"
@@ -37,6 +38,14 @@ So instead of me doing the planning, Landy does it. It knows her current goals a
 ### The agent
 
 Landy runs as a **Hermes** agent connected to **Codex**, using my existing Codex subscription rather than paying for yet another AI service on top.
+
+### Chasing free tiers
+
+The model behind Landy isn't fixed to Codex forever - whenever a new free trial or free-tier subscription comes up, we swap it in and try it out. My husband keeps an eye on what's offering a free month at any given time, so Landy effectively hops between providers rather than us paying for multiple subscriptions in parallel. It's a fun side effect of building this: we end up testing a rotating cast of models for free.
+
+### Where it runs
+
+Landy lives on our "server laptop" - my old daily-driver laptop, bought eight years ago and finally retired 18 months ago when I got a new one. Instead of letting it gather dust, we wiped it, installed Linux, and now it sits closed and plugged in on a shelf in the study, quietly running multiple Hermes instances around the clock. No screen open, no fans you'd notice - just a lid-shut laptop earning its keep again. There's something satisfying about upcycling eight-year-old compute to raise a toddler.
 
 ### The daily loop, via Telegram
 
@@ -72,6 +81,7 @@ To keep token costs sane, Landy only pulls the genuinely important snippets into
 | **Model / compute** | Codex |
 | **Messaging** | Telegram |
 | **Memory** | Obsidian vault |
+| **Hosting** | Upcycled 8-year-old laptop, running Linux |
 
 ## What's Next
 
