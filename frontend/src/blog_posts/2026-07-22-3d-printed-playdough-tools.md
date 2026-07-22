@@ -20,7 +20,9 @@ Ember turned three, and we decided to make her birthday party Play-Doh themed. T
 
 ## The idea
 
-We'd just bought a **Bambu Lab A1 Combo**, which meant I could finally print in colour and print more than one thing at a time. Store-bought Play-Doh tools are fine, but I wanted something better than fine. I wanted tools that were *custom* — to the kids, to the party, to the whole point of the day.
+We'd just bought a **Bambu Lab A1 Combo** — my first 3D printer ever. I'd never owned one before, and honestly the party was as much an excuse as a reason. I wanted to actually get my hands on one and find out what it was capable of: how printing works, what the machine can and can't do, and — the question I was most curious about — whether you can drive it from a *parametric* model rather than hand-modelling every single thing. Could I describe a tool in code and have the geometry generate itself? That was the itch I really wanted to scratch.
+
+Printing in colour and printing more than one thing at a time was a nice bonus on top. Store-bought Play-Doh tools are fine, but I wanted something better than fine. I wanted tools that were *custom* — to the kids, to the party, to the whole point of the day.
 
 So here's what I landed on. For each little guest, I'd make a set of three tools:
 
