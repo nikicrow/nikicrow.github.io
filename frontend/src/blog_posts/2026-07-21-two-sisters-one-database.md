@@ -16,7 +16,7 @@ tags:
   - parental-leave
 ---
 
-I've spent a good chunk of the last month on a project that has nothing to do with my job and everything to do with the skills I use there. **[App name]** is a full-stack app I built to track and compare the data I've collected on my two daughters — Ember's first year, and Imogen's life so far — and after a lot of nap-times and evenings, it's roughly ninety percent of the way to being a real, deployed application.
+I've spent a good chunk of the last month on a project that has nothing to do with my job and everything to do with the skills I use there. **BabyData app 2025** is a full-stack app I built to track and compare the data I've collected on my two daughters — Ember's first year, and Imogen's life so far — and after a lot of nap-times and evenings, it's roughly ninety percent of the way to being a real, deployed application.
 
 ## Why build it
 
@@ -30,9 +30,7 @@ To me, this data is gold. We treasure photos of our babies, and rightly so — b
 
 And here's where I show my hand: deep down, I'm a SQL girl. To a frontend or software developer, bolting a full database onto an app like this probably looks excessive. For me it was non-negotiable. I want to be able to SQL my way around my own data and dig for insights in a way I simply can't in any other language — and then surface what I find through Python visualisations. The database isn't overkill; it's the whole point.
 
-The heart of it is a comparison page. I can line up the two of them at the same age and look at time awake at night, how many times we had to feed overnight, feeds per day, and how long each feed actually took. It has been, in about equal measure, encouraging and disheartening. Seeing our night wakings shrink and feeds get more efficient is a genuine lift on a hard morning. Seeing a stretch where it got *worse* is a bit of a gut-punch. But it's honest, and it's ours.
-
-My favourite thing to watch is feed efficiency. Imogen feeds noticeably faster than Ember did at the same age <!-- drop in the real figure here, e.g. "X minutes vs Y" -->, and being able to see that pattern hold across weeks — rather than just half-remembering it — is exactly the kind of thing I built this for.
+The heart of it is a comparison page. I can line up the two of them at the same age and look at time awake at night, how many times we had to feed overnight, feeds per day, and how long each feed actually took. It has been, in about equal measure, encouraging and disheartening. Seeing our night wakings shrink and feeds get quicker is a genuine lift on a hard morning. Seeing a stretch where it got *worse* is a bit of a gut-punch. But it's honest, and it's ours.
 
 <!-- screenshot: comparison page -->
 
