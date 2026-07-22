@@ -7,6 +7,7 @@
   export default defineConfig({
     plugins: [react(), tailwindcss()],
     assetsInclude: ['**/*.md'],
+    publicDir: path.resolve(__dirname, './frontend/public'),
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
