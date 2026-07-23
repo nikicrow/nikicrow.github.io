@@ -53,19 +53,17 @@ export function Home() {
 
         {/* Right col — polaroid collage */}
         <div className="zine-hero-right" style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
-          <WashiTape x={70} y={6} w={120} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 22, left: 50 }}>
-            <Polaroid caption="me + my mat-leave baby" rotate={-6} color="var(--zine-blush)" src="/photos/me-and-imogen.jpg" alt="Me holding my baby while on maternity leave" />
+          <WashiTape x={70} y={2} w={115} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 10, left: 50 }}>
+            <Polaroid caption="me + baby Imogen" rotate={-5} color="var(--zine-blush)" w={190} h={205} src="/photos/mum-and-baby.jpg" alt="Ghibli-style illustration of me holding my baby daughter Imogen" />
           </div>
-          <WashiTape x={20} y={210} w={100} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 220, left: 0 }}>
-            <div className="hen-waddle" style={{ transformOrigin: 'center bottom' }}>
-              <Polaroid caption="my two daughters" rotate={4} color="var(--zine-sage)" w={180} h={130} src="/photos/ember-and-imogen.jpg" alt="My two daughters lying side by side" />
-            </div>
+          <WashiTape x={15} y={228} w={100} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 240, left: 0 }}>
+            <Polaroid caption="kakigori in Japan" rotate={4} color="var(--zine-ochre)" w={195} h={145} src="/photos/family-shaved-ice.jpg" alt="Ghibli-style illustration of our family eating shaved ice in Japan" />
           </div>
-          <WashiTape x={170} y={320} w={90} rotate={-12} color="var(--zine-terracotta)" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 330, left: 150 }}>
-            <Polaroid caption="my overgrown veggie patch" rotate={7} color="var(--zine-ochre)" w={170} h={120} src="/photos/veggie-patch.jpg" alt="My overgrown vegetable patch" />
+          <WashiTape x={195} y={248} w={90} rotate={-12} color="var(--zine-terracotta)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 258, left: 178 }}>
+            <Polaroid caption="the crew in Arashiyama" rotate={6} color="var(--zine-sage)" w={150} h={185} src="/photos/family-bamboo-forest.jpg" alt="Ghibli-style family selfie in the Arashiyama bamboo grove, with our newborn in a carrier" />
           </div>
         </div>
 
@@ -100,31 +98,6 @@ export function Home() {
               <p style={{ fontSize: 14, color: 'var(--zine-ink2)', lineHeight: 1.5, margin: 0 }}>{x.d}</p>
             </div>
           ))}
-        </div>
-      </section>
-
-      {/* Family scrapbook */}
-      <section className="reveal" style={{ marginTop: 60 }}>
-        <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 40, marginBottom: 4, fontStyle: 'italic' }}>
-          my little crew{' '}
-          <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 34, color: 'var(--zine-blush)' }}>(chaos &amp; all)</span>
-        </h2>
-        <p style={{ fontSize: 15, color: 'var(--zine-ink2)', lineHeight: 1.6, maxWidth: 520, marginTop: 6, marginBottom: 8 }}>
-          The reason I code fast and sleep little — a few snapshots from family life and our adventures in Japan.
-        </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 44, alignItems: 'flex-start', paddingTop: 26 }}>
-          <div style={{ position: 'relative' }}>
-            <WashiTape x={40} y={-8} w={110} rotate={-6} color="var(--zine-blush)" pattern="dots" zIndex={5} />
-            <Polaroid caption="me + baby Imogen" w={230} h={280} rotate={-3} color="var(--zine-blush)" src="/photos/mum-and-baby.jpg" alt="Me holding my baby daughter Imogen" />
-          </div>
-          <div style={{ position: 'relative' }}>
-            <WashiTape x={30} y={-8} w={120} rotate={5} color="var(--zine-ochre)" pattern="stripes" zIndex={5} />
-            <Polaroid caption="kakigori in Japan" w={300} h={225} rotate={2} color="var(--zine-ochre)" src="/photos/family-shaved-ice.jpg" alt="Our family enjoying shaved ice desserts in Japan" />
-          </div>
-          <div style={{ position: 'relative' }}>
-            <WashiTape x={30} y={-8} w={100} rotate={-8} color="var(--zine-sage)" pattern="dots" zIndex={5} />
-            <Polaroid caption="Arashiyama bamboo grove" w={210} h={280} rotate={4} color="var(--zine-sage)" src="/photos/family-bamboo-forest.jpg" alt="Family selfie in the Arashiyama bamboo forest, with our newborn in a carrier" />
-          </div>
         </div>
       </section>
 
