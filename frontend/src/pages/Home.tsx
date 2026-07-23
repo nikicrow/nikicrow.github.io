@@ -53,17 +53,22 @@ export function Home() {
 
         {/* Right col — polaroid collage */}
         <div className="zine-hero-right" style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
-          <WashiTape x={70} y={2} w={115} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 10, left: 50 }}>
-            <Polaroid caption="me + baby Imogen" rotate={-5} color="var(--zine-blush)" w={190} h={205} src="/photos/mum-and-baby.jpg" alt="Ghibli-style illustration of me holding my baby daughter Imogen" />
+          {/* Top-left: me + baby (portrait) */}
+          <WashiTape x={10} y={-2} w={100} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 6, left: 0 }}>
+            <Polaroid caption="me + baby Imogen" rotate={-4} color="var(--zine-blush)" w={148} h={172} src="/photos/mum-and-baby.jpg" alt="Ghibli-style illustration of me holding my baby daughter Imogen" />
           </div>
-          <WashiTape x={15} y={228} w={100} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 240, left: 0 }}>
-            <Polaroid caption="kakigori in Japan" rotate={4} color="var(--zine-ochre)" w={195} h={145} src="/photos/family-shaved-ice.jpg" alt="Ghibli-style illustration of our family eating shaved ice in Japan" />
+          {/* Top-right: kakigori (landscape) */}
+          <WashiTape x={205} y={8} w={90} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 18, left: 185 }}>
+            <Polaroid caption="kakigori in Japan" rotate={3} color="var(--zine-ochre)" w={135} h={104} src="/photos/family-shaved-ice.jpg" alt="Ghibli-style illustration of our family eating shaved ice in Japan" />
           </div>
-          <WashiTape x={195} y={248} w={90} rotate={-12} color="var(--zine-terracotta)" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 258, left: 178 }}>
-            <Polaroid caption="the crew in Arashiyama" rotate={6} color="var(--zine-sage)" w={150} h={185} src="/photos/family-bamboo-forest.jpg" alt="Ghibli-style family selfie in the Arashiyama bamboo grove, with our newborn in a carrier" />
+          {/* Bottom-centre: Arashiyama (portrait) — this one wiggles */}
+          <WashiTape x={92} y={240} w={95} rotate={-10} color="var(--zine-terracotta)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 250, left: 64 }}>
+            <div className="hen-waddle" style={{ transformOrigin: 'center bottom' }}>
+              <Polaroid caption="the crew in Kyoto" rotate={4} color="var(--zine-sage)" w={155} h={175} src="/photos/family-bamboo-forest.jpg" alt="Ghibli-style family selfie in the Arashiyama bamboo grove, with our newborn in a carrier" />
+            </div>
           </div>
         </div>
 
