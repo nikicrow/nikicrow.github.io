@@ -19,7 +19,7 @@ export function About() {
         {/* Left: polaroid */}
         <div style={{ position: 'relative', paddingTop: 20 }}>
           <WashiTape x={40} y={8} w={100} rotate={-5} color="var(--zine-ochre)" pattern="stripes" zIndex={5} />
-          <Polaroid caption="that's me" w={240} h={260} rotate={-3} color="var(--zine-blush)" src="/photos/mum-and-baby.jpg" alt="Me holding my baby daughter Imogen" />
+          <Polaroid caption="that's me" w={240} h={260} rotate={-3} color="var(--zine-ochre)" src="/photos/niki-veggie-garden.jpg" alt="Me gardening in my veggie patch" />
         </div>
 
         {/* Right: bio intro */}
@@ -57,31 +57,6 @@ export function About() {
           <p style={{ marginBottom: 0 }}>
             After three years there (and one baby), I joined a large telco as Senior Data Scientist. Within a year I was leading a team to deploy an end-to-end MLOps system. They recognised my work — despite getting pregnant again — and promoted me to Lead Machine Learning Engineer. My current role.
           </p>
-        </div>
-      </section>
-
-      {/* Family — Japan trip */}
-      <section style={{ marginBottom: 40 }}>
-        <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 36, fontStyle: 'italic', marginBottom: 6 }}>
-          my little crew{' '}
-          <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 28, color: 'var(--zine-sage)' }}>(chaos & all)</span>
-        </h2>
-        <p style={{ fontSize: 15, color: 'var(--zine-ink2)', lineHeight: 1.6, maxWidth: 560, marginBottom: 24 }}>
-          The reason I code fast and sleep little. A few snapshots from family life — adventures in Japan and the veggie patch that keeps me sane.
-        </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 40, alignItems: 'flex-start', paddingTop: 12 }}>
-          <div style={{ position: 'relative' }}>
-            <WashiTape x={30} y={-6} w={110} rotate={-6} color="var(--zine-ochre)" pattern="stripes" zIndex={5} />
-            <Polaroid caption="kakigori in Japan" w={280} h={210} rotate={-2} color="var(--zine-blush)" src="/photos/family-shaved-ice.jpg" alt="Our family enjoying shaved ice desserts in Japan" />
-          </div>
-          <div style={{ position: 'relative' }}>
-            <WashiTape x={40} y={-6} w={100} rotate={5} color="var(--zine-sage)" pattern="dots" zIndex={5} />
-            <Polaroid caption="Arashiyama bamboo grove" w={200} h={266} rotate={3} color="var(--zine-sage)" src="/photos/family-bamboo-forest.jpg" alt="Family selfie in the Arashiyama bamboo forest, with our newborn in a carrier" />
-          </div>
-          <div style={{ position: 'relative' }}>
-            <WashiTape x={30} y={-6} w={100} rotate={-4} color="var(--zine-terracotta)" pattern="stripes" zIndex={5} />
-            <Polaroid caption="good things grow here" w={220} h={250} rotate={2} color="var(--zine-ochre)" src="/photos/niki-veggie-garden.jpg" alt="Me gardening in my veggie patch" />
-          </div>
         </div>
       </section>
 
