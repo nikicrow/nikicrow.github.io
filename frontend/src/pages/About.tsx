@@ -19,7 +19,7 @@ export function About() {
         {/* Left: polaroid */}
         <div style={{ position: 'relative', paddingTop: 20 }}>
           <WashiTape x={40} y={8} w={100} rotate={-5} color="var(--zine-ochre)" pattern="stripes" zIndex={5} />
-          <Polaroid caption="that's me" w={240} h={260} rotate={-3} color="var(--zine-blush)" label="self portrait" />
+          <Polaroid caption="that's me" w={240} h={260} rotate={-3} color="var(--zine-ochre)" src="/photos/niki-veggie-garden.jpg" alt="Me gardening in my veggie patch" />
         </div>
 
         {/* Right: bio intro */}

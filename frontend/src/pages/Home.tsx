@@ -103,6 +103,31 @@ export function Home() {
         </div>
       </section>
 
+      {/* Family scrapbook */}
+      <section className="reveal" style={{ marginTop: 60 }}>
+        <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 40, marginBottom: 4, fontStyle: 'italic' }}>
+          my little crew{' '}
+          <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 34, color: 'var(--zine-blush)' }}>(chaos &amp; all)</span>
+        </h2>
+        <p style={{ fontSize: 15, color: 'var(--zine-ink2)', lineHeight: 1.6, maxWidth: 520, marginTop: 6, marginBottom: 8 }}>
+          The reason I code fast and sleep little — a few snapshots from family life and our adventures in Japan.
+        </p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 44, alignItems: 'flex-start', paddingTop: 26 }}>
+          <div style={{ position: 'relative' }}>
+            <WashiTape x={40} y={-8} w={110} rotate={-6} color="var(--zine-blush)" pattern="dots" zIndex={5} />
+            <Polaroid caption="me + baby Imogen" w={230} h={280} rotate={-3} color="var(--zine-blush)" src="/photos/mum-and-baby.jpg" alt="Me holding my baby daughter Imogen" />
+          </div>
+          <div style={{ position: 'relative' }}>
+            <WashiTape x={30} y={-8} w={120} rotate={5} color="var(--zine-ochre)" pattern="stripes" zIndex={5} />
+            <Polaroid caption="kakigori in Japan" w={300} h={225} rotate={2} color="var(--zine-ochre)" src="/photos/family-shaved-ice.jpg" alt="Our family enjoying shaved ice desserts in Japan" />
+          </div>
+          <div style={{ position: 'relative' }}>
+            <WashiTape x={30} y={-8} w={100} rotate={-8} color="var(--zine-sage)" pattern="dots" zIndex={5} />
+            <Polaroid caption="Arashiyama bamboo grove" w={210} h={280} rotate={4} color="var(--zine-sage)" src="/photos/family-bamboo-forest.jpg" alt="Family selfie in the Arashiyama bamboo forest, with our newborn in a carrier" />
+          </div>
+        </div>
+      </section>
+
       {/* Featured projects */}
       <section className="reveal" style={{ marginTop: 60 }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: 22 }}>
