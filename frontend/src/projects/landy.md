@@ -17,7 +17,6 @@ links:
   github: "https://github.com/nikicrow/early-learning-lab"
   blog: "/blog/landy-part-1"
 relatedProjects:
-  - dbt-baby-data
   - baby-data-app
 ---
 
