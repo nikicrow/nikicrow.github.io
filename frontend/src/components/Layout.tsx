@@ -74,7 +74,7 @@ export function Layout() {
       <div className="zine-container" style={{ maxWidth: 1180, margin: '0 auto', padding: '32px 56px 80px' }}>
         {/* Header */}
         <header style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: 28, position: 'relative', zIndex: 4 }}>
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Link to="/" viewTransition style={{ textDecoration: 'none' }}>
             <NikiLogo />
           </Link>
 
@@ -85,6 +85,7 @@ export function Layout() {
                 <Link
                   key={item.to}
                   to={item.to}
+                  viewTransition
                   className="zine-nav-link"
                   style={{
                     color: active ? 'var(--zine-terracotta2)' : 'var(--zine-ink2)',

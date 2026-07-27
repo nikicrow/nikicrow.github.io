@@ -94,6 +94,73 @@ body {
   animation: zine-fade-in 0.3s ease-out;
 }
 
+/* ══════════════════════════════════════════════════════════
+   Cross-page view transitions — scrapbook page-turn
+   Same-document transitions driven by React Router's
+   `viewTransition` prop + the browser View Transitions API.
+   Progressive enhancement: unsupported browsers just navigate
+   instantly (see the mount fade fallback below).
+   ══════════════════════════════════════════════════════════ */
+
+/* Where the View Transitions API exists, let it own the page
+   animation and switch off the mount-based fade so they don't
+   double up. Where it doesn't, `.zine-page-fade` stays as the
+   graceful fallback. */
+@supports (view-transition-name: none) {
+  .zine-page-fade { animation: none; }
+}
+
+/* Outgoing page lifts and turns away toward its left spine. */
+@keyframes zine-page-turn-out {
+  0%   { opacity: 1; transform: perspective(1600px) translateX(0)    rotateY(0deg); }
+  100% { opacity: 0; transform: perspective(1600px) translateX(-4%)  rotateY(6deg); }
+}
+
+/* Incoming page swings in from the right with a soft paper-shadow
+   sweep down its leading edge, then settles flat. */
+@keyframes zine-page-turn-in {
+  0%   { opacity: 0; transform: perspective(1600px) translateX(6%)  rotateY(-9deg);
+         filter: drop-shadow(-24px 0 26px rgba(43, 36, 24, 0.28)); }
+  55%  { opacity: 1; }
+  100% { opacity: 1; transform: perspective(1600px) translateX(0)   rotateY(0deg);
+         filter: drop-shadow(0 0 0 rgba(43, 36, 24, 0)); }
+}
+
+::view-transition-old(root) {
+  animation: zine-page-turn-out 0.42s cubic-bezier(.4, .0, .6, 1) both;
+  transform-origin: left center;
+}
+::view-transition-new(root) {
+  animation: zine-page-turn-in 0.52s cubic-bezier(.2, .8, .4, 1) both;
+  transform-origin: left center;
+}
+
+/* Shared-element morphs (a card title growing into the detail
+   heading): give every morphing group the springy zine easing so
+   the title feels like it's being pulled onto the page. */
+::view-transition-group(*) {
+  animation-duration: 0.5s;
+  animation-timing-function: cubic-bezier(.2, .8, .4, 1.2);
+}
+
+/* Respect reduced-motion: drop the turn + morph to a quick cross-fade. */
+@keyframes zine-vt-fade-out { from { opacity: 1; } to { opacity: 0; } }
+@keyframes zine-vt-fade-in  { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root) {
+    animation: zine-vt-fade-out 0.14s ease both;
+    transform: none;
+  }
+  ::view-transition-new(root) {
+    animation: zine-vt-fade-in 0.14s ease both;
+    transform: none;
+  }
+  ::view-transition-group(*) {
+    animation-duration: 0.14s;
+    animation-timing-function: ease;
+  }
+}
+
 /* ── Hen waddle ── */
 @keyframes waddle {
   0%, 100% { transform: rotate(-4deg); }

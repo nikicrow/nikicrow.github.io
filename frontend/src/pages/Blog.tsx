@@ -3,6 +3,9 @@ import { Link } from 'react-router';
 import { blogPosts } from '../data/blogPosts';
 import { Stamp } from '../components/zine/Stamp';
 import { useReveal } from '../components/zine/useReveal';
+import { useSharedTransitionName } from '../components/zine/useSharedTransitionName';
+
+type BlogPostItem = (typeof blogPosts)[number];
 
 const BORDER_COLORS = [
   'var(--zine-terracotta)',
@@ -13,6 +16,74 @@ const BORDER_COLORS = [
   'var(--zine-sage2)',
 ];
 const CARD_ROTS = [-0.3, 0.3, -0.3, 0.3];
+
+function BlogPostCard({ post, index: i, onToggleTag }: { post: BlogPostItem; index: number; onToggleTag: (tag: string) => void }) {
+  // The clicked post's title carries a shared name so it morphs into the
+  // article heading on the post page.
+  const titleName = useSharedTransitionName(`/blog/${post.slug}`, `post-title-${post.slug}`);
+
+  return (
+    <div
+      className="zine-card reveal"
+      style={{
+        background: '#fff',
+        padding: '22px 24px',
+        borderLeft: `5px solid ${BORDER_COLORS[i % BORDER_COLORS.length]}`,
+        boxShadow: '0 4px 14px rgba(43,36,24,0.08)',
+        transform: `rotate(${CARD_ROTS[i % CARD_ROTS.length]}deg)`,
+      }}
+    >
+      {/* Top row */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
+        <span style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5 }}>
+          {(post.category ?? 'general').toUpperCase()}
+        </span>
+        <span style={{ fontFamily: 'var(--zine-mono)', fontSize: 11, color: 'var(--zine-ink2)' }}>
+          {new Date(post.date).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })} · {post.readTime}
+        </span>
+      </div>
+
+      {/* Title */}
+      <Link to={`/blog/${post.slug}`} viewTransition style={{ textDecoration: 'none', color: 'inherit' }}>
+        <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 30, fontStyle: 'italic', lineHeight: 1.15, margin: '0 0 10px', viewTransitionName: titleName }}>
+          {post.title}
+        </h2>
+      </Link>
+
+      {/* Excerpt */}
+      <p style={{ fontFamily: 'var(--zine-body)', fontSize: 15, color: 'var(--zine-ink2)', lineHeight: 1.6, marginBottom: 14 }}>
+        {post.excerpt}
+      </p>
+
+      {/* Bottom row */}
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+          {(Array.isArray(post.tags) ? post.tags : []).map((tag) => (
+            <button
+              key={tag}
+              onClick={() => onToggleTag(tag)}
+              style={{
+                padding: '2px 8px',
+                background: 'var(--zine-cream)',
+                color: 'var(--zine-ink2)',
+                border: 'none',
+                borderRadius: 999,
+                fontFamily: 'var(--zine-mono)',
+                fontSize: 10,
+                cursor: 'pointer',
+              }}
+            >
+              #{tag}
+            </button>
+          ))}
+        </div>
+        <Link to={`/blog/${post.slug}`} viewTransition style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-terracotta2)', textDecoration: 'none' }}>
+          read more →
+        </Link>
+      </div>
+    </div>
+  );
+}
 
 export function Blog() {
   useReveal();
@@ -142,66 +213,7 @@ export function Blog() {
           </div>
         ) : (
           filteredPosts.map((post, i) => (
-            <div
-              key={post.slug}
-              className="zine-card reveal"
-              style={{
-                background: '#fff',
-                padding: '22px 24px',
-                borderLeft: `5px solid ${BORDER_COLORS[i % BORDER_COLORS.length]}`,
-                boxShadow: '0 4px 14px rgba(43,36,24,0.08)',
-                transform: `rotate(${CARD_ROTS[i % CARD_ROTS.length]}deg)`,
-              }}
-            >
-              {/* Top row */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 8 }}>
-                <span style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5 }}>
-                  {(post.category ?? 'general').toUpperCase()}
-                </span>
-                <span style={{ fontFamily: 'var(--zine-mono)', fontSize: 11, color: 'var(--zine-ink2)' }}>
-                  {new Date(post.date).toLocaleDateString('en-AU', { day: 'numeric', month: 'short', year: 'numeric' })} · {post.readTime}
-                </span>
-              </div>
-
-              {/* Title */}
-              <Link to={`/blog/${post.slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 30, fontStyle: 'italic', lineHeight: 1.15, margin: '0 0 10px' }}>
-                  {post.title}
-                </h2>
-              </Link>
-
-              {/* Excerpt */}
-              <p style={{ fontFamily: 'var(--zine-body)', fontSize: 15, color: 'var(--zine-ink2)', lineHeight: 1.6, marginBottom: 14 }}>
-                {post.excerpt}
-              </p>
-
-              {/* Bottom row */}
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 8 }}>
-                <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                  {(Array.isArray(post.tags) ? post.tags : []).map((tag) => (
-                    <button
-                      key={tag}
-                      onClick={() => toggleTag(tag)}
-                      style={{
-                        padding: '2px 8px',
-                        background: 'var(--zine-cream)',
-                        color: 'var(--zine-ink2)',
-                        border: 'none',
-                        borderRadius: 999,
-                        fontFamily: 'var(--zine-mono)',
-                        fontSize: 10,
-                        cursor: 'pointer',
-                      }}
-                    >
-                      #{tag}
-                    </button>
-                  ))}
-                </div>
-                <Link to={`/blog/${post.slug}`} style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-terracotta2)', textDecoration: 'none' }}>
-                  read more →
-                </Link>
-              </div>
-            </div>
+            <BlogPostCard key={post.slug} post={post} index={i} onToggleTag={toggleTag} />
           ))
         )}
       </div>
