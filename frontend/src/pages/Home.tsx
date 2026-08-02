@@ -42,10 +42,10 @@ export function Home() {
             financial markets, parenting in tech, and the joyful chaos of doing it all at once.
           </p>
           <div style={{ display: 'flex', gap: 14, marginTop: 22, alignItems: 'center' }}>
-            <Link to="/portfolio">
+            <Link to="/portfolio" viewTransition>
               <TapeButton>see my projects →</TapeButton>
             </Link>
-            <Link to="/blog" style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink2)', transform: 'rotate(-3deg)', display: 'inline-block', textDecoration: 'none' }}>
+            <Link to="/blog" viewTransition style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink2)', transform: 'rotate(-3deg)', display: 'inline-block', textDecoration: 'none' }}>
               or read the blog ↗
             </Link>
           </div>
@@ -108,13 +108,13 @@ export function Home() {
             featured projects{' '}
             <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 30, color: 'var(--zine-terracotta2)' }}>★</span>
           </h2>
-          <Link to="/portfolio" className="zine-nav-link" style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-ink2)', textDecoration: 'none' }}>
+          <Link to="/portfolio" viewTransition className="zine-nav-link" style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-ink2)', textDecoration: 'none' }}>
             see all ↗
           </Link>
         </div>
         <div className="zine-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
           {featuredProjects.slice(0, 4).map((p, i) => (
-            <Link key={p.id} to={`/portfolio/${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link key={p.id} to={`/portfolio/${p.id}`} viewTransition style={{ textDecoration: 'none', color: 'inherit' }}>
               <div
                 className="zine-card"
                 style={{
@@ -177,7 +177,7 @@ export function Home() {
         <p style={{ color: 'var(--zine-ink2)', marginBottom: 22, maxWidth: 500, marginLeft: 'auto', marginRight: 'auto' }}>
           I&apos;m always up for chatting about ML, markets, parenting in tech, or the right way to compost.
         </p>
-        <Link to="/about">
+        <Link to="/about" viewTransition>
           <TapeButton>get in touch →</TapeButton>
         </Link>
       </section>

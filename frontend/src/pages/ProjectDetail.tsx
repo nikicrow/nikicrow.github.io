@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router';
+import { useParams, Link, Navigate, useViewTransitionState } from 'react-router';
 import { getProjectById, getRelatedProjects, Project } from '../data/projects';
 import { Stamp } from '../components/zine/Stamp';
 import { TapeButton } from '../components/zine/TapeButton';
@@ -19,6 +19,13 @@ export function ProjectDetail() {
   const { id } = useParams();
   const project = getProjectById(id || '');
 
+  // Hooks must run unconditionally, before any early return. The heading is
+  // named while arriving from a card (forward) or heading back to the list, so
+  // it morphs to/from the matching card title and otherwise turns with the page.
+  const arriving = useViewTransitionState(`/portfolio/${id}`);
+  const leavingToList = useViewTransitionState('/portfolio');
+  const titleName = arriving || leavingToList ? `project-title-${id}` : undefined;
+
   if (!project) return <Navigate to="/portfolio" replace />;
 
   const relatedProjects = getRelatedProjects(project);
@@ -28,6 +35,7 @@ export function ProjectDetail() {
       {/* Back link */}
       <Link
         to="/portfolio"
+        viewTransition
         style={{ fontFamily: 'var(--zine-mono)', fontSize: 12, color: 'var(--zine-ink2)', textDecoration: 'none', display: 'inline-block', marginBottom: 28 }}
       >
         ← back to projects
@@ -40,7 +48,7 @@ export function ProjectDetail() {
           <Stamp color="var(--zine-sage2)" rotate={2}>{statusLabel(project.status)}</Stamp>
           {project.featured && <Stamp color="var(--zine-ochre)" rotate={-2}>featured</Stamp>}
         </div>
-        <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 64, fontStyle: 'italic', lineHeight: 1.05, fontWeight: 600, margin: '12px 0 14px' }}>
+        <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 64, fontStyle: 'italic', lineHeight: 1.05, fontWeight: 600, margin: '12px 0 14px', viewTransitionName: titleName }}>
           {project.title}
         </h1>
         <p style={{ fontFamily: 'var(--zine-body)', fontSize: 19, color: 'var(--zine-ink2)', lineHeight: 1.55, marginBottom: 22 }}>
@@ -135,7 +143,7 @@ export function ProjectDetail() {
       <div style={{ marginTop: 48, background: 'var(--zine-terracotta)', color: 'var(--zine-cream)', padding: '28px 32px', position: 'relative', borderRadius: 2 }}>
         <WashiTape x={30} y={-10} w={90} rotate={-2} color="var(--zine-ochre)" pattern="dots" />
         <p style={{ fontFamily: 'var(--zine-hand)', fontSize: 20, margin: '0 0 8px' }}>liked this one?</p>
-        <Link to="/blog" style={{ color: 'var(--zine-cream)', fontFamily: 'var(--zine-display)', fontSize: 22, fontStyle: 'italic' }}>
+        <Link to="/blog" viewTransition style={{ color: 'var(--zine-cream)', fontFamily: 'var(--zine-display)', fontSize: 22, fontStyle: 'italic' }}>
           read the blog →
         </Link>
       </div>
@@ -146,7 +154,7 @@ export function ProjectDetail() {
           <h3 style={{ fontFamily: 'var(--zine-display)', fontSize: 28, fontStyle: 'italic', marginBottom: 18 }}>more projects</h3>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 16 }}>
             {relatedProjects.map((rel) => (
-              <Link key={rel.id} to={`/portfolio/${rel.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+              <Link key={rel.id} to={`/portfolio/${rel.id}`} viewTransition style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="zine-card" style={{ background: '#fff', padding: 18, boxShadow: '0 4px 14px rgba(43,36,24,0.08)' }}>
                   <div style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5, marginBottom: 6 }}>
                     {rel.category.toUpperCase()}

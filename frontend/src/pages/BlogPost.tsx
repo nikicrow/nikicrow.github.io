@@ -1,4 +1,4 @@
-import { useParams, Link, Navigate } from 'react-router';
+import { useParams, Link, Navigate, useViewTransitionState } from 'react-router';
 import { blogPosts } from '../data/blogPosts';
 import { Stamp } from '../components/zine/Stamp';
 import { WashiTape } from '../components/zine/WashiTape';
@@ -9,6 +9,12 @@ export function BlogPost() {
   const { slug } = useParams();
   const post = blogPosts.find((p) => p.slug === slug);
 
+  // Hooks before any early return. Named while arriving from a post card or
+  // heading back to the list, so the heading morphs to/from the card title.
+  const arriving = useViewTransitionState(`/blog/${slug}`);
+  const leavingToList = useViewTransitionState('/blog');
+  const titleName = arriving || leavingToList ? `post-title-${slug}` : undefined;
+
   if (!post) return <Navigate to="/blog" replace />;
 
   const relatedPosts = blogPosts.filter((p) => p.slug !== slug).slice(0, 3);
@@ -18,6 +24,7 @@ export function BlogPost() {
       {/* Back link */}
       <Link
         to="/blog"
+        viewTransition
         style={{ fontFamily: 'var(--zine-mono)', fontSize: 12, color: 'var(--zine-ink2)', textDecoration: 'none', display: 'inline-block', marginBottom: 28 }}
       >
         ← back to blog
@@ -34,7 +41,7 @@ export function BlogPost() {
             </span>
           </div>
 
-          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 56, fontStyle: 'italic', lineHeight: 1.05, fontWeight: 600, margin: '0 0 14px' }}>
+          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 56, fontStyle: 'italic', lineHeight: 1.05, fontWeight: 600, margin: '0 0 14px', viewTransitionName: titleName }}>
             {post.title}
           </h1>
 
@@ -80,7 +87,7 @@ export function BlogPost() {
         <div style={{ marginTop: 48, background: '#fff', padding: '24px 28px', position: 'relative', boxShadow: '0 4px 14px rgba(43,36,24,0.08)' }}>
           <WashiTape x={30} y={-10} w={80} rotate={-3} color="var(--zine-sage)" pattern="dots" />
           <p style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink)', margin: '0 0 8px' }}>thanks for reading ✿</p>
-          <Link to="/blog" style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-terracotta2)', textDecoration: 'none' }}>
+          <Link to="/blog" viewTransition style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-terracotta2)', textDecoration: 'none' }}>
             ← back to the blog
           </Link>
         </div>
@@ -95,6 +102,7 @@ export function BlogPost() {
               <Link
                 key={rel.slug}
                 to={`/blog/${rel.slug}`}
+                viewTransition
                 style={{ textDecoration: 'none', color: 'inherit' }}
               >
                 <div className="zine-card" style={{ background: '#fff', padding: '16px 20px', boxShadow: '0 4px 14px rgba(43,36,24,0.08)', borderLeft: '4px solid var(--zine-terracotta)' }}>
