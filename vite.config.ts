@@ -7,6 +7,7 @@
   export default defineConfig({
     plugins: [react(), tailwindcss()],
     assetsInclude: ['**/*.md'],
+    publicDir: path.resolve(__dirname, './frontend/public'),
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {
@@ -56,7 +57,7 @@
       outDir: 'build',
     },
     server: {
-      port: 3000,
+      port: parseInt(process.env.PORT || '3000'),
       open: true,
     },
   });

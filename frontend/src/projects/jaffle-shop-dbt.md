@@ -5,7 +5,7 @@ description: "A dbt sandbox for experimenting with LLM-powered data QA and entit
 status: development
 category: Data
 completedDate: "2025-11-15"
-featured: true
+featured: false
 draft: false
 tech:
   - dbt

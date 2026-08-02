@@ -9,17 +9,17 @@ import { featuredProjects } from '../data/projects';
 const ACCENT_COLORS = ['var(--zine-terracotta)', 'var(--zine-sage)', 'var(--zine-ochre)', 'var(--zine-blush)'];
 
 const NOW = [
-  { label: 'reading', value: 'The Goal — Goldratt' },
-  { label: 'building', value: 'Baby Data App v0.4' },
+  { label: 'reading', value: 'Wind and Truth — Brandon Sanderson' },
+  { label: 'building', value: 'Baby Data App v0.4 and Landy' },
   { label: 'growing', value: 'tomatoes (too many)' },
-  { label: 'listening', value: 'lo-fi & farm noises' },
+  { label: 'listening', value: 'Incy Wincy Spider' },
 ];
 
 const THINGS = [
   { t: 'Machine Learning', d: 'Production ML systems. Models that survive contact with reality, not just notebooks.', c: 'var(--zine-terracotta)', e: '🤖' },
-  { t: 'Garden + chickens', d: 'Three hens, one zucchini glut, an aspirational compost pile.', c: 'var(--zine-sage)', e: '🌿' },
-  { t: 'Mum of two', d: 'Toddler Ember, newborn Imogen. Sleep-deprived, mostly delighted.', c: 'var(--zine-blush)', e: '🍼' },
-  { t: 'Writing', d: 'Honest essays on tech, trading, and the messy bits of work-life integration.', c: 'var(--zine-ochre)', e: '✏️' },
+  { t: 'Garden + animals', d: 'Border collie, chickens, veggie patch and an aspirational compost pile.', c: 'var(--zine-sage)', e: '🌿' },
+  { t: 'Mum of two', d: 'Two girls, a toddler and a newborn. Lacking sleep, adult company but rich in wholesome family time.', c: 'var(--zine-blush)', e: '🍼' },
+  { t: 'Writing', d: 'Honest essays on tech, parenting, and the messy bits of work-life integration.', c: 'var(--zine-ochre)', e: '✏️' },
 ];
 
 export function Home() {
@@ -28,49 +28,47 @@ export function Home() {
   return (
     <div>
       {/* Hero */}
-      <section style={{ position: 'relative', minHeight: 540, marginTop: 16 }}>
+      <section className="zine-hero" style={{ position: 'relative', minHeight: 540, marginTop: 16 }}>
         {/* Left col */}
-        <div style={{ position: 'absolute', top: 30, left: 0, right: 380 }}>
+        <div className="zine-hero-left" style={{ position: 'absolute', top: 30, left: 0, right: 380 }}>
           <Stamp rotate={-3}>print("hello world")</Stamp>
-          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 86, lineHeight: 0.95, margin: '18px 0 10px', fontWeight: 600, letterSpacing: -1 }}>
+          <h1 className="zine-hero-h1" style={{ fontFamily: 'var(--zine-display)', fontSize: 86, lineHeight: 0.95, margin: '18px 0 10px', fontWeight: 600, letterSpacing: -1 }}>
             Data scientist,<br />
             <span style={{ fontStyle: 'italic', color: 'var(--zine-terracotta2)' }}>ML engineer,</span><br />
-            <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 108, color: 'var(--zine-sage)' }}>mum of two.</span>
+            <span className="zine-hero-hand" style={{ fontFamily: 'var(--zine-hand)', fontSize: 108, color: 'var(--zine-sage)' }}>mum of two.</span>
           </h1>
           <p style={{ maxWidth: 460, fontSize: 17, lineHeight: 1.6, color: 'var(--zine-ink2)', marginTop: 14 }}>
             Building production ML systems by day, raising humans by night. I write about machine learning,
             financial markets, parenting in tech, and the joyful chaos of doing it all at once.
           </p>
           <div style={{ display: 'flex', gap: 14, marginTop: 22, alignItems: 'center' }}>
-            <Link to="/portfolio">
+            <Link to="/portfolio" viewTransition>
               <TapeButton>see my projects →</TapeButton>
             </Link>
-            <Link to="/blog" style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink2)', transform: 'rotate(-3deg)', display: 'inline-block', textDecoration: 'none' }}>
+            <Link to="/blog" viewTransition style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink2)', transform: 'rotate(-3deg)', display: 'inline-block', textDecoration: 'none' }}>
               or read the blog ↗
             </Link>
           </div>
         </div>
 
         {/* Right col — polaroid collage */}
-        <div style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
-          <WashiTape x={70} y={6} w={120} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 22, left: 50 }}>
-            <Polaroid caption="me, probably debugging" rotate={-6} color="var(--zine-blush)" label="self portrait" />
+        <div className="zine-hero-right" style={{ position: 'absolute', right: 0, top: 0, width: 340, height: 500 }}>
+          <WashiTape x={70} y={2} w={115} rotate={-8} color="var(--zine-ochre)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 10, left: 50 }}>
+            <Polaroid caption="me + baby Imogen" rotate={-5} color="var(--zine-blush)" w={190} h={205} src="/photos/mum-and-baby.jpg" alt="Ghibli-style illustration of me holding my baby daughter Imogen" />
           </div>
-          <WashiTape x={20} y={210} w={100} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 220, left: 0 }}>
-            <div className="hen-waddle" style={{ transformOrigin: 'center bottom' }}>
-              <Polaroid caption="hens 🐔" rotate={4} color="var(--zine-sage)" w={180} h={130} label="garden" />
-            </div>
+          <WashiTape x={15} y={228} w={100} rotate={6} color="var(--zine-sage)" pattern="dots" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 240, left: 0 }}>
+            <Polaroid caption="kakigori in Japan" rotate={4} color="var(--zine-ochre)" w={195} h={145} src="/photos/family-shaved-ice.jpg" alt="Ghibli-style illustration of our family eating shaved ice in Japan" />
           </div>
-          <WashiTape x={170} y={320} w={90} rotate={-12} color="var(--zine-terracotta)" zIndex={5} />
-          <div className="reveal" style={{ position: 'absolute', top: 330, left: 150 }}>
-            <Polaroid caption="Ember + Imogen" rotate={7} color="var(--zine-ochre)" w={170} h={120} label="the chaos" />
+          <WashiTape x={195} y={248} w={90} rotate={-12} color="var(--zine-terracotta)" zIndex={5} />
+          <div className="reveal" style={{ position: 'absolute', top: 258, left: 178 }}>
+            <Polaroid caption="the crew in Arashiyama" rotate={6} color="var(--zine-sage)" w={150} h={185} src="/photos/family-bamboo-forest.jpg" alt="Ghibli-style family selfie in the Arashiyama bamboo grove, with our newborn in a carrier" />
           </div>
         </div>
 
         {/* Decorative arrow */}
-        <svg width="180" height="60" style={{ position: 'absolute', left: 380, top: 380 }}>
+        <svg className="zine-hero-arrow" width="180" height="60" style={{ position: 'absolute', left: 380, top: 380 }}>
           <path data-draw="true" d="M5 30 Q40 5, 80 30 T155 30" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
           <path data-draw="true" d="M150 22 L162 30 L150 38" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
         </svg>
@@ -82,7 +80,7 @@ export function Home() {
           things I do{' '}
           <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 36, color: 'var(--zine-sage)' }}>(when not changing nappies)</span>
         </h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: 26 }}>
+        <div className="zine-grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 20, marginTop: 26 }}>
           {THINGS.map((x, i) => (
             <div
               key={i}
@@ -110,13 +108,13 @@ export function Home() {
             featured projects{' '}
             <span style={{ fontFamily: 'var(--zine-hand)', fontSize: 30, color: 'var(--zine-terracotta2)' }}>★</span>
           </h2>
-          <Link to="/portfolio" className="zine-nav-link" style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-ink2)', textDecoration: 'none' }}>
+          <Link to="/portfolio" viewTransition className="zine-nav-link" style={{ fontFamily: 'var(--zine-mono)', fontSize: 13, color: 'var(--zine-ink2)', textDecoration: 'none' }}>
             see all ↗
           </Link>
         </div>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
+        <div className="zine-grid-2" style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: 20 }}>
           {featuredProjects.slice(0, 4).map((p, i) => (
-            <Link key={p.id} to={`/portfolio/${p.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <Link key={p.id} to={`/portfolio/${p.id}`} viewTransition style={{ textDecoration: 'none', color: 'inherit' }}>
               <div
                 className="zine-card"
                 style={{
@@ -158,7 +156,7 @@ export function Home() {
       <section className="reveal" style={{ marginTop: 60, background: '#fff', padding: 28, boxShadow: '0 4px 14px rgba(43,36,24,0.08)', transform: 'rotate(-0.4deg)', position: 'relative' }}>
         <WashiTape x={40} y={-12} w={110} rotate={-3} color="var(--zine-sage)" pattern="dots" />
         <h2 style={{ fontFamily: 'var(--zine-display)', fontSize: 28, fontStyle: 'italic', marginTop: 0, marginBottom: 14 }}>currently…</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
+        <div className="zine-grid-4" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18 }}>
           {NOW.map((n) => (
             <div key={n.label}>
               <div style={{ fontFamily: 'var(--zine-mono)', fontSize: 10, color: 'var(--zine-terracotta2)', letterSpacing: 1.5 }}>
@@ -179,7 +177,7 @@ export function Home() {
         <p style={{ color: 'var(--zine-ink2)', marginBottom: 22, maxWidth: 500, marginLeft: 'auto', marginRight: 'auto' }}>
           I&apos;m always up for chatting about ML, markets, parenting in tech, or the right way to compost.
         </p>
-        <Link to="/about">
+        <Link to="/about" viewTransition>
           <TapeButton>get in touch →</TapeButton>
         </Link>
       </section>
