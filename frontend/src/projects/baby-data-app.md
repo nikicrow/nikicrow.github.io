@@ -3,7 +3,7 @@ id: "baby-data-app"
 title: "Baby Data App"
 description: "A full-stack app for tracking baby data with AI-powered insights, backed by its own dbt data modelling layer."
 status: development
-category: AI
+category: DATA
 completedDate: "2025-12-01"
 featured: true
 draft: false
@@ -38,10 +38,12 @@ Two reasons:
 ## Architecture
 
 ### Frontend
+
 - **Vite + React** for a fast, modern development experience
 - Clean UI for quick data entry (essential when you're sleep-deprived with a newborn)
 
 ### Backend
+
 - **Python** with **Pydantic** models for type-safe data handling
 - Separate models for each data type:
   - Feeds (breast and bottle)
@@ -51,6 +53,7 @@ Two reasons:
   - Health records
 
 ### Database
+
 - **PostgreSQL** for reliable, structured data storage
 - Currently running locally - all working smoothly
 
@@ -66,13 +69,13 @@ Keeping the modelling in its own dbt layer means the data engineering can evolve
 
 ## Tech Stack
 
-| Component | Technology |
-|-----------|------------|
-| **Frontend** | Vite, React |
-| **Backend** | Python, Pydantic |
-| **Database** | PostgreSQL |
-| **Data Modelling** | dbt, uv |
-| **AI** | Coming soon |
+| Component          | Technology       |
+| ------------------ | ---------------- |
+| **Frontend**       | Vite, React      |
+| **Backend**        | Python, Pydantic |
+| **Database**       | PostgreSQL       |
+| **Data Modelling** | dbt, uv          |
+| **AI**             | Coming soon      |
 
 ## What's Next
 
