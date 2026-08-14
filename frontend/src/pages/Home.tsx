@@ -48,6 +48,10 @@ export function Home() {
             <Link to="/blog" viewTransition style={{ fontFamily: 'var(--zine-hand)', fontSize: 22, color: 'var(--zine-ink2)', transform: 'rotate(-3deg)', display: 'inline-block', textDecoration: 'none' }}>
               or read the blog ↗
             </Link>
+            <svg className="zine-hero-arrow" width="56" height="20" viewBox="0 0 180 60" style={{ flexShrink: 0, transform: 'rotate(-4deg)' }}>
+              <path data-draw="true" d="M5 30 Q40 5, 80 30 T155 30" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+              <path data-draw="true" d="M150 22 L162 30 L150 38" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
+            </svg>
           </div>
         </div>
 
@@ -66,12 +70,6 @@ export function Home() {
             <Polaroid caption="the crew in Arashiyama" rotate={6} color="var(--zine-sage)" w={150} h={185} src="/photos/family-bamboo-forest.jpg" alt="Ghibli-style family selfie in the Arashiyama bamboo grove, with our newborn in a carrier" />
           </div>
         </div>
-
-        {/* Decorative arrow */}
-        <svg className="zine-hero-arrow" width="180" height="60" style={{ position: 'absolute', left: 380, top: 380 }}>
-          <path data-draw="true" d="M5 30 Q40 5, 80 30 T155 30" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-          <path data-draw="true" d="M150 22 L162 30 L150 38" stroke="var(--zine-terracotta2)" strokeWidth="2.5" fill="none" strokeLinecap="round" />
-        </svg>
       </section>
 
       {/* Things I do */}
