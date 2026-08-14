@@ -20,9 +20,9 @@ Ember turned three, and we decided to make her birthday party Play-Doh themed. H
 
 ## The idea
 
-So we bought a **Bambu Lab A1 Combo**. I've never owned one before, and honestly the party was as much an excuse as a reason. I wanted to actually get my hands on one and find out what it was capable of: how printing works, what the machine can and can't do, and — the question I was most curious about — whether you can drive it from a *parametric* model rather than hand-modelling every single thing. Could I describe a tool in code and have the geometry generate itself using python scripts?
+So we bought a **Bambu Lab A1 Combo**. I've never owned a 3D printer before, and honestly the party was as much an excuse as a reason. I wanted to find out what it was capable of: how printing works, what the machine can and can't do, and whether you can drive it from a _parametric_ model rather than hand-modelling every single thing. Could I describe a tool in code and have the geometry generate itself using python scripts?
 
-I wanted to use AI, new software for 3D printing I had never used before, and my existing python skills to create play-doh tools that were *custom* — to the kids, to the party, to the whole point of the day.
+I wanted to use AI, new software for 3D printing I had never used before, and my existing python skills to create play-doh tools that were _custom_ — to the kids, to the party, to the whole point of the day.
 
 So here's what I landed on. For each little guest, I'd make a set of three tools:
 
@@ -30,17 +30,17 @@ So here's what I landed on. For each little guest, I'd make a set of three tools
 - a **scraper** — toddler-friendly, chunky, easy for small hands
 - a **stamp** — with their **name** on it
 
-Party activity *and* party favour, in one squishy package.
+Party activity _and_ party favour, in one squishy package.
 
 ## The repo: 3D Printing Skills
 
-Rather than model each tool by hand — one name, one theme, one file at a time — I built the thing parametrically. The result is a little repo I'm calling **3D Printing Skills**: a handful of Python scripts plus a set of *skills* I hand to AI so it can drive them.
+Rather than model each tool by hand — one name, one theme, one file at a time — I built the thing parametrically. The result is a little repo I'm calling **3D Printing Skills**: a handful of Python scripts plus a set of _skills_ I hand to AI so it can drive them.
 
-The scripts are parametric by design. I tell them a **name** and a **theme**, and they generate the geometry for a matching roller, scraper, and stamp — the name embossed on the stamp, the theme worked into the roller texture. Change the two inputs, get a whole new set. That's exactly the kind of problem a computer should be doing for you: I wasn't going to nudge vertices around for a dozen different kids.
+The scripts are parametric by design. I tell them a **name** and a **theme**, and AI generates the geometry for a matching roller, scraper, and stamp — the name embossed on the stamp, the theme worked into the roller texture. Change the two inputs, get a whole new set. That's exactly the kind of problem a computer should be doing for you: I wasn't going to nudge vertices around for a dozen different kids.
 
 [Repo here!](https://github.com/nikicrow/3d-printing-skills)
 
-For most of it I used **Claude** to run the skills and generate all the files. That's the part I found exciting. The skills encode *how* to make a good, printable, toddler-safe tool, and the AI does the fiddly work of turning "make me a roller with bees and a stamp that says EMBER" into actual files I can print. I'm essentially teaching the AI my little corner of 3D-printing know-how once, and then reusing it as many times as I need.
+For most of it I used **Claude** to run the skills and generate all the files. That's the part I found exciting. The skills encode _how_ to make a good, printable, toddler-safe tool, and the AI does the fiddly work of turning "make me a roller with bees and a stamp that says EMBER" into actual files I can print. I'm essentially teaching the AI my little corner of 3D-printing know-how once, and then reusing it as many times as I need.
 
 <!-- photo: a set of the printed tools (roller, scraper, stamp) -->
 
@@ -48,7 +48,7 @@ For most of it I used **Claude** to run the skills and generate all the files. T
 
 From there it went into **Bambu Studio**. I could lay out multiple tools on a single plate and print a whole batch in one go, rather than babysitting the printer for one lonely stamp at a time. For a party's worth of kids, that efficiency was the difference between "nice idea" and "actually finished in time."
 
-And I did finish in time. I ended up with a pile of really cute, genuinely toddler-friendly Play-Doh tools for Ember's party — plus a heap of different stamps that turned out sweeter than I expected.
+I ended up with a pile of really cute, toddler-friendly Play-Doh tools for Ember's party — plus a heap of different stamps that turned out way sweeter than I expected.
 
 <!-- photo: the stamps laid out / kids using them at the party -->
 
@@ -58,4 +58,4 @@ The party was the deadline, but the repo is the thing I get to keep. **3D Printi
 
 There's a version of me that would have spent a week hand-modelling twelve slightly different rollers and given up halfway. Instead I got to spend that time thinking about what would actually delight a group of wriggly three-year-olds — and then let the tools generate themselves.
 
-I'll keep using the repo for the next thing, and the thing after that. But this first outing is hard to beat: a room full of toddlers, rolling out dinosaurs and bees, stamping their own names into the dough, and taking a custom set home at the end. Not a bad birthday, for three.
+I'll keep using the repo for the next thing, and the thing after that. But this first outing is hard to beat: a room full of toddlers, rolling out dinosaurs and bees, stamping their own names into the dough, and taking a custom set home at the end.

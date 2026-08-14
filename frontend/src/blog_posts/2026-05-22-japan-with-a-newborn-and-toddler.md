@@ -67,4 +67,4 @@ I mean this in the most literal way. It's super easy, super cheap, and the deliv
 
 Absolutely. Japan suits this season of life in a way I didn't fully expect, even though I knew it would work. The food situation is easy, the infrastructure is great, the cost is manageable, and staying for a long stretch rather than doing a frantic holiday makes it genuinely restful in the ways mat leave is supposed to be restful.
 
-If you're Australian, have any connection to Japan, and are wondering whether to take the leap — do it.
+If you're thinking about it — do it.
