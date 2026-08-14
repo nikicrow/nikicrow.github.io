@@ -17,7 +17,7 @@ In [Part 1](/blog/landy-part-1) I introduced Landy — my little Codex-powered b
 developmentally appropriate activities to do with my toddler so I didn't have to think one up
 at 6am with a baby on my hip.
 
-Here's the bit I didn't write at the time, because it hadn't happened yet: I stopped using it.
+But then: I stopped using it.
 
 ## The failure mode
 
@@ -30,7 +30,7 @@ Every single morning I'd get some version of the same three things:
 - whisper something weird in Japanese
 
 That's it. That was the product. Day after day, the same script with the words shuffled. There was
-no *why*, no build on yesterday, no sense that anything was tracking either kid. It felt like a
+no _why_, no build on yesterday, no sense that anything was tracking either kid. It felt like a
 cron job cosplaying as a parenting assistant, so I quietly stopped opening it.
 
 When I finally sat down to work out what went wrong, it was two things, and they were feeding each
@@ -52,20 +52,20 @@ We're back in Australia now, which means the server lives in the same house as m
 other side of the world, which changes what's practical.
 
 The hardware is gloriously unimpressive: an upcycled laptop from years ago running Linux, with a
-handful of keys that don't work because the dog stood on it — which is precisely why it got
+dysfunctional O key because the dog munted it — which is precisely why it got
 replaced and precisely why it was free to become a server. Decent RAM, though. That's the only spec
 that's mattered.
 
 On it: Hermes desktop, still on the same Codex subscription. What's new is everything above that:
 
-- **several profiles**, one per job, each with its own small markdown instruction file
+- **several profiles**, one per job, each with its own soul.md instruction file
 - **a runbook** describing how they hand work to each other
 - **a kanban board** they use to pass tasks between themselves
 - **a 7am planning cron job**, plus a few others that run silently and never ping me
 
-That last one matters more than it sounds. The planning happens at 7am whether I'm awake or not,
+That last one matters more than it sounds. My husband started complaining that I was slowing down the internet with landy whenever I was expecting a message, so now the planning happens at 7am before he works,
 and by the time I look at anything it's already done. A lot of the crew's work now happens without
-me in the loop at all. I don't need to see the planning. I need the output.
+me in the loop at all. I don't need to see the committee meeting. I simply need the output.
 
 The kanban board is the part I find quietly delightful. When one of them decides a task is better
 suited to somebody else, it moves the card across and leaves whatever it's gathered sitting there
@@ -95,7 +95,7 @@ than either babying them or expecting too much.
 
 **Landy Creative** — image generation and printables. This one exists because Ember loves a
 prop. It makes passports and boarding passes for her to cut out, which double as a cutting-and-
-scissors activity *and* as roleplay for actual flights. Cut them out on Tuesday, use them on the
+scissors activity _and_ as roleplay for actual flights. Cut them out on Tuesday, use them on the
 plane in September.
 
 ## Adding Imogen
@@ -104,7 +104,7 @@ The other structural change: child profiles. Not agent profiles — profiles for
 themselves. Imogen is four and a half months now, so she got her own.
 
 Setting hers up taught me something I hadn't known. When Researcher put together her baseline, the
-thing that came back loudest was **floor time**. Not tummy time as a scheduled event — floor time
+thing that came back was **floor time**. Not tummy time as a scheduled event — floor time
 as a default state. Babies this age should be spending as little time as possible contained in
 carriers, bouncers, seats and swings, and as much as possible flat on a mat with room to move. And
 critically: lots of short bursts beats one long virtuous stretch.
@@ -114,7 +114,7 @@ just "can she be on the floor for this bit?" and the answer is usually yes.
 
 ## Giving them the calendar
 
-The other addition, and possibly my favourite: the crew can see our family calendar.
+The other additio: the crew can see our family calendar.
 
 My husband set the bots up with their own Google profile on the server and shared our family
 calendar with it. So everything I already put in there — swimming lessons, playgroup, someone's
@@ -127,15 +127,15 @@ enriching activities on a morning where we'd already done swimming, and I'd read
 it, and feel like I'd failed at something. Which is an absurd thing to be made to feel by software
 I wrote myself.
 
-Now a day with swimming in it *is* the activity. The suggestions get lighter, or they get shaped
+Now a day with swimming in it _is_ the activity. The suggestions get lighter, or they get shaped
 around what's already happening. Nobody hands me a five-point developmental program on a day
 we've got playgroup and a visitor.
 
 ## Does it actually work?
 
-Yes, and the difference isn't subtle.
+Mostly.
 
-What I get now looks like: here's the activity, here's *why* we're doing it, here's what it's
+What I get now looks like: here's the activity, here's _why_ we're doing it, here's what it's
 building, and here's the five-minute version because you have a newborn. That last part is the
 bit I didn't know I needed. An activity with no time budget attached is an activity I will skip.
 
@@ -158,7 +158,7 @@ Two things, one technical and one not.
 The technical one: **separation of concerns applies to agents exactly like it applies to code.**
 Landy wasn't underpowered, it was under-specified. Give one profile one job and a clean place to
 work, and the quality jumps. Give it five jobs and a messy vault and you get the same three
-suggestions forever.
+suggestions forever. See my [principles that scale](/blog/principles-that-scale-separation-of-concerns) blog if you are interested in that one.
 
 The other one is about messy play. Researcher kept surfacing it, so we've leaned into it hard, and
 it's turned out to be one of the more valuable things I've learned in this whole project. Messy
@@ -171,5 +171,4 @@ turned out the way to get there was to stop asking one bot to be everything.
 
 ---
 
-*Next up: the runbook itself — how the profiles delegate, what's in each instruction file, and the
-silent cron jobs that do the planning I never see.*
+\_Next up: connecting it to my 2d and 3d printers... let's see what happens lol.

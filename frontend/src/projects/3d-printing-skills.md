@@ -28,7 +28,7 @@ A small, growing repo that turns a plain-language request into a physical object
 
 ## Why I Built This
 
-My eldest is seriously into Play-Doh, and I wanted to throw her a Play-Doh themed birthday party where every kid takes home a set of custom tools with their own name on them. That meant a 3D printer - and once you have a printer, it stops being a gadget and becomes a small factory for imaginative play: custom play-kitchen food, a name-emblazoned toy plane covered in her favourite bunny, a jar of solid plastic "medicine pills" for playing doctors.
+My eldest is into Play-Doh, and I wanted to throw her a Play-Doh themed birthday party where every kid takes home a set of custom tools with their own name on them. That meant a 3D printer - and once you have a printer, it stops being a gadget and becomes a small factory for imaginative play: custom play-kitchen food, a name-emblazoned toy plane covered in her favourite bunny, "medicine pills" for playing doctors.
 
 The other reason was selfish: I wanted to keep my AI and Python skills warm while on parental leave, and learn something new that keeps paying off for the next twenty years.
 
@@ -53,19 +53,18 @@ A **Bambu Lab A1 with the AMS combo**, which lets me run multiple colours in a s
 ## What's In It So Far
 
 - **Name stamps** - each kid's name plus their own icons
-- **Scrapers / cutters with names on them** - the favourite by a mile, because Play-Doh can be chopped into a hundred little pieces and scattered everywhere
-- **Non-custom stamps** - little icons, shapes, and textures
-- **A Play-Doh pasta roller / extruder** - and various other classic Play-Doh contraptions
+- **Scrapers with names on them** - the favourite by a mile, because Play-Doh can be chopped into a hundred little pieces and scattered into my favourite rug
+- **A Play-Doh roller** - and various other classic Play-Doh contraptions
 
 ## Tech Stack
 
-| Component | Technology |
-|-----------|------------|
-| **Geometry** | Python (parametric generators) |
-| **Automation** | Claude Skills |
-| **Output format** | STL |
-| **Slicing** | Bambu Studio |
-| **Printer** | Bambu Lab A1 + AMS |
+| Component         | Technology                     |
+| ----------------- | ------------------------------ |
+| **Geometry**      | Python (parametric generators) |
+| **Automation**    | Claude Skills                  |
+| **Output format** | STL                            |
+| **Slicing**       | Bambu Studio                   |
+| **Printer**       | Bambu Lab A1 + AMS             |
 
 ## What's Next
 
@@ -75,6 +74,6 @@ A **Bambu Lab A1 with the AMS combo**, which lets me run multiple colours in a s
 
 ## Reflections
 
-The interesting bit isn't the printer - it's the loop. Describe a thing in words, get Python that makes the geometry, get an object in your hands a few hours later. On maternity leave. One-handed. That's a genuinely new kind of making, and I don't think I've found the edges of it yet.
+The interesting bit isn't the printer - it's the loop. Describe a thing in words, get Python that makes the geometry, get an object in your hands a few hours later. On maternity leave. One-handed. That's a new kind of making, and I don't think I've found the edges of it yet.
 
 [More on how it came about →](/blog/play-doh-driven-development)

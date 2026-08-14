@@ -25,6 +25,7 @@ relatedProjects:
 Landy (**L**earning **and** **D**evelopment) is an AI agent my husband and I built to take the mental load off planning toddler activities while I'm on parental leave with a newborn and a two-and-a-half-year-old who's just come out of daycare. Every day it messages me on Telegram with activity suggestions tailored to exactly where my daughter is at developmentally - no prep-heavy googling, no decision fatigue, just "here's what to do today."
 
 [Read the backstory on the blog](/blog/landy-part-1)
+[Read the latest developments](/blog/landy-part-2-meet-the-crew)
 
 ## Why I Built This
 
@@ -50,7 +51,8 @@ Landy lives on our "server laptop" - my old daily-driver laptop, bought eight ye
 
 Landy talks to me through **Telegram** so it reaches me wherever I am - no app to open, no dashboard to check:
 
-- **Morning message** - a morning activity and an afternoon activity, picked based on her current goals and whatever's realistic that day.
+- **Morning message** - a morning activity picked based on her current goals and whatever's realistic that day.
+- **Afternoon message** - an afternoon activity.
 - **Evening message (~7pm)** - a review of how today's activities went. I give quick feedback, and Landy uses it to plan tomorrow's activities.
 
 This loop runs every day, so the plan is always adjusting to reality instead of an idealised schedule I'd never stick to.
@@ -74,13 +76,13 @@ To keep token costs sane, Landy only pulls the genuinely important snippets into
 
 ## Tech Stack
 
-| Component | Technology |
-|-----------|------------|
-| **Agent runtime** | Hermes |
-| **Model / compute** | Codex |
-| **Messaging** | Telegram |
-| **Memory** | Obsidian vault |
-| **Hosting** | Upcycled 8-year-old laptop, running Linux |
+| Component           | Technology                                |
+| ------------------- | ----------------------------------------- |
+| **Agent runtime**   | Hermes                                    |
+| **Model / compute** | Codex                                     |
+| **Messaging**       | Telegram                                  |
+| **Memory**          | Obsidian vault                            |
+| **Hosting**         | Upcycled 8-year-old laptop, running Linux |
 
 ## What's Next
 
