@@ -1,6 +1,6 @@
 ---
 id: "3d-printing-skills"
-title: "3D Printing Skills"
+title: "3D Printing with AI"
 description: "A repo of parameterised Python generators and AI skills that turn a plain-language request into a printable STL - built to make custom Play-Doh tools and imaginative-play props one-handed on maternity leave."
 status: development
 category: AI
