@@ -15,7 +15,7 @@ Before we get into the juicy stuff, let me introduce myself and what this series
 
 I am a Data Scientist. I have been for a few years now, predominantly using Python for Machine Learning and SQL for data analysis and using a range of data visualisation tools. I am also a first time mum to an almost 8 month old baby girl. Her name is Ember and here’s a picture. Pretty clear why I am so obsessed with her if you ask me.
 
-Press enter or click to view image in full size
+![Ember at around eight months old, grinning at the camera while sitting propped up against her dad's leg on a play mat](/blog/ember_baby.jpg)
 
 ## The story behind the data collection
 
