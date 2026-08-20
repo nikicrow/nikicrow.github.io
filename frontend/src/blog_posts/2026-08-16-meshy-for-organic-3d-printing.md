@@ -20,9 +20,9 @@ Some tools work well when you know that you want a cylinder, a rectangle, a part
 
 That distinction has changed how I approach my designs.
 
-> **PHOTO PLACEHOLDER — Hero image**
-> A wide shot of the finished sensory frog pond, showing the frogs, lily pads, flowers and turtles together.
-> _Suggested caption: Our custom 3D-printed frog pond pieces, designed for hands-on sensory play._
+![The finished sensory frog pond: 3D-printed frogs, lily pads and lily flowers floating in a paddling pool with river stones](/blog/meshy_pond_hero.jpg)
+
+_Our custom 3D-printed frog pond pieces, designed for hands-on sensory play._
 
 ## From an idea to a printable 3D model
 
@@ -49,17 +49,13 @@ The set now includes:
 - small lily flowers; and
 - cute pond turtles.
 
-> **PHOTO PLACEHOLDER — Frog designs**
-> Sitting and swimming frogs shown side by side, ideally from a few angles.
-> _Suggested caption: Exploring different poses helped the frogs feel like characters rather than repeated objects._
+![A sitting frog and a low swimming frog on separate lily pads, side by side in the water](/blog/meshy_frog_designs.jpg)
 
-> **PHOTO PLACEHOLDER — Floating pieces**
-> A lily pad and swimming frog being tested in water.
-> _Suggested caption: The lily pads were designed and tested as functional sensory-play pieces, not simply decorations._
+_Exploring different poses helped the frogs feel like characters rather than repeated objects._
 
-> **PHOTO PLACEHOLDER — Details and colour**
-> Close-up of a multicolour turtle, lily flower or frog.
-> _Suggested caption: Multicolour printing brings out the small details without requiring painted or glued-on parts._
+![A 3D-printed frog riding a floating lily pad, with smaller pads and a lily flower nearby](/blog/meshy_floating_pieces.jpg)
+
+_The lily pads were designed and tested as functional sensory-play pieces, not simply decorations._
 
 Meshy has allowed me to explore the softer shapes and playful proportions that make these pieces appealing. It is much easier to prompt for a chunky, cheerful turtle or a rounded frog than it is to define every curve in code.
 
@@ -75,19 +71,11 @@ Wherever possible, I would rather produce one robust, print-in-place object. Mul
 
 This matters because these aren't display models. They are being made for sensory play: splashing, scooping, squeezing, dropping and whatever other durability testing a group of toddlers invents on the day. The finished pieces need to be tactile and charming, but they also need to cope with real play.
 
-> **PHOTO PLACEHOLDER — In-hand scale**
-> A child's hand — or an adult hand for scale — holding one of the chunky finished models.
-> _Suggested caption: Rounded forms and sturdy details make the pieces easier for small hands to grip and explore._
-
 ## Where Meshy doesn't work as well for me
 
 The most valuable part of this experiment has been discovering Meshy's limits as well as its strengths.
 
 I tried using it to create a sensory-play strainer: a much more geometric object that needed flat surfaces, regular holes and a controlled cylindrical form. The results weren't nearly as successful. Meshy seemed to want to soften the geometry and introduce ripples and irregular surfaces. Those qualities can add charm to an animal or flower, but they are frustrating when the design needs to be dimensionally predictable and functional.
-
-> **PHOTO PLACEHOLDER — Useful comparison**
-> The unsuccessful Meshy strainer beside a more precise geometry-based version, or screenshots of both models.
-> _Suggested caption: Organic variation works beautifully for creatures, but not so well when a functional design depends on flat, regular geometry._
 
 After plenty of trial and error, my current rule of thumb is simple:
 
@@ -123,14 +111,6 @@ There is no single setting that solves all of this. Using fewer colours may redu
 
 The goal is not simply to use the least possible filament. It is to use filament thoughtfully: producing something durable, safe and enjoyable without generating a mountain of waste or turning every tiny pond creature into an all-day print.
 
-> **PHOTO PLACEHOLDER — The hidden cost of colour**
-> A finished small model beside the purged filament and prime tower generated while printing it.
-> _Suggested caption: With a small multicolour model, the purge waste can sometimes be larger than the finished print._
-
-> **PHOTO PLACEHOLDER — Orientation and supports**
-> Two slicer screenshots showing different orientations and their predicted support material or print times.
-> _Suggested caption: Model orientation affects overhangs, supports, filament use and the total time needed to print._
-
 ## Matching the tool to the shape
 
 AI-assisted design isn't about asking one tool to do everything. It is about recognising the kind of problem in front of me and choosing a workflow that plays to the strengths of the available tools.
@@ -143,6 +123,6 @@ The sensory frog pond has been a particularly fun way to explore that gap. It co
 
 That combination of creativity and problem-solving is exactly what I enjoy about 3D printing. Sometimes the answer is a perfectly measured cylinder. Sometimes it is a very round frog with a cheerful face. The trick is knowing which tool to ask.
 
-> **PHOTO PLACEHOLDER — Final scene**
-> The complete frog pond set arranged for the party or in active play.
-> _Suggested caption: The finished sensory pond brings together AI-assisted character design, multicolour printing and plenty of real-world testing._
+![The complete pond set laid out: multiple frogs, lily pads in two greens, lily flowers and a bed of river stones](/blog/meshy_final_scene.jpg)
+
+_The finished sensory pond brings together AI-assisted character design, multicolour printing and plenty of real-world testing._

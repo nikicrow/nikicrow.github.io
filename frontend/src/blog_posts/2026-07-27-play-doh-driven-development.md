@@ -47,6 +47,10 @@ Python files generate the geometry and export STL files (the printable mesh form
 
 The important part is that the Python is **parameterised**. A stamp isn't a stamp — it's a function that takes a name, a set of icons, a size, and gives you back a stamp. So one file makes twelve different party favours. Bees and flowers for one kid, random shapes for another, everything else identical.
 
+![A 3D-printed pale blue Play-Doh roller with Ember's name mirrored along the barrel and rows of bees and flowers around it](/blog/playdoh_name_roller.jpg)
+
+_One generator, one name, one set of icons — bees and flowers for this one._
+
 The other important part: the repo has **skills** in it, so the agent doing the work knows how to run these files without me re-explaining the whole setup each time. I describe what I want, it knows which generator to call and with what arguments. Which matters enormously when the window for doing this is a nap, and when — realistically — I have somewhere between zero and one hands free at any given moment.
 
 ## What's in it so far
@@ -55,6 +59,14 @@ The other important part: the repo has **skills** in it, so the agent doing the 
 - **Scrapers with names on them** - my eldest's favourite by a mile, because she can chop the Play-Doh into a hundred little pieces and scatter them everywhere
 - **A Play-Doh roller** - and various other classic Play-Doh contraptions
 - **Name labeled key chains** - to use on their bags and stuff later
+
+![A toddler's hand pushing the blue roller across a flattened slab of dough, leaving Ember's name and rows of bee and flower imprints behind](/blog/playdoh_rolling_dough.jpg)
+
+_The actual test: does it work when a two-year-old drives it?_
+
+![A hand holding the Ember name stamp above a slab of orange and white dough showing a crisp raised "Ember" imprint](/blog/playdoh_name_stamp.jpg)
+
+_Their name, in their hands, in dough._
 
 The name thing isn't just decoration, by the way. It's how they can start learning to recognise their own name. _This is mine. I made this._ You can't buy that at Kmart.
 

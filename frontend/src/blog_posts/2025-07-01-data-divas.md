@@ -1,6 +1,6 @@
 ---
 title: "Data Divas: 2025 Wrapped"
-slug: "data-divas-2025-wrapped"
+slug: "data-divas"
 date: 2026-01-15
 category: Community
 excerpt: "How a slightly awkward HR meeting turned into 80+ members, a killer mentoring program, and one of the best things I've done at work."
