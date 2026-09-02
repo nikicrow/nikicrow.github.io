@@ -41,7 +41,7 @@ export function BlogPost() {
             </span>
           </div>
 
-          <h1 style={{ fontFamily: 'var(--zine-display)', fontSize: 56, fontStyle: 'italic', lineHeight: 1.05, fontWeight: 600, margin: '0 0 14px', viewTransitionName: titleName }}>
+          <h1 className="zine-post-h1" style={{ fontFamily: 'var(--zine-display)', fontSize: 56, fontStyle: 'italic', lineHeight: 1.05, fontWeight: 600, margin: '0 0 14px', viewTransitionName: titleName }}>
             {post.title}
           </h1>
 

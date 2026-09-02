@@ -194,6 +194,19 @@ body {
 .zine-prose h2 { font-size: 30px; margin: 32px 0 12px; }
 .zine-prose h3 { font-size: 24px; margin: 24px 0 8px; }
 .zine-prose p { margin-bottom: 18px; }
+.zine-prose ul, .zine-prose ol {
+  margin: 0 0 20px;
+  padding-left: 28px;
+}
+.zine-prose ul { list-style: disc; }
+.zine-prose ol { list-style: decimal; }
+.zine-prose li { margin-bottom: 7px; padding-left: 3px; }
+.zine-prose a {
+  color: var(--zine-terracotta2);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+.zine-prose strong { font-weight: 700; }
 .zine-prose blockquote {
   border-left: 4px solid var(--zine-terracotta);
   font-family: var(--zine-display);
@@ -602,6 +615,10 @@ html {
   .zine-page-h1 {
     font-size: 44px !important;
     line-height: 1.05 !important;
+  }
+  .zine-post-h1 {
+    font-size: 40px !important;
+    overflow-wrap: anywhere;
   }
   .zine-about-h1 {
     font-size: 44px !important;
