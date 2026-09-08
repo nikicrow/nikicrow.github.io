@@ -49,6 +49,8 @@ The set now includes:
 - small lily flowers; and
 - cute pond turtles.
 
+See here for my uploaded prints on MakerWorld, including the [sensory frog in swimming and sitting poses](https://makerworld.com/en/models/3278506-3-colour-frog-swimming-and-sitting#profileId-3718404) and [floating lily pads for the sensory frog pond](https://makerworld.com/en/models/3163291-floating-lilypads-for-sensory-frog-pond#profileId-3575259).
+
 ![A sitting frog and a low swimming frog on separate lily pads, side by side in the water](/blog/meshy_frog_designs.jpg)
 
 _Exploring different poses helped the frogs feel like characters rather than repeated objects._
