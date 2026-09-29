@@ -37,7 +37,9 @@ I also did the arithmetic before sending the state. "She is 80% of the way throu
 
 The first run used short, sentence-like facts. I scored Jev's answers on the **same validation rows** and with the **same metrics** as the three tree models. That made this a comparison of predictions, rather than a few hand-picked examples that looked impressive.
 
-**[Insert chart: initial Jev narrative layout versus XGBoost, LightGBM and random forest on the validation split, for both sleep horizons.]**
+![Validation precision-recall, ROC and cumulative-recall curves for Jev and the three tree models, for sleep starting within 30 or 60 minutes.](/blog/baby_data_jev_model_comparison.png)
+
+*The first Jev comparison on the validation days. Jev is the pink line; the other lines are LightGBM, XGBoost and random forest.*
 
 **[Insert table: validation PR-AUC, ROC-AUC, Brier score and base rate for the first Jev comparison.]**
 
