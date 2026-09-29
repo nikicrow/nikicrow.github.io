@@ -54,7 +54,9 @@ I tried four input layouts, each with a different hypothesis:
 - **Minimal:** just age, time of day, wake-window progress and the day so far.
 - **Qualitative:** descriptions such as "near the end of her usual wake window", without the precise measurements.
 
-**[Insert chart: Jev narrative, numeric, minimal and qualitative layouts against the tree baselines on validation.]**
+![Validation precision-recall, ROC and cumulative-recall curves comparing four Jev input layouts with the tree models for both sleep horizons.](/blog/baby_data_jev_diff_input_comparison.png)
+
+*The four Jev input layouts are dashed lines; the tree models are solid lines. The numeric layout loses the most ground, while the minimal layout holds up well.*
 
 **[Insert table: metrics and input-token use for all four layouts.]**
 
