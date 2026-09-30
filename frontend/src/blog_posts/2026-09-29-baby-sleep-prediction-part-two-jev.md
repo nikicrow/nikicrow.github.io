@@ -1,5 +1,5 @@
 ---
-title: "Part 2: Can Jev predict when my baby will sleep? Part 2"
+title: "Part 2: Can Jev predict when my baby will sleep?"
 slug: "baby-sleep-prediction-jev"
 date: 2026-09-29
 category: AI
@@ -29,6 +29,21 @@ TypeSafe also [pitches Jev as fast and inexpensive](https://typesafe.ai/blog/int
 
 A tree model can read a row of numerical features. Jev needs a **state**: a description of what was true at the prediction time. My code turned each awake moment into a JSON object with named facts about the baby's age, the time of day, how far she was through her usual wake window and what had happened so far that day. I then sent two Noul questions, one for sleep starting within 30 minutes and one for 60 minutes, with definitions of what counted as yes and no.
 
+Here is one awake moment, in the narrative layout, exactly as it was sent to Jev:
+
+```json
+{
+  "baby": "21 weeks old (5.0 months)",
+  "time_now": "13:10 (afternoon)",
+  "current_wake_window": "Awake for 1 h 1 min, since waking from a nap that lasted 1 h 26 min. Her typical wake window over the last two weeks is 1 h 57 min, so she is 52% of the way through a typical wake window.",
+  "recent_wake_windows": "Her last three wake windows averaged 2 h 14 min.",
+  "today_so_far": "Up for the day for 4 h 55 min; 1 nap so far today totalling 1 h 26 min.",
+  "last_night": "Slept 10 h 33 min in total, longest stretch 7 h 33 min, woke once.",
+  "sleep_last_24h": "14 h 12 min across 4 sleeps, about her usual daily amount.",
+  "feeding": "Last feed started 54 min ago (a 12 min breastfeed). 7 feeds in the last 24 hours, about every 3 h 35 min."
+}
+```
+
 Admittedly, there was a bit of cheating (or enhancement?) here. I had already looked at which features mattered most to the tree models using shapley values, then used that knowledge to decide what Jev should see. In particular, age, clock time and wake-window progress looked useful. So Jev was _zero-shot_ in the sense that I never trained its weights on my babies' labelled data. The input design, however, benefited from my first experiment with the traditional ML models.
 
 I also did the arithmetic before sending the state. "She is 80% of the way through her typical wake window" is more useful than making Jev work that out from two durations. The docs say that Jev stinks at arithmetic, and that you should process that prior to sending it to Jev. The [state layouts and the questions](https://github.com/nikicrow/dbt-baby-data/tree/main/ml/baby_ml) are in the repo if you want to see exactly what went over the API.
@@ -43,7 +58,7 @@ _The first Jev comparison on the validation days. Jev is the pink line; the othe
 
 My reaction was: not bad. Really not bad for a model that had never been fitted to Ember or Imogen. The trees did better on the 30-minute question, while Jev was much closer on the 60-minute one. The result was interesting enough that I immediately wanted to know whether I could improve it by changing _how I described the same moment_.
 
-## Four ways to describe an awake baby
+## Four different Jev inputs
 
 I tried four input layouts, each with a different hypothesis:
 
@@ -72,9 +87,9 @@ I scored the original XGBoost model on the test set, then refitted the same mode
 
 Against the original XGBoost, zero-shot Jev was remarkably competitive. Against XGBoost refitted with recent data, the tree won clearly. Both statements are true, and I think the second one is especially useful if I ever want to put a prediction in the app: I would need to keep retraining it as the girls grow.
 
-# WINNER: Probably still XGBoost for now
+**WINNER: Probably still XGBoost for now**
 
-Is it weird that I am a little relieved that the models I have built can still win?
+Is it weird that I am a little relieved that the models I know and love can still win against the latest and greatest AI?
 
 ## The familiar problem in unfamiliar clothes
 
