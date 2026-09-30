@@ -1,5 +1,5 @@
 ---
-title: "I Deployed My Baby Tracker to a Tailnet — Because Apparently My Family Has Its Own Private Cloud Now"
+title: "I Deployed My Baby Tracker to a Tailnet And This is My New Favourite Way to Deploy My Personal Apps"
 slug: "baby-tracker-tailnet"
 date: 2026-09-01
 category: Tech
