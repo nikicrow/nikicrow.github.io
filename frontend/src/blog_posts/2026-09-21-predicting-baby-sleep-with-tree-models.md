@@ -1,9 +1,9 @@
 ---
-title: "Can I predict when my baby will fall asleep?"
+title: "Part 1: Can an ML model predict when my baby will fall asleep?"
 slug: "predicting-baby-sleep-with-tree-models"
 date: 2026-09-21
-category: Parenting
-excerpt: "I turned two babies' feeds, nappies and sleeps into 28,000 awake moments to see whether a model can tell me when the next nap is coming."
+category: ML
+excerpt: "How I turned my two babies' feeds, nappies and sleeps into a ML model friendly dataset to see whether a model can tell me when the next nap is coming."
 published: true
 tags:
   - parenting
