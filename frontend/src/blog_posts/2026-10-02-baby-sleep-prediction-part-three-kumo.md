@@ -4,7 +4,7 @@ slug: "baby-sleep-prediction-kumo"
 date: 2026-10-02
 category: AI
 excerpt: "NVIDIA's Kumo Tabular gets surprisingly close to XGBoost on my baby sleep data, but it also takes 5 mins per label on my basic CPU laptop."
-published: false
+published: true
 tags:
   - parenting
   - baby-data
@@ -91,8 +91,8 @@ The context isn't necessarily tiny: NVIDIA reports a final pretraining stage ext
 
 Kumo Tabular is a very interesting alternative. The recent-context results are strong, and being able to give a pretrained model labelled examples without retraining its weights is compelling. I can see why that could be useful when trying a new propensity question.
 
-But for this dataset, on this computer, it hasn't given me a reason to replace the trees. XGBoost performs better in the recent-data comparison, and Kumo's runtime and calibration both need more attention than I can ignore.
+But for this dataset, on this computer, it hasn't given me a reason to replace the trees. XGBoost performs better in the recent-data comparison, and Kumo's runtime and calibration both need more attention than I can ignore. I think the next horizon will be lighter weight tabular type models you can fine tune to a specific dataset for a particular problem, and that's where things will get REALLY juicy.
 
 I am still excited about zero-shot and in-context approaches to tabular prediction. I just wouldn't go crazy replacing existing models yet, particularly for the huge, complex, very imbalanced datasets that turn up in my work.
 
-The most useful lesson from this series so far is: the problem is ultimately still feature engineering and giving your model the most relevant data to the problem. Which was always the problem.
+The most useful lesson from this series so far is: the problem is ultimately still feature engineering and giving your model the most relevant data to the problem. Which, funnily enough, was always the hard part of the problem.
