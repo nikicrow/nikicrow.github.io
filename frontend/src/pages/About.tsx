@@ -331,8 +331,8 @@ export function About() {
           {[
             {
               label: "EMAIL",
-              value: "not.telling@isthissafetho.com",
-              href: "mailto:not.telling@isthissafetho.com",
+              value: "nikiallum94@gmail.com",
+              href: "mailto:nikiallum94@gmail.com",
             },
             {
               label: "LINKEDIN",
