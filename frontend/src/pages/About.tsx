@@ -41,8 +41,6 @@ const SKILLS: Record<string, string[]> = {
   "maker & hardware": [
     "Bambu Lab 3D printing",
     "parametric CAD design",
-    "Obsidian",
-    "Telegram bots",
   ],
 };
 
